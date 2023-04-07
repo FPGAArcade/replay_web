@@ -1,0 +1,54 @@
+---
+---
+
+<header>
+  <div>IMG Logo</div>
+  <ul class="nav-list">
+    <li>Hardware</li>
+    <li>News</li>
+    <li>FAQ</li>
+    <li>Docs</li>
+    <li>Releases</li>
+    <li>Forum</li>
+    <li>GitHub</li>
+  </ul>
+  <div class="three-lions">---</div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    gap: 1em;
+    justify-content: flex-end;
+    align-items: center;
+
+    background-color: #161616;
+    color: #a1a1a1;
+
+    padding: 0.5em;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .three-lions {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* TODO: extract breakpoints */
+  @media (min-width: 700px) {
+    .nav-list {
+      display: flex;
+      margin-left: auto;
+
+      gap: 1em;
+      list-style-type: none;
+    }
+
+    .three-lions {
+      display: none;
+    }
+  }
+</style>
