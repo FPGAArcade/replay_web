@@ -12,6 +12,9 @@
   },
   "dependencies": {
     "@astrojs/vue": "^2.1.1",
-    "astro": "^2.2.0"
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "astro": "^2.2.0",
+    "vue-material-design-icons": "^5.2.0",
+    "vue3-simple-icons": "^7.18.0"
   }
 }

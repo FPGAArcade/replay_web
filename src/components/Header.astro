@@ -1,5 +1,8 @@
 ---
 import headerLogo from "../assets/header-logo.png";
+import { GithubIcon } from "vue3-simple-icons";
+import MenuIcon from "vue-material-design-icons/Menu.vue";
+
 import { Image } from "astro:assets";
 ---
 
@@ -12,53 +15,56 @@ import { Image } from "astro:assets";
     <li>Docs</li>
     <li>Releases</li>
     <li>Forum</li>
-    <li>GitHub</li>
+    <li><GithubIcon style="fill: white" /></li>
   </ul>
-  <div class="three-lions">---</div>
-</header>
+  <div class="three-lions">
+    <MenuIcon />
+  </div>
 
-<style>
-  header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1em;
-
-    padding: 0.5em;
-    height: 46px;
-
-    overflow: hidden;
-    background-color: var(--rpl-header-background-color);
-    color: var(--rpl-header-text-color);
-  }
-
-  header > img {
-    object-fit: contain;
-    object-position: left;
-    height: 100%;
-  }
-
-  .nav-list {
-    display: none;
-  }
-
-  .three-lions {
-    display: block;
-    margin-left: auto;
-  }
-
-  /* TODO: extract breakpoints */
-  @media (min-width: 700px) {
-    .nav-list {
+  <style>
+    header {
       display: flex;
-      margin-left: auto;
-
+      justify-content: flex-end;
+      align-items: center;
       gap: 1em;
-      list-style-type: none;
+
+      padding: 0.5em;
+      height: 46px;
+
+      overflow: hidden;
+      background-color: var(--rpl-header-background-color);
+      color: var(--rpl-header-text-color);
+    }
+
+    header > img {
+      object-fit: contain;
+      object-position: left;
+      height: 100%;
+    }
+
+    .nav-list {
+      display: none;
     }
 
     .three-lions {
-      display: none;
+      display: block;
+      margin-left: auto;
     }
-  }
-</style>
+
+    /* TODO: extract breakpoints */
+    @media (min-width: 700px) {
+      .nav-list {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        gap: 1em;
+        list-style-type: none;
+      }
+
+      .three-lions {
+        display: none;
+      }
+    }
+  </style>
+</header>
