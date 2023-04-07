@@ -1,8 +1,10 @@
 ---
+import headerLogo from "../assets/header-logo.png";
+import { Image } from "astro:assets";
 ---
 
 <header>
-  <div>IMG Logo</div>
+  <Image src={headerLogo} alt="FPGA Arcade Logo" />
   <ul class="nav-list">
     <li>Hardware</li>
     <li>News</li>
@@ -18,14 +20,22 @@
 <style>
   header {
     display: flex;
-    gap: 1em;
     justify-content: flex-end;
     align-items: center;
-
-    background-color: #161616;
-    color: #a1a1a1;
+    gap: 1em;
 
     padding: 0.5em;
+    height: 46px;
+
+    overflow: hidden;
+    background-color: #161616;
+    color: #a1a1a1;
+  }
+
+  header > img {
+    object-fit: contain;
+    object-position: left;
+    height: 100%;
   }
 
   .nav-list {
