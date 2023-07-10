@@ -9,66 +9,125 @@ import { Image } from "astro:assets";
 <header>
   <Image src={headerLogo} alt="FPGA Arcade Logo" />
 
+  <button class="nav-list-toggle">
+    <MenuIcon />
+  </button>
+
   <nav>
-    <ul class="nav-list">
+    <ul class="nav-list" data-visible="false">
       <li><a href="/">Hardware</a></li>
       <li><a href="/demo">News</a></li>
       <li>FAQ</li>
-      <li>Docs</li>
-      <li>Releases</li>
-      <li>Forum</li>
-      <li><GithubIcon style="fill: white" /></li>
+      <li><a href="https://docs.fpgaarcade.com/">Docs</a></li>
+      <li><a href="https://build.fpgaarcade.com/releases">Releases</a></li>
+      <li>
+        <a href="https://github.com/FPGAArcade/"
+          ><GithubIcon style="fill: white;" /></a
+        >
+      </li>
     </ul>
-    <div class="three-lions">
-      <MenuIcon />
-    </div>
   </nav>
+</header>
 
-  <style>
-    header {
-      --rpl-link-color: var(--rpl-header-text-color);
+<style>
+  header {
+    --rpl-link-color: var(--rpl-header-text-color);
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
 
-      padding: 0.5em;
-      height: 46px;
+    padding: 0.5em;
+    height: 46px;
 
-      overflow: hidden;
-      background-color: var(--rpl-header-background-color);
-      color: var(--rpl-header-text-color);
+    overflow: hidden;
+    background-color: var(--rpl-header-background-color);
+    color: var(--rpl-header-text-color);
+  }
+
+  header > img {
+    object-fit: contain;
+    object-position: left;
+    height: 100%;
+  }
+
+  .nav-list {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+
+    flex-direction: column;
+    align-items: center;
+
+    inset: 0 0 0 30%;
+    padding: 4rem 0;
+    margin: 0;
+    gap: 1.5em;
+
+    border-left: 2px solid var(--rpl-border-color);
+    list-style-type: none;
+
+    /* Fallback for readability on older browsers */
+    @supports (
+      background:
+        color-mix(in srgb, var(--rpl-header-background-color) 85%, transparent)
+    ) {
+      --background-color: color-mix(
+        in srgb,
+        var(--rpl-header-background-color) 85%,
+        transparent
+      );
     }
+    background: var(--background-color, var(--rpl-header-background-color));
+    backdrop-filter: blur(5px);
+    transform: translateX(100%);
+  }
 
-    header > img {
-      object-fit: contain;
-      object-position: left;
-      height: 100%;
-    }
+  .nav-list[data-visible="true"] {
+    transform: translateX(0%);
+    /* TODO: Should be on the nav-list but then get a glitch on page resize */
+    transition: transform 0.25s ease-out;
+  }
 
+  .nav-list-toggle {
+    display: block;
+    z-index: 999;
+    margin-left: auto;
+    border: 0;
+    background: none;
+    color: white;
+  }
+
+  @media (min-width: 40em) {
     .nav-list {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      padding: 0;
+      border: none;
+      z-index: auto;
+    }
+
+    .nav-list[data-visible="false"],
+    .nav-list[data-visible="true"] {
+      transform: none;
+      transition: none;
+    }
+
+    .nav-list-toggle {
       display: none;
     }
+  }
+</style>
 
-    .three-lions {
-      display: block;
-      margin-left: auto;
-    }
+<script>
+  const navList = document.querySelector(".nav-list");
+  const toggleButton = document.querySelector("button.nav-list-toggle");
+  toggleButton?.addEventListener("click", () => {
+    if (!(navList instanceof HTMLElement)) return;
 
-    /* TODO: extract breakpoints */
-    @media (min-width: 700px) {
-      .nav-list {
-        display: flex;
-        align-items: center;
-
-        gap: 1em;
-        list-style-type: none;
-      }
-
-      .three-lions {
-        display: none;
-      }
-    }
-  </style>
-</header>
+    navList.dataset.visible =
+      navList.dataset.visible === "true" ? "false" : "true";
+  });
+</script>
