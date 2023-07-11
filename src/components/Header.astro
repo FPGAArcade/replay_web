@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
   </button>
 
   <nav>
-    <ul class="nav-list" data-visible="false">
+    <ul class="nav-list" data-visible="false" data-animated="false">
       <li><a href="/">Hardware</a></li>
       <li><a href="/demo">News</a></li>
       <li>FAQ</li>
@@ -86,7 +86,9 @@ import { Image } from "astro:assets";
 
   .nav-list[data-visible="true"] {
     transform: translateX(0%);
-    /* TODO: Should be on the nav-list but then get a glitch on page resize */
+  }
+
+  .nav-list[data-animated="true"] {
     transition: transform 0.25s ease-out;
   }
 
@@ -107,12 +109,7 @@ import { Image } from "astro:assets";
       padding: 0;
       border: none;
       z-index: auto;
-    }
-
-    .nav-list[data-visible="false"],
-    .nav-list[data-visible="true"] {
       transform: none;
-      transition: none;
     }
 
     .nav-list-toggle {
@@ -124,10 +121,25 @@ import { Image } from "astro:assets";
 <script>
   const navList = document.querySelector(".nav-list");
   const toggleButton = document.querySelector("button.nav-list-toggle");
+
   toggleButton?.addEventListener("click", () => {
     if (!(navList instanceof HTMLElement)) return;
 
     navList.dataset.visible =
       navList.dataset.visible === "true" ? "false" : "true";
+
+    navList.dataset.animated = "true";
+  });
+
+  // Avoid close transform triggering when resizing desktop to mobile
+  navList?.addEventListener("transitionend", (event) => {
+    if (!(navList instanceof HTMLElement) || event.target !== navList) return;
+
+    navList.dataset.animated = "false";
+  });
+  navList?.addEventListener("transitioncancel", (event) => {
+    if (!(navList instanceof HTMLElement) || event.target !== navList) return;
+
+    navList.dataset.animated = "false";
   });
 </script>
