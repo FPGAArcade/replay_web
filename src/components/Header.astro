@@ -9,12 +9,11 @@ import { Image } from "astro:assets";
 <header>
   <Image src={headerLogo} alt="FPGA Arcade Logo" />
 
-  <button class="nav-list-toggle">
+  <button class="nav__menu-btn" data-nav-toggle-btn>
     <MenuIcon />
   </button>
-
-  <nav>
-    <ul class="nav-list" data-visible="false" data-animated="false">
+  <nav class="nav" data-nav data-nav-open="false" data-nav-animating="false">
+    <ul class="nav__list">
       <li><a href="/">Hardware</a></li>
       <li><a href="/demo">News</a></li>
       <li>FAQ</li>
@@ -22,7 +21,7 @@ import { Image } from "astro:assets";
       <li><a href="https://build.fpgaarcade.com/releases">Releases</a></li>
       <li>
         <a href="https://github.com/FPGAArcade/"
-          ><GithubIcon style="fill: white;" /></a
+          ><GithubIcon title="FPGAArcade GitHub" style="fill: white;" /></a
         >
       </li>
     </ul>
@@ -52,21 +51,11 @@ import { Image } from "astro:assets";
     height: 100%;
   }
 
-  .nav-list {
+  .nav {
     display: flex;
     position: fixed;
     z-index: 100;
-
-    flex-direction: column;
-    align-items: center;
-
     inset: 0 0 0 30%;
-    padding: 4rem 0;
-    margin: 0;
-    gap: 1.5em;
-
-    border-left: 2px solid var(--rpl-border-color);
-    list-style-type: none;
 
     /* Fallback for readability on older browsers */
     @supports (
@@ -81,18 +70,32 @@ import { Image } from "astro:assets";
     }
     background: var(--background-color, var(--rpl-header-background-color));
     backdrop-filter: blur(5px);
+
     transform: translateX(100%);
   }
 
-  .nav-list[data-visible="true"] {
+  .nav[data-nav-open="true"] {
     transform: translateX(0%);
   }
 
-  .nav-list[data-animated="true"] {
+  .nav[data-nav-animating="true"] {
     transition: transform 0.25s ease-out;
   }
 
-  .nav-list-toggle {
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+
+    margin: 0;
+    padding: 4rem 0;
+    gap: 1.5em;
+
+    list-style-type: none;
+  }
+
+  .nav__menu-btn {
     display: block;
     z-index: 999;
     margin-left: auto;
@@ -102,44 +105,46 @@ import { Image } from "astro:assets";
   }
 
   @media (min-width: 40em) {
-    .nav-list {
-      display: flex;
-      flex-direction: row;
+    .nav {
       position: static;
-      padding: 0;
       border: none;
       z-index: auto;
       transform: none;
     }
 
-    .nav-list-toggle {
+    .nav__list {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+    }
+
+    .nav__menu-btn {
       display: none;
     }
   }
 </style>
 
 <script>
-  const navList = document.querySelector(".nav-list");
-  const toggleButton = document.querySelector("button.nav-list-toggle");
+  const nav = document.querySelector("[data-nav]");
+  const menuBtn = document.querySelector("[data-nav-toggle-btn]");
 
-  toggleButton?.addEventListener("click", () => {
-    if (!(navList instanceof HTMLElement)) return;
+  menuBtn?.addEventListener("click", () => {
+    if (!(nav instanceof HTMLElement)) return;
 
-    navList.dataset.visible =
-      navList.dataset.visible === "true" ? "false" : "true";
+    nav.dataset.navOpen = nav.dataset.navOpen === "true" ? "false" : "true";
 
-    navList.dataset.animated = "true";
+    nav.dataset.navAnimating = "true";
   });
 
   // Avoid close transform triggering when resizing desktop to mobile
-  navList?.addEventListener("transitionend", (event) => {
-    if (!(navList instanceof HTMLElement) || event.target !== navList) return;
+  nav?.addEventListener("transitionend", (event) => {
+    if (!(nav instanceof HTMLElement) || event.target !== nav) return;
 
-    navList.dataset.animated = "false";
+    nav.dataset.navAnimating = "false";
   });
-  navList?.addEventListener("transitioncancel", (event) => {
-    if (!(navList instanceof HTMLElement) || event.target !== navList) return;
+  nav?.addEventListener("transitioncancel", (event) => {
+    if (!(nav instanceof HTMLElement) || event.target !== nav) return;
 
-    navList.dataset.animated = "false";
+    nav.dataset.navAnimating = "false";
   });
 </script>
