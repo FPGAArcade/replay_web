@@ -2,6 +2,7 @@
 import headerLogo from "../assets/header-logo.png";
 import { GithubIcon } from "vue3-simple-icons";
 import MenuIcon from "vue-material-design-icons/Menu.vue";
+import MenuClose from "vue-material-design-icons/Close.vue";
 
 import { Image } from "astro:assets";
 ---
@@ -9,8 +10,9 @@ import { Image } from "astro:assets";
 <header>
   <Image src={headerLogo} alt="FPGA Arcade Logo" />
 
-  <button class="nav__menu-btn" data-nav-toggle-btn>
-    <MenuIcon />
+  <button class="menu-btn" data-nav-toggle-btn>
+    <MenuIcon class="icon" data-hidden="false" />
+    <MenuClose class="icon" data-hidden="true" />
   </button>
   <nav class="nav" data-nav data-nav-open="false" data-nav-animating="false">
     <ul class="nav__list">
@@ -95,13 +97,26 @@ import { Image } from "astro:assets";
     list-style-type: none;
   }
 
-  .nav__menu-btn {
+  .menu-btn {
     display: block;
+    position: sticky;
     z-index: 999;
-    margin-left: auto;
     border: 0;
     background: none;
     color: white;
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu-btn .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  .menu-btn .icon[data-hidden="true"] {
+    opacity: 0;
   }
 
   @media (min-width: 40em) {
@@ -118,7 +133,7 @@ import { Image } from "astro:assets";
       padding: 0;
     }
 
-    .nav__menu-btn {
+    .menu-btn {
       display: none;
     }
   }
@@ -127,13 +142,18 @@ import { Image } from "astro:assets";
 <script>
   const nav = document.querySelector("[data-nav]");
   const menuBtn = document.querySelector("[data-nav-toggle-btn]");
+  const menuIcons = document.querySelectorAll(".menu-btn [data-hidden]");
 
   menuBtn?.addEventListener("click", () => {
     if (!(nav instanceof HTMLElement)) return;
 
     nav.dataset.navOpen = nav.dataset.navOpen === "true" ? "false" : "true";
-
     nav.dataset.navAnimating = "true";
+
+    menuIcons.forEach((el) => {
+      if (!(el instanceof HTMLElement)) return;
+      el.dataset.hidden = el.dataset.hidden === "true" ? "false" : "true";
+    });
   });
 
   // Avoid close transform triggering when resizing desktop to mobile
