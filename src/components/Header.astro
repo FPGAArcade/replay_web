@@ -157,24 +157,35 @@ import { Image } from "astro:assets";
   const nav = document.querySelector("[data-nav]");
   const menuBtn = document.querySelector(".menu-btn");
 
-  menuBtn?.addEventListener("click", () => {
-    if (!(nav instanceof HTMLElement) || !(menuBtn instanceof HTMLElement))
-      return;
+  if (nav instanceof HTMLElement && menuBtn instanceof HTMLElement) {
+    menuBtn.addEventListener("click", (event) => {
+      nav.dataset.navOpen = nav.dataset.navOpen === "true" ? "false" : "true";
+      nav.dataset.navAnimating = "true";
+      menuBtn.dataset.navOpen = nav.dataset.navOpen;
 
-    nav.dataset.navOpen = nav.dataset.navOpen === "true" ? "false" : "true";
-    nav.dataset.navAnimating = "true";
-    menuBtn.dataset.navOpen = nav.dataset.navOpen;
-  });
+      event.stopPropagation();
+    });
 
-  // Avoid close transform triggering when resizing desktop to mobile
-  nav?.addEventListener("transitionend", (event) => {
-    if (!(nav instanceof HTMLElement) || event.target !== nav) return;
+    document.body.addEventListener("click", (event) => {
+      if (!(event.target instanceof Element) || nav.contains(event.target))
+        return;
 
-    nav.dataset.navAnimating = "false";
-  });
-  nav?.addEventListener("transitioncancel", (event) => {
-    if (!(nav instanceof HTMLElement) || event.target !== nav) return;
+      nav.dataset.navOpen = "false";
+      nav.dataset.navAnimating = "true";
+      menuBtn.dataset.navOpen = "false";
+    });
 
-    nav.dataset.navAnimating = "false";
-  });
+    // Avoid close transform triggering when resizing desktop to mobile
+    nav.addEventListener("transitionend", (event) => {
+      if (!(nav instanceof HTMLElement) || event.target !== nav) return;
+
+      nav.dataset.navAnimating = "false";
+    });
+
+    nav.addEventListener("transitioncancel", (event) => {
+      if (!(nav instanceof HTMLElement) || event.target !== nav) return;
+
+      nav.dataset.navAnimating = "false";
+    });
+  }
 </script>
