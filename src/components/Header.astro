@@ -1,7 +1,6 @@
 ---
 import headerLogo from "../assets/header-logo.png";
 import { GithubIcon } from "vue3-simple-icons";
-import MenuIcon from "vue-material-design-icons/Menu.vue";
 
 import { Image } from "astro:assets";
 ---
@@ -9,66 +8,173 @@ import { Image } from "astro:assets";
 <header>
   <Image src={headerLogo} alt="FPGA Arcade Logo" />
 
-  <nav>
-    <ul class="nav-list">
+  <button class="menu-btn" data-nav-open="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav" data-nav data-nav-open="false" data-nav-animating="false">
+    <ul class="nav__list">
       <li><a href="/">Hardware</a></li>
       <li><a href="/demo">News</a></li>
       <li>FAQ</li>
-      <li>Docs</li>
-      <li>Releases</li>
-      <li>Forum</li>
-      <li><GithubIcon style="fill: white" /></li>
+      <li><a href="https://docs.fpgaarcade.com/">Docs</a></li>
+      <li><a href="https://build.fpgaarcade.com/releases">Releases</a></li>
+      <li>
+        <a href="https://github.com/FPGAArcade/"
+          ><GithubIcon title="FPGAArcade GitHub" style="fill: white;" />
+        </a>
+      </li>
     </ul>
-    <div class="three-lions">
-      <MenuIcon />
-    </div>
   </nav>
+</header>
 
-  <style>
-    header {
-      --rpl-link-color: var(--rpl-header-text-color);
+<style>
+  header {
+    --rpl-link-color: var(--rpl-header-text-color);
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+    padding: 0.5em;
+    height: 46px;
+
+    overflow: hidden;
+    background-color: var(--rpl-header-background-color);
+    color: var(--rpl-header-text-color);
+  }
+
+  header > img {
+    object-fit: contain;
+    object-position: left;
+    height: 100%;
+  }
+
+  .nav {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    inset: 0 0 0 30%;
+
+    /* Fallback for readability on older browsers */
+    @supports (
+      background:
+        color-mix(in srgb, var(--rpl-header-background-color) 85%, transparent)
+    ) {
+      --background-color: color-mix(
+        in srgb,
+        var(--rpl-header-background-color) 85%,
+        transparent
+      );
+    }
+    background: var(--background-color, var(--rpl-header-background-color));
+    backdrop-filter: blur(5px);
+
+    transform: translateX(100%);
+  }
+
+  .nav[data-nav-open="true"] {
+    transform: translateX(0%);
+  }
+
+  .nav[data-nav-animating="true"] {
+    transition: transform 0.25s ease-out;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+
+    margin: 0;
+    padding: 4rem 0;
+    gap: 1.5em;
+
+    list-style-type: none;
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    overflow: hidden;
+
+    cursor: pointer;
+    z-index: 999;
+    border: none;
+    background: none;
+    color: white;
+    width: 28px;
+    height: 23px;
+  }
+
+  .menu-btn > span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transform-origin: center left;
+    transition: transform 0.3s ease, scale 0.3s ease;
+  }
+
+  .menu-btn[data-nav-open="true"] > span:first-child {
+    transform: rotateZ(45deg);
+  }
+
+  .menu-btn[data-nav-open="true"] > span:nth-child(2) {
+    transform: scaleX(0);
+  }
+
+  .menu-btn[data-nav-open="true"] > span:last-child {
+    transform: rotateZ(-45deg);
+  }
+
+  @media (min-width: 40em) {
+    .nav {
+      position: static;
+      border: none;
+      z-index: auto;
+      transform: none;
+    }
+
+    .nav__list {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1em;
-
-      padding: 0.5em;
-      height: 46px;
-
-      overflow: hidden;
-      background-color: var(--rpl-header-background-color);
-      color: var(--rpl-header-text-color);
+      flex-direction: row;
+      padding: 0;
     }
 
-    header > img {
-      object-fit: contain;
-      object-position: left;
-      height: 100%;
-    }
-
-    .nav-list {
+    .menu-btn {
       display: none;
     }
+  }
+</style>
 
-    .three-lions {
-      display: block;
-      margin-left: auto;
-    }
+<script>
+  const nav = document.querySelector("[data-nav]");
+  const menuBtn = document.querySelector(".menu-btn");
 
-    /* TODO: extract breakpoints */
-    @media (min-width: 700px) {
-      .nav-list {
-        display: flex;
-        align-items: center;
+  menuBtn?.addEventListener("click", () => {
+    if (!(nav instanceof HTMLElement) || !(menuBtn instanceof HTMLElement))
+      return;
 
-        gap: 1em;
-        list-style-type: none;
-      }
+    nav.dataset.navOpen = nav.dataset.navOpen === "true" ? "false" : "true";
+    nav.dataset.navAnimating = "true";
+    menuBtn.dataset.navOpen = nav.dataset.navOpen;
+  });
 
-      .three-lions {
-        display: none;
-      }
-    }
-  </style>
-</header>
+  // Avoid close transform triggering when resizing desktop to mobile
+  nav?.addEventListener("transitionend", (event) => {
+    if (!(nav instanceof HTMLElement) || event.target !== nav) return;
+
+    nav.dataset.navAnimating = "false";
+  });
+  nav?.addEventListener("transitioncancel", (event) => {
+    if (!(nav instanceof HTMLElement) || event.target !== nav) return;
+
+    nav.dataset.navAnimating = "false";
+  });
+</script>
