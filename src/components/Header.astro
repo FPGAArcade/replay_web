@@ -1,8 +1,6 @@
 ---
 import headerLogo from "../assets/header-logo.png";
 import { GithubIcon } from "vue3-simple-icons";
-import MenuIcon from "vue-material-design-icons/Menu.vue";
-import MenuClose from "vue-material-design-icons/Close.vue";
 
 import { Image } from "astro:assets";
 ---
@@ -10,9 +8,10 @@ import { Image } from "astro:assets";
 <header>
   <Image src={headerLogo} alt="FPGA Arcade Logo" />
 
-  <button class="menu-btn" data-nav-toggle-btn>
-    <MenuIcon class="icon" data-hidden="false" />
-    <MenuClose class="icon" data-hidden="true" />
+  <button class="menu-btn" data-nav-open="false">
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
   <nav class="nav" data-nav data-nav-open="false" data-nav-animating="false">
     <ul class="nav__list">
@@ -23,8 +22,8 @@ import { Image } from "astro:assets";
       <li><a href="https://build.fpgaarcade.com/releases">Releases</a></li>
       <li>
         <a href="https://github.com/FPGAArcade/"
-          ><GithubIcon title="FPGAArcade GitHub" style="fill: white;" /></a
-        >
+          ><GithubIcon title="FPGAArcade GitHub" style="fill: white;" />
+        </a>
       </li>
     </ul>
   </nav>
@@ -98,25 +97,40 @@ import { Image } from "astro:assets";
   }
 
   .menu-btn {
-    display: block;
-    position: sticky;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    overflow: hidden;
+
+    cursor: pointer;
     z-index: 999;
-    border: 0;
+    border: none;
     background: none;
     color: white;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 23px;
   }
 
-  .menu-btn .icon {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: opacity 0.25s ease-in-out;
+  .menu-btn > span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transform-origin: center left;
+    transition: transform 0.3s ease, scale 0.3s ease;
   }
 
-  .menu-btn .icon[data-hidden="true"] {
-    opacity: 0;
+  .menu-btn[data-nav-open="true"] > span:first-child {
+    transform: rotateZ(45deg);
+  }
+
+  .menu-btn[data-nav-open="true"] > span:nth-child(2) {
+    transform: scaleX(0);
+  }
+
+  .menu-btn[data-nav-open="true"] > span:last-child {
+    transform: rotateZ(-45deg);
   }
 
   @media (min-width: 40em) {
@@ -141,19 +155,15 @@ import { Image } from "astro:assets";
 
 <script>
   const nav = document.querySelector("[data-nav]");
-  const menuBtn = document.querySelector("[data-nav-toggle-btn]");
-  const menuIcons = document.querySelectorAll(".menu-btn [data-hidden]");
+  const menuBtn = document.querySelector(".menu-btn");
 
   menuBtn?.addEventListener("click", () => {
-    if (!(nav instanceof HTMLElement)) return;
+    if (!(nav instanceof HTMLElement) || !(menuBtn instanceof HTMLElement))
+      return;
 
     nav.dataset.navOpen = nav.dataset.navOpen === "true" ? "false" : "true";
     nav.dataset.navAnimating = "true";
-
-    menuIcons.forEach((el) => {
-      if (!(el instanceof HTMLElement)) return;
-      el.dataset.hidden = el.dataset.hidden === "true" ? "false" : "true";
-    });
+    menuBtn.dataset.navOpen = nav.dataset.navOpen;
   });
 
   // Avoid close transform triggering when resizing desktop to mobile
