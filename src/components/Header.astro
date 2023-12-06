@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 ---
 
 <header>
-  <Image src={headerLogo} alt="FPGA Arcade Logo" />
+  <a href="/"><Image src={headerLogo} alt="FPGA Arcade Logo" /></a>
 
   <button class="menu-btn" data-nav-open="false">
     <span></span>
@@ -16,8 +16,7 @@ import { Image } from "astro:assets";
   <nav class="nav" data-nav data-nav-open="false" data-nav-animating="false">
     <ul class="nav__list">
       <li><a href="/">Hardware</a></li>
-      <li><a href="/demo">News</a></li>
-      <li>FAQ</li>
+      <li><a href="/news">News</a></li>
       <li><a href="https://docs.fpgaarcade.com/">Docs</a></li>
       <li><a href="https://build.fpgaarcade.com/releases">Releases</a></li>
       <li>
@@ -49,10 +48,13 @@ import { Image } from "astro:assets";
     color: var(--rpl-header-text-color);
   }
 
-  header > img {
+  header a,
+  header img {
+    height: 100%;
+  }
+  header img {
     object-fit: contain;
     object-position: left;
-    height: 100%;
   }
 
   .nav {
