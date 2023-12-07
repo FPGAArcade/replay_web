@@ -20,62 +20,82 @@ const { title } = Astro.props;
   </head>
   <body>
     <slot name="Header"><Header /></slot>
-    <slot />
+    <div class="content"><slot /></div>
     <slot name="Footer"><Footer /></slot>
+    <style is:global>
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+
+        --rpl-header-background-color: #161616;
+        --rpl-header-text-color: #a1a1a1;
+        --rpl-footer-background-color: var(--rpl-header-background-color);
+        --rpl-footer-text-color: var(--rpl-header-text-color);
+        --rpl-link-color: #e7501e;
+        --rpl-link-underline-color: var(--rpl-link-color);
+        --rpl-border-color: var(--rpl-link-color);
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+      }
+      body {
+        margin: 0;
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+      a {
+        display: inline-block;
+        position: relative;
+
+        color: var(--rpl-link-color);
+        text-decoration: none;
+      }
+      a:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--rpl-link-underline-color);
+
+        transform: scaleX(0);
+        transition: transform 0.3s ease-out;
+      }
+      a:hover::after {
+        transform: scaleX(1);
+      }
+
+      .content {
+        padding-inline: 0rem;
+      }
+
+      @media (min-width: 40em) {
+        .content {
+          padding-inline: 5rem;
+        }
+      }
+
+      /* Utility Classes */
+      .full-width {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-
-    --rpl-header-background-color: #161616;
-    --rpl-header-text-color: #a1a1a1;
-    --rpl-footer-background-color: var(--rpl-header-background-color);
-    --rpl-footer-text-color: var(--rpl-header-text-color);
-    --rpl-link-color: #e7501e;
-    --rpl-link-underline-color: var(--rpl-link-color);
-    --rpl-border-color: var(--rpl-link-color);
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  body {
-    margin: 0;
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: auto 1fr auto;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  }
-  a {
-    display: inline-block;
-    position: relative;
-
-    color: var(--rpl-link-color);
-    text-decoration: none;
-  }
-  a:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--rpl-link-underline-color);
-
-    transform: scaleX(0);
-    transition: transform 0.3s ease-out;
-  }
-  a:hover::after {
-    transform: scaleX(1);
-  }
-</style>
