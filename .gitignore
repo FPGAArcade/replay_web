@@ -19,3 +19,8 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Temp ignore test content
+src/content/authors
+src/content/posts
+src/assets/images
