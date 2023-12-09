@@ -7,7 +7,7 @@ Built using Astro.build and vuejs.
 ## News Posts
 
 News posts are .md files in the src/content/posts/ directory. Create the post
-using standard markdown.
+using [standard markdown](https://www.markdownguide.org/basic-syntax/).
 
 ### Images
 

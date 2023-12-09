@@ -15,6 +15,9 @@ One of the great things about using an FPGA for this is I can update the program
 
 Here you can see the 68K prefetch behaviour for a move instruction (click for a bigger picture). The yellow op-code is a move.l D0, $00010000 You can see it fetches the next instruction (4EF9 in green, a JMP) before it has written back the contents of D0 (in purple).
 
+<figure>
+
 ![68_prefetch](@assets/images/68_prefetch.gif)
 
+</figure>
 

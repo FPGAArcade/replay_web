@@ -7,13 +7,11 @@ authors:
   - mikej
 ---
 
-Our resident coding genius Erique has been hard at work finishing off driver support for the DB. Source and the ROM binary can be round here : https://github.com/FPGAArcade/amiga\_code
+Our resident coding genius Erique has been hard at work finishing off driver support for the DB. Source and the ROM binary in the [amiga code repository](https://github.com/FPGAArcade/amiga_code).
 
 Please also take a look at the FAQ here:
 
 https://www.fpgaarcade.com/kb/how-to-install-and-setup-the-060-daughterboard/
-
- 
 
 The Ethernet (unlike some other solutions) relies on a 16 bit parallel interface MAC which sits on the '060 local bus. There is scope for improving performance, but first I want to increase the CPU frequency as high as possible. Many rev6 060s will work at 113MHz.There is a jumper on board to increase the core voltage by ~5% if necessary via the dedicated DC/DC driving the CPU.
 
@@ -21,4 +19,14 @@ Another question I've been asked...  We have 128MB of directly connected SDRAM,
 
 The picture below shows Erique's homebrew SD card adapter. This allows him to connect a logic analyzer while connected to the SD card .... and the board being in it's case. Neat!
 
-![](@assets/images/IMG_20190925_222229-1024x768.jpg) ![](@assets/images/IMG_20191025_084521_3-768x1024.jpg)
+<figure>
+
+![](@assets/images/IMG_20190925_222229-1024x768.jpg) 
+
+</figure>
+
+<figure>
+
+![](@assets/images/IMG_20191025_084521_3-768x1024.jpg)
+
+</figure>

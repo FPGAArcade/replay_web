@@ -18,4 +18,8 @@ Dropbox for analysis : [https://www.dropbox.com/sh/kwz68yqmczdu1tz/AAADVbMhWohmc
 
  /MikeJ
 
+<figure>
+
  ![](@assets/images/22406235_10154836493611366_111471250334156113_n.jpg)
+
+</figure>
