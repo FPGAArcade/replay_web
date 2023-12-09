@@ -1,5 +1,6 @@
 ---
 import "@styles/global.css";
+import "@styles/utility.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
@@ -10,7 +11,7 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,7 +26,7 @@ const { title } = Astro.props;
     <slot name="Footer"><Footer /></slot>
     <style>
       .content {
-        padding-inline: 0rem;
+        padding-inline: 1rem;
       }
 
       @media (min-width: 40em) {

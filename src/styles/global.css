@@ -55,12 +55,38 @@ a:hover::after {
     transform: scaleX(1);
 }
 
-/* Utility Classes */
-.full-width {
-    width: 100vw;
+/* Responsive images by default */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* following three classes work around min-content breaking responsive images
+   within the figure */
+figure {
+    background: white;
+    border: 1px solid darkgrey;
+
+    padding: 0.5rem;
+    margin: 1rem;
+
+    text-align: center;
+    display: inline-block;
+}
+
+figure.center {
     position: relative;
     left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    transform: translateX(-50%)
+}
+
+figure p {
+    margin: 0;
+}
+
+figcaption {
+    display: block;
+    caption-side: bottom;
+    font-size: 0.75rem;
 }

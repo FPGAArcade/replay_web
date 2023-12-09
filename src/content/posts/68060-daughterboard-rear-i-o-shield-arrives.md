@@ -15,6 +15,9 @@ Contact me if you want one. It only fits on B2 boards (not 1.0B) without modific
 
 (Note in the picture below I've not got the board screwed together so the holes are not quite aligned)
 
- 
+<figure>
 
 ![](@assets/images/db_io-1024x491.jpg)
+
+<figcaption>Daughterboard IO shield</figcaption>
+</figure>
