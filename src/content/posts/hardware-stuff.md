@@ -13,8 +13,11 @@ The Amiga code is pretty stable. Work is being done to add RTG interlaced modes 
 
 I've been working with some new suppliers and assemblers, using my Namco 28 pin ASIC replacement as a test. They have just arrived back and look very nice :
 
+<figure>
+
 ![namco28c](@assets/images/namco28c-259x300.jpg)
 
+</figure>
  
 
 I need to test these, then I'll update (ok, write) this part of the website. These modules are used to replace a number of Namco devices in old arcade games.
@@ -27,4 +30,8 @@ I've managed thanks to Samtec to get a smaller amount, so I can get on and produ
 
 /Mike
 
+<figure>
+
 ![samtec](@assets/images/samtec-300x169.jpg)
+
+</figure>

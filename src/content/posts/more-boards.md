@@ -9,6 +9,8 @@ authors:
 
 Some of the new toys... Sorry for the lack of updates, still working on the new website. I'll start taking orders for these later this week.
 
- 
+<figure>
 
-[![replay_lots](@assets/images/replay_lots.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_lots.jpg)
+![replay_lots](@assets/images/replay_lots.jpg)
+
+</figure>

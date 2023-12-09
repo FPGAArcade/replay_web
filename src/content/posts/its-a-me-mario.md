@@ -8,7 +8,12 @@ authors:
 image: "@assets/images/NES-Console-Set-scaled.jpg"
 ---
 
-\[caption id="attachment\_67043" align="aligncenter" width="1024"\]![Nintendo entertainment system console with controller](@assets/images/NES-Console-Set-1024x556.jpg) Nintendo Entertainment System - [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos)\[/caption\]
+<figure>
+
+![Nintendo entertainment system console with controller](@assets/images/NES-Console-Set-1024x556.jpg)
+
+<figcaption>Nintendo Entertainment System - [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos)</figcaption>
+</figure>
 
 There has been quite a lot of work going on in the background with the FPGA Arcade project, not the least of which is a host of new core releases.
 
@@ -18,7 +23,8 @@ For FPGA capacity reasons, the Vidor4000 release of the NES has been split into 
 
 There's also been a number of new Arcade cores released including [Track&Field](https://www.fpgaarcade.com/kb/trackfield/) and its sequel [Hypersports](https://www.fpgaarcade.com/kb/hypersports/); [Tutankham](https://www.fpgaarcade.com/kb/tutankham/), [Time Pilot](https://www.fpgaarcade.com/kb/timepilot/), [Donkey Kong](https://www.fpgaarcade.com/kb/donkey-kong-2/) and more...
 
-\[gallery ids="66653,66025,66721,66764,66436,66479"\]
+<!-- TODO: Gallery component based on list of image names -->
+<!-- \[gallery ids="66653,66025,66721,66764,66436,66479"\] -->
 
 Further information can be found in the [FAQ](https://www.fpgaarcade.com/kbtopic/all/) section. All the latest stable core releases for supported platforms are available for download from the [releases site](https://build.fpgaarcade.com/releases/) and if you're the adventurous sort, continuous development builds via the [CI build server](https://build.fpgaarcade.com/).
 

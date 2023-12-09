@@ -14,7 +14,11 @@ I've been working with Jim Drew, who pointed me at some source code released by 
 
 This was a fairly simple sub-section of the game which showed how the parallax scroll worked. It also nicely exhibited the problem with my core. When you are debugging complex hardware, usually we use a simulator to see what's going on. It takes several minutes to simulate one frame of video (on bigger projects it can take hours) so it really helps to get as simple a test case as possible. The testbench I use can load in SREC files from the cross assembler directly into the DRAM in the sim, so I can run exactly the same software as on the hardware.
 
-[![sim](@assets/images/sim-300x174.gif)](http://www.fpgaarcade.com/wp4/wp-content/uploads/2015/09/sim.gif)
+<figure>
+
+![sim](@assets/images/sim.gif)
+
+</figure>
 
 To make sure the OS doesn't get in the way, I upload a simple bootstrap binary to 0xF80000 (where the Kick ROM would live) which jumps to 0x20000 in chip men - where I have also uploaded my test program and any resource files needed. The files are in the forum [here](http://www.fpgaarcade.com/punbb/viewtopic.php?id=232&p=34)
 

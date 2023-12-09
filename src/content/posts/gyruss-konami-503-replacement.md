@@ -12,9 +12,9 @@ Took a quick break from the new Replay build system today and tested a batch of 
 They appear to work well, so I can ship the board back to it's owner and get some desk space back!
 
 You can see the new 40 pin module working on the board below. I've got some left in stock, contact me if you need any - as well as a wide selection of 28 pin replacements.
-
-/Mike
-
  
+<figure>
 
 ![](@assets/images/gyruss.jpg)
+
+</figure>

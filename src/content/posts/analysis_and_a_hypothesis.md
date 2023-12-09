@@ -16,7 +16,12 @@ What could cause that the [VLM5030 partially behaves non-deterministic](https://
 
 The issue is 100% reproducible in a controlled environment and the time slots of the variations are fixed. Ideal boundary conditions to take this back to simulation for further investigation.
 
-\[caption id="attachment\_67278" align="aligncenter" width="1024"\][![](@assets/images/vlm5030_sim_destroy_gl_100ms-1024x444.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/09/vlm5030_sim_destroy_gl_100ms.png) Loading the registerfile slots with new frame data at 0x1FF8, write strobe by rflatchwen\[/caption\]
+<figure>
+
+![](@assets/images/vlm5030_sim_destroy_gl_100ms.png)
+
+<figcaption>Loading the registerfile slots with new frame data at 0x1FF8, write strobe by rflatchwen</figcaption>
+</figure>
 
 Simulation output above shows that the VLM reads the next frame from address 0x1FF8 at 104.5 ms. This frame loads 0x00 into registerfile slot 11 (`rf11[9:3]`) that stores the frame's pitch information. Pitch value 0x00 configures noise generation which makes use of the random generator (ref. [vlm5030.cpp](https://github.com/mamedev/mame/blob/7c721ed780a0be351b958543e2cece981c7827e3/src/devices/sound/vlm5030.cpp#L75) L.58). Time to take a closer look at this circuit.
 
@@ -24,7 +29,12 @@ Simulation output above shows that the VLM reads the next frame from address 0x1
 
 Revisiting [Randomness on a microscopic level](https://www.fpgaarcade.com/randomness-on-a-microscopic-level/), look at note at the bottom of the schematic that says "NOTE: Active RST shifts 0 into the LFSR." Contemplate on the term "shifts", it means that the LFSR is reset synchronously when RST is active. Coincidentally, the entire clocking system is halted during RST:
 
-\[caption id="attachment\_67279" align="aligncenter" width="1024"\][![](@assets/images/vlm5030_sim_rst-1024x239.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/09/vlm5030_sim_rst.png) Derived VLM5030 clocks during RST sequence\[/caption\]
+<figure>
+
+![](@assets/images/vlm5030_sim_rst.png)
+
+<figcaption>Derived VLM5030 clocks during RST sequence</figcaption>
+</figure>
 
 So no matter for how long RST is kept active, there won't be a clock to clear the LFSR.
 
@@ -36,7 +46,12 @@ What if the LFSR gets cleared at the beginning of a speech sample? This appears 
 
 The chip can't be changed of course, but we can run this experiment with the gate-level design.
 
-\[caption id="attachment\_67283" align="aligncenter" width="1024"\][![](@assets/images/vlm5030_lfsr_async_rst-1024x329.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/09/vlm5030_lfsr_async_rst.png) Left: LFSR with synchronous clear. Right: Modification for asynchronous clear\[/caption\]
+<figure>
+
+![](@assets/images/vlm5030_lfsr_async_rst.png)
+
+<figcaption>Left: LFSR with synchronous clear. Right: Modification for asynchronous clear</figcaption>
+</figure>
 
 Running the asynchronous version in the test rig multiple times results in exactly the same waveform for each run.
 

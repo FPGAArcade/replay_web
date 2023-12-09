@@ -17,23 +17,27 @@ We have abstracted the FPGA framework and created a build system so that the sam
 
 Here we have the Videopac core with KC Munchkin on V4
 
+<figure>
+
 ![](@assets/images/V4-Videopac-1024x748.jpg)
 
- 
+</figure> 
 
 And here Colecovision Frogger on the V4, with Frogger on Replay1's Videopac core in the small picture.
 
- 
+<figure>
 
 ![](@assets/images/V4-Colecovision-R1-Videopac-1024x811.jpg)
 
- 
+</figure>
 
 Ignore the configured time here, we had a bug....
 
+<figure>
+
 ![](@assets/images/IMG_20190515_122439-768x1024.jpg)
 
- 
+</figure> 
 
 We've started to put some binary releases here on github here, https://github.com/fpgaarcade
 

@@ -13,6 +13,8 @@ Oh, and Happy new year to all !
 
 I have now got most of the kit over here in Sweden (including a computer) so hopefully I can finally complete everything I have started - before Arnim does everything :)
 
- 
+<figure>
 
-[![ColecoVision_Boxed](@assets/images/ColecoVision_Boxed.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/ColecoVision_Boxed.jpg)
+![ColecoVision_Boxed](@assets/images/ColecoVision_Boxed.jpg)
+
+</figure>

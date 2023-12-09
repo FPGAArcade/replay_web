@@ -15,6 +15,8 @@ Below is one DVI channel, and I'm extremely happy with the quality of the eye pa
 
 Next is to make some measurements of the DRAM signal quality.
 
- 
+<figure>
 
-[![dvitrace](@assets/images/dvitrace.gif)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/dvitrace.gif)
+![dvitrace](@assets/images/dvitrace.gif)
+
+</figure>

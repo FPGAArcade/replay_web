@@ -11,8 +11,14 @@ Here is a picture of the board in a mini-itx box. It's the smallest case I could
 
 The hardware is fully tested now and I'm starting to send out more boards to beta testers. I'm having a lot of fun playing around with the Amiga core. You can see below it running up 1.3 workbench. I'm producing a video of it running some demos and behaving as a A1200 with AGA chipset and 68020 processor.
 
- 
+<figure>
 
-[![itx](@assets/images/itx.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/itx.jpg)
+![itx](@assets/images/itx.jpg)
 
-[![replay_wb](@assets/images/replay_wb.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_wb.jpg)
+</figure>
+
+<figure>
+
+![replay_wb](@assets/images/replay_wb.jpg)
+
+</figure>

@@ -11,4 +11,8 @@ The RevB Replay PCB is waiting in China for some parts. For some reason a number
 
 I have quite a lot of most parts already though...
 
-[![replay_parts](@assets/images/replay_parts.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_parts.jpg)
+<figure>
+
+![replay_parts](@assets/images/replay_parts.jpg)
+
+</figure>

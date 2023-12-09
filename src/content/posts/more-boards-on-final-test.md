@@ -13,8 +13,9 @@ Workbench is full, this is the overflow storage!
 
 (These are all going to the distributors. If you were on the original list please email me. I also have boards at reduced cost for developers still)
 
- 
+<figure>
 
-[![boards](@assets/images/boards-300x169.jpg)](http://www.fpgaarcade.com/wp4/wp-content/uploads/2015/11/boards.jpg)
+![boards](@assets/images/boards.jpg)
 
+</figure>
 /MikeJ

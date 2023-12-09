@@ -16,7 +16,12 @@ The [previous post](https://www.fpgaarcade.com/logic-gates-extraction/) introduc
 
 The image below shows a portion of the sequencer ROM:
 
-\[caption id="attachment\_67184" align="aligncenter" width="1024"\][![Tracing of sequencer ROM bitline 0 and equivelant circuit](@assets/images/rom_example-1024x414.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/08/rom_example.png) Bitline 0 in the sequencer ROM\[/caption\]
+<figure>
+
+![Tracing of sequencer ROM bitline 0 and equivelant circuit](@assets/images/rom_example.png)
+
+<figcaption>Bitline 0 in the sequencer ROM</figcaption>
+</figure>
 
 - The blue metal bar is GND
 - The horizontal red metal bar is bitline 0 (out of 37)
@@ -49,13 +54,24 @@ Extracting the ROM that stores the K-factors is a bit more complex since it's pa
 
 Shown below is bitline 0 exhibiting the same composition of word line transistors as before. There are two differences this time, though: The bitline is gated by 2 enable transistors (ena2 & ena0) and there's no pull-up transistor for termination.
 
-\[caption id="attachment\_67198" align="aligncenter" width="1024"\][![Bitline 0 in KROM slice 2](@assets/images/krom-1024x216.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/08/krom.png) Bitline 0 in KROM table 2\[/caption\]
+<figure>
+
+![Bitline 0 in KROM slice 2](@assets/images/krom.png)
+
+<figcaption>Bitline 0 in KROM table 2</figcaption>
+</figure>
 
 Remember [the statement about logic gates without termination](https://www.fpgaarcade.com/logic-gates-extraction/)? The job's not done until we hit a pull-up - it ain't over 'till the fat lady sings.
 
 Tracing back further, we end up at a fat pull-up transistor that finally terminates all the bitlines 0 from each of the tables:
 
-[![KROM bit 0 as distributed complex NOR](@assets/images/krom_termination-1024x306.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/08/krom_termination.png)The corresponding logic function follows the hierarchical structure of the K-factor ROM:
+<figure>
+
+![KROM bit 0 as distributed complex NOR](@assets/images/krom_termination.png)
+
+</figure>
+
+The corresponding logic function follows the hierarchical structure of the K-factor ROM:
 
 - 10 NOR gates \[9:0\], generating the 10 bit output data vector (NOR\[0\] in the image above)
     - Each NOR with up to 6 inputs, collecting the corresponding bitlines of the 6 tables (bitlines 0 of tables 2 and 3 in the image above)
@@ -64,6 +80,10 @@ Tracing back further, we end up at a fat pull-up transistor that finally termina
 
  
 
-[![Fat lady by カロリーネ](@assets/images/fat-lady-300x80.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/08/fat-lady.png)
+<figure>
+
+![Fat lady by カロリーネ](@assets/images/fat-lady-300x80.png)
+
+</figure>
 
 Job done.

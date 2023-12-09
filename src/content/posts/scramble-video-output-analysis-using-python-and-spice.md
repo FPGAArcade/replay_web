@@ -10,10 +10,11 @@ authors:
 I wrote the first FPGA Scramble/Frogger core way back in 2007 (when we were all a lot younger)....
 
  
+<figure>
 
 ![](@assets/images/scramble_website-1-300x278.jpg)
 
- 
+</figure> 
 
 It's been ported to all sorts of other hardware with little changes, but when we were moving it to our new build system I took the opportunity to look at the video output stage again. Looking at the schematics pics below, Scramble has a simple resistor DAC (top left) for the character video, additional outputs for stars (top right), a blue background for Frogger (bottom left) and logic for Missiles and Shells (bottom right).
 
@@ -21,7 +22,13 @@ The designers cleverly used the CS (chip select) pin of the output look up table
 
 I learnt a trick from Chris Brenner who wrote a script which ran through every combination of the Pacman audio DAC in SPICE, evaluated the output voltage and built a look up table for the FPGA. SPICE is an open source circuit simulator which has been around since the dawn of time. [https://en.wikipedia.org/wiki/SPICE](https://en.wikipedia.org/wiki/SPICE)
 
-![](@assets/images/scramble_output.gif) I wrote a simple script in Python using PySpice, which builds the above circuit in every combination, modelling board output resistor and monitor termination.  https://pyspice.fabrice-salvaire.fr/
+<figure>
+
+![](@assets/images/scramble_output.gif)
+
+</figure>
+
+I wrote a simple script in Python using PySpice, which builds the above circuit in every combination, modelling board output resistor and monitor termination.  https://pyspice.fabrice-salvaire.fr/
 
 If I picked datasheet typical values of 0.35 VoL (low output voltage) and 3.3 VoH (high output) we got the interesting result that the "off" black is slightly lower than the driven zero black. My guess is with the original CRT the black level was adjusted so all off was super-black and you couldn't see the difference. It looked a bit odd on a modern display where the black level is fixed. I slightly simplified the drive and built a LUT (look up table) that accurately recreates the colours of the original game.
 

@@ -8,7 +8,11 @@ authors:
 image: "@assets/images/20190217_190845.jpg"
 ---
 
+<figure>
+
 ![](@assets/images/20190217_190845-1024x576.jpg)
+
+</figure>
 
 The final complete R1 & 68060 DB to ship
 
@@ -26,7 +30,11 @@ WARN: !!Match fail Addr: 0
 3.009: \[messaging.c:270\] DumpBuffer: address = 0012d2c4 ; size = 128 (0x80) bytes  
 3.011: \[messaging.c:316\] 0x00000000: 0000FFFF FFFF0000 FFFF0000 0000FFFF
 
+<figure>
+
 ![](@assets/images/20190217_153746-1024x576.jpg)
+
+</figure>
 
 I had already replaced the DRAM chip and it hadn't fixed the problem. An old tip is to press down hard on the BGA - and suddenly it was all good. With little to lose (apart from maybe setting fire to my office) I gave it a good roasting with the hot air gun. 300C for a few minutes seems to have done the trick.
 

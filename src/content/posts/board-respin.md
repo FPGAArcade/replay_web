@@ -15,8 +15,18 @@ Having the daughter board made this difficult. I found while I was in China some
 
 It would look something like this :
 
-[![replayb_demo](@assets/images/replayb_demo.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replayb_demo.jpg)
+<figure>
+
+![replayb_demo](@assets/images/replayb_demo.jpg)
+
+</figure>
 
 I didn't get the PCB changes done in time, so I had to bring home a whole load of components ...
 
-[![replayb_comps](@assets/images/replayb_comps.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replayb_comps.jpg) I am working on the layout changes now and hope to finish and get the boards made next week.
+<figure>
+
+![replayb_comps](@assets/images/replayb_comps.jpg)
+
+</figure>
+
+I am working on the layout changes now and hope to finish and get the boards made next week.

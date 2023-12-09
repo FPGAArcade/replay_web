@@ -9,4 +9,8 @@ authors:
 
 Here is a picture of the Replay board mid assembly. The BGA has been mounted as well as all the small capacitors and most of the ICs. I have all the parts now, so I hope to have the board fully built for the weekend.
 
-[![replay_assem1](@assets/images/replay_assem1.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_assem1.jpg)
+<figure>
+
+![replay_assem1](@assets/images/replay_assem1.jpg)
+
+</figure>

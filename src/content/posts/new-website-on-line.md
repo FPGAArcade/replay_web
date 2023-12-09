@@ -15,6 +15,8 @@ Unfortunately, I spent so much time in the Forum posting updates, I forgot to up
 
 Meanwhile, testing continues :
 
- 
+<figure>
 
-[![20131025_001331](@assets/images/20131025_001331.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/20131025_001331.jpg)
+![20131025_001331](@assets/images/20131025_001331.jpg)
+
+</figure>

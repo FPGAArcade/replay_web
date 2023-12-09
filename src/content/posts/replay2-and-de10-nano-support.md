@@ -12,7 +12,17 @@ Sorry it's been a bit quiet here for the last few months. I had to move flat thr
 
 The initial plan was to launch our new board (Replay2) at the Revision demo party, but it was not to be. The Xilinx Ultrascale parts used on it arrived a few months ago, but the design and PCB layout is complex to say the least. Replay2 is an Mini-ITX form factor (170mmX170mm), so it can fit in standard cases. We have build options of 1 to 4GB of DDR4 memory on the processor system, and twin 8bit DDR3 128MByte memories on the FPGA. Digital video out, as well as 30bit analog RGB is provided, as well as a display port connection for developers. We also provide USB3.1, a PS/2 connector (supports Amiga keyboard protocol) and Gigabit Ethernet. There are also some exciting mass storage options. The device also has a GPU on board we intend to fully utilize both from the GUI and from the Amiga core.
 
-![](@assets/images/20200608_143832-225x300.jpg)![](@assets/images/20200615_150601-225x300.jpg)
+<figure>
+
+![](@assets/images/20200608_143832-225x300.jpg)
+
+</figure>
+
+<figure>
+
+![](@assets/images/20200615_150601-225x300.jpg)
+
+</figure>
 
 The Replay framework is being updated to support the board. Currently the same core can (in most cases) be built for Replay1 using Xilinx ISE, Arduino Vidor 4000 using Intel Quartus and now Replay2 using Xilinx Vivado. Our build system and Jenkins CI handles all this and rebuilds all cores that need it when a git commit occurs.
 
@@ -24,4 +34,8 @@ My aim since the first design releases (nearly 20 years ago) was to bring FPGA r
 
 /MikeJ
 
+<figure>
+
 ![](@assets/images/pacman.gif)
+
+</figure>

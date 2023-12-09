@@ -11,6 +11,8 @@ The RevB Replay PCB respin is taking shape. The main reason for doing this is to
 
 All in all I'm pretty happy with it, it's a good improvement. The PCB is due to be made on Feb18, which is not far away now and I haven't quite finished the routing ....
 
- 
+<figure>
 
-[![fpgaarcade_revb_layout](@assets/images/fpgaarcade_revb_layout.gif)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/fpgaarcade_revb_layout.gif)
+![fpgaarcade_revb_layout](@assets/images/fpgaarcade_revb_layout.gif)
+
+</figure>

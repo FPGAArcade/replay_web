@@ -11,7 +11,23 @@ I've been shipping Namco CUS34 replacements for a while and the majority of the 
 
 The test framework is written in Python, and then wavedrom (https://wavedrom.com/) is used to draw the waveforms.
 
-[![](@assets/images/20230206_121314-225x300.jpg)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2023/02/20230206_121314-scaled.jpg)[![](@assets/images/capture_main_read-300x250.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2023/02/capture_main_read.png)![](@assets/images/logic_main_read-300x176.png)
+<figure>
+
+![](@assets/images/20230206_121314.jpg)
+
+</figure>
+
+<figure>
+
+![](@assets/images/capture_main_read.png)
+
+</figure>
+
+<figure>
+
+![](@assets/images/logic_main_read.png)
+
+</figure>
 
 Sometimes you need a bit more timing information, so a logic analyser is also hooked up. This lets me see which edges are used.
 
@@ -19,7 +35,23 @@ A month or so ago I thought all was good - and then somebody tries it in a ToyPo
 
 Unlike the other boards which use this chip - Dragon Buster for example - pin 13 is tied low rather than high.  This seems to put the chip in an entirely different mode. As far as I know, no schematics exist for these boards, so a brute force reverse engineering effort is underway.
 
-[![](@assets/images/toypop-225x300.jpeg)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2023/05/toypop-scaled.jpeg)[![](@assets/images/cus34_logic-225x300.jpeg)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2023/05/cus34_logic-scaled.jpeg)[![](@assets/images/agilent_cus34-225x300.jpeg)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2023/05/agilent_cus34-scaled.jpeg)
+<figure>
+
+![](@assets/images/toypop.jpeg)
+
+</figure>
+
+<figure>
+
+![](@assets/images/cus34_logic.jpeg)
+
+</figure>
+
+<figure>
+
+![](@assets/images/agilent_cus34.jpeg)
+
+</figure>
 
 I dug out my old adapter board from 10 years ago. This let's me isolate each pin and with the logic analyzer - here the big Agilent 1680 - I can work out which pin is an input, which is an output etc.
 

@@ -13,4 +13,8 @@ Four main boards are now in existence and have gone/going to developers. I've be
 
 I've been away for the weekend so not much other progress to report, but hopefully I can now focus on bringing up the main card :)
 
-[![replay_patch](@assets/images/replay_patch.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_patch.jpg)
+<figure>
+
+![replay_patch](@assets/images/replay_patch.jpg)
+
+</figure>

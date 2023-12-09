@@ -9,4 +9,8 @@ authors:
 
 Oh, I nearly forgot - here is an overview of the base board and it's connectors.
 
-[![replay_overview](@assets/images/replay_overview1.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_overview1.jpg)
+<figure>
+
+![replay_overview](@assets/images/replay_overview1.jpg)
+
+</figure>

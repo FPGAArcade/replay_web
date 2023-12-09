@@ -19,4 +19,8 @@ Exciting times!
 
 /Mike
 
+<figure>
+
 ![](@assets/images/generations-1024x768.jpg)
+
+</figure>

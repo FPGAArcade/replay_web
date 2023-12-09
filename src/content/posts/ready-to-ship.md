@@ -15,14 +15,24 @@ Very large FPGA with high IO pin count for expansion 64 MByte of DDR memory Six 
 
 Things were delayed slightly due to a quality issue on one of the power regulators. These are being replaced and the boards tested.
 
-[![replay_box](@assets/images/replay_box.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_box.jpg)
+<figure>
 
- 
+![replay_box](@assets/images/replay_box.jpg)
+
+</figure> 
 
 This is the custom test jig used to speed up production test. A special FPGA design is used to wiggle all IO pins though loops on the jig and make sure they work as expected. The test suite runs margin tests on the DRAM and all other IOs are hooked up to verify they are working correctly.
 
-[![replay_test](@assets/images/replay_test.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_test.jpg)
+<figure>
+
+![replay_test](@assets/images/replay_test.jpg)
+
+</figure>
 
 This is the optional dual host USB interface. Each interface supports a hub, so you can connect mouse and keyboard to the external port. The internal port is designed for cases with built in USB keyboard, but this can be cabled out to a connector if needed.
 
-[![replay_usb2](@assets/images/replay_usb2.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_usb2.jpg)
+<figure>
+
+![replay_usb2](@assets/images/replay_usb2.jpg)
+
+</figure>

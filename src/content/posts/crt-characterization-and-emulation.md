@@ -11,7 +11,11 @@ I think many people agree that retro hardware looks best on CRTs from the same p
 
 I've got a small Sony PVM I use for testing, and a large Sony broadcast monitor that is most often used as a coffee table to be honest. Modern screens have a different gamut (colour space) but the gamut is generally larger than the Rec601 EBU spec for the CRT.
 
+<figure>
+
 ![](@assets/images/20200619_211849-scaled.jpg)
+
+</figure>
 
 I'm lucky enough to have access to some software from [Light Illusion](https://www.lightillusion.com) and a high-end probe on loan. I'm using Replay1 as a patch generator controlled by the calibration software over a serial link. This wasn't my initial plan, but it's almost impossible to get PAL analog video out a modern PC. Replay1 has a reasonable quality analog output stage, filter and line driver - but it's good to get any artefacts here included in the calibration.
 

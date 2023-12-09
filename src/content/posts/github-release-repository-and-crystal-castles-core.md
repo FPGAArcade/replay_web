@@ -17,4 +17,8 @@ https://github.com/FPGAArcade/replay\_release
 
 Including Crystal Castles by the fabulous Chris B.
 
+<figure>
+
 ![](@assets/images/crystal_castles-1024x768.jpg)
+
+</figure>

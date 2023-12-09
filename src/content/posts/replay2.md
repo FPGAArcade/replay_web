@@ -22,8 +22,8 @@ It's currently being prototyped and the design is in PCB layout. I hope we will 
 
 /MikeJ
 
- 
-
- 
+<figure>
 
 ![](@assets/images/replay2.jpeg)
+
+</figure>

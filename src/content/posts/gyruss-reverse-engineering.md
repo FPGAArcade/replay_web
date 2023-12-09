@@ -8,7 +8,11 @@ authors:
 image: "@assets/images/gyruss-1.png"
 ---
 
+<figure>
+
 ![](@assets/images/gyruss-1.png)
+
+</figure>
 
 Here at FPGAArcade we've always tried to reproduce retro hardware for preservation as accurately as possible. When I did the first Pacman design years ago it was quite easy as there were only a few custom ICs. I built some analysis hardware you can find way back in the news here to compare the ASIC with my CPLD clone on the board in real time.
 
@@ -18,10 +22,18 @@ I was lucky enough to be able to borrow a Gyruss game a few months ago and test 
 
 In the picture below, I'm using a Replay1 board with it's debug daughterboard. This proves 5V isolation. Inside the FPGA I'm running the replacement design and a logic analyser core which compares all the IO in real time against the target board. Once the design is well understood, I can replace the custom ASIC with my CPLD board running the same code and see if it still works. Then we can produce an FPGA version of the complete game.
 
+<figure>
+
 ![](@assets/images/Gyruss_debug.png)
+
+</figure>
 
 Modern and retro hardware in perfect union
 
+<figure>
+
 ![](@assets/images/cpld40.gif)
+
+</figure>
 
 The 40 pin CPLD module which can be used to repair old boards (Konami 503)

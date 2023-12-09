@@ -15,7 +15,11 @@ I've got it all running now, and the advantage of this direct compare is that th
 
 Now I understand what the chip does, I can put it back on the Zynq tester shown in the previous post and apply some unusual signals just to make sure it works correctly.
 
-[![](@assets/images/20230704_230252-225x300.jpg)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2023/07/20230704_230252-scaled.jpg)
+<figure>
+
+![](@assets/images/20230704_230252-scaled.jpg)
+
+</figure>
 
 I've seen posts from a Japanese chap who has reverse engineered the die. Great job, but no source code as far as I can see yet.The code for this, along with all the other reverse engineer chips will be in the public R2 git repository, and used in our latest FPGA cores.
 

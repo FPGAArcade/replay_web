@@ -9,4 +9,8 @@ authors:
 
 Just appeared on a new building here, I thought this was rather cool ;)
 
-[![20150618_144907](@assets/images/20150618_144907.jpg)](http://www.fpgaarcade.com/wp4/wp-content/uploads/2015/06/20150618_144907.jpg)
+<figure>
+
+![20150618_144907](@assets/images/20150618_144907.jpg)
+
+</figure>

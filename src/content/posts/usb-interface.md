@@ -13,4 +13,8 @@ Simply, work went crazy and I moved flat in the summer last year - all of which 
 
 More news to follow ....
 
-[![usb](@assets/images/usb.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/usb.jpg)
+<figure>
+
+![usb](@assets/images/usb.jpg)
+
+</figure>

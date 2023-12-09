@@ -38,7 +38,12 @@ To understand which kind of logic gate is built by a particular group of transis
 2. Follow the path(s) along the enhancement-mode transistors
 3. Stop at the pull-up transistor
 
-\[caption id="attachment\_67204" align="aligncenter" width="1024"\][![Basic logic gates NOT, NAND, NOR, XOR. Layout and schematic](@assets/images/gate_examples-1024x330.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/08/gate_examples.png) Tracing procedure applied to basic logic gates\[/caption\]
+<figure>
+
+![Basic logic gates NOT, NAND, NOR, XOR. Layout and schematic](@assets/images/gate_examples.png)
+
+<figcaption>Tracing procedure applied to basic logic gates</figcaption>
+</figure>
 
 The pull-up transistor acts as termination, so there must always exist one in a gate; not zero, not two, exactly one. It corresponds to the gate's dot.
 

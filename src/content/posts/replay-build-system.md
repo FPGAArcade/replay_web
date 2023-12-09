@@ -15,7 +15,11 @@ If we look at Loader, a simple reference design which uses the Replay framework.
 
 These are all the source files in the core/rtl directory:
 
+<figure>
+
 ![](@assets/images/loader_files.gif)
+
+</figure>
 
 \_src.txt contains  :
 
@@ -39,7 +43,11 @@ rmake qrt --target=V4 does the same for Intel Quartus for the Vidor 4000
 
 and we can also rmake viv for Xilinx Vivado, targeting the Zynq Ultrascale currently.
 
+<figure>
+
 ![](@assets/images/ladybug_build-1024x654.gif)
+
+</figure>
 
 Cool eh?
 
@@ -47,4 +55,8 @@ Cool eh?
 
 Having the same build system for simulation makes it really easy to test the cores. The build system has /tb directories for each target which include a model of the board including DDR (Replay1) or SDR (Vidor) memory and can capture and store the video output to a file. Here is the result of simulating one frame of the Loader core :
 
+<figure>
+
 ![](@assets/images/vga.gif)
+
+</figure>

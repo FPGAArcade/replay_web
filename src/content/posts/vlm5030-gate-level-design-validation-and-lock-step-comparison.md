@@ -21,21 +21,41 @@ Each method has its pros and cons. Simulation enables maximum controllability an
 
 To bridge both worlds, I created a test rig consisting of a small Cyclone II board that contains the gate-level replacement plus the ROM and also controls an external VLM5030 chip. It enables full control over the selection of speech samples without the need to trigger specific in-game situations.
 
-\[caption id="attachment\_67244" align="aligncenter" width="668"\]![](@assets/images/test_rig_block_diagram.png) Block diagram of the VLM5030 test rig\[/caption\]
+<figure>
+
+![](@assets/images/test_rig_block_diagram.png) 
+
+<figcaption>Block diagram of the VLM5030 test rig</figcaption>
+</figure>
 
 Operation of the chip and the replacement is observed by a logic analyzer that's hooked to the address bus. This makes use of VLM5030's feature to output audio as 10 bit signed integer PCM samples on the address bus. Tracing both the chip's and the replacement's audio stream from a common trigger enables direct comparison of their PCM output with sample rate granularity.
 
 The results are quite impressing - the screenshot below shows a range of Salamander's "Destroy them all!" speech sample. Topmost channel is the gate-level design, followed by the chip and a re-run of the chip as the bottom channel. They're perfectly in sync and sample values appear to match as well!
 
-\[caption id="attachment\_67274" align="aligncenter" width="1024"\][![](@assets/images/destroy_gl_chip_chip2nd_020ms-1024x245.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/09/destroy_gl_chip_chip2nd_020ms.png) Detail of Salamander's "Destroy them all!" at 20 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run\[/caption\]
+<figure>
+
+![](@assets/images/destroy_gl_chip_chip2nd_020ms.png)
+
+<figcaption>Detail of Salamander's "Destroy them all!" at 20 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption
+</figure>
 
 However, there are locations where all three waveforms begin to diverge (around the 0.108 s mark). It's not necessarily just a difference between the gate-level design and the chip, but also the chip produces a different waveform during its 2nd run:
 
-\[caption id="attachment\_67246" align="aligncenter" width="1024"\][![](@assets/images/destroy_gl_chip_chip2nd_100ms-1024x252.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/09/destroy_gl_chip_chip2nd_100ms.png) Detail of Salamander's "Destroy them all!" at 100 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run\[/caption\]
+<figure>
+
+![](@assets/images/destroy_gl_chip_chip2nd_100ms.png)
+
+<figcaption>Detail of Salamander's "Destroy them all!" at 100 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption>
+</figure>
 
 All three converge later at the 0.270 s mark and continue in lock-step:
 
-\[caption id="attachment\_67247" align="aligncenter" width="1024"\][![](@assets/images/destroy_gl_chip_chip2nd_255ms-1024x255.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/09/destroy_gl_chip_chip2nd_255ms.png) Detail of Salamander's "Destroy them all!" at 255 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run\[/caption\]
+<figure>
+
+![](@assets/images/destroy_gl_chip_chip2nd_255ms.png)
+
+<figcaption>Detail of Salamander's "Destroy them all!" at 255 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption>
+</figure>
 
 ## Conclusion
 

@@ -25,7 +25,11 @@ The thinking being if people are prepared to pay for a Vampire 4 when MiSTer is 
 
 The nice thing with the new build system is I can easily take a library module and run it through the tool to get an idea of timing. Here I ran my M68K core (TG68K derivative) thorough Xilinx Vivado.
 
+<figure>
+
 ![](@assets/images/m68k_viv.gif)
+
+</figure>
 
 The CPU core runs with a single cycle cache at 28MHz in my Amiga design on Replay1. On the ultrascale it comes out at around 70MHz without any optimization so I think we can compete with the Apollo core used on the Vampire.
 

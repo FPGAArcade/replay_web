@@ -15,10 +15,8 @@ I hope to get some more details posted soon. I've started to order parts for the
 
 The production boards will most likely be massed produced by a well known hobby hardware manufacturer, but it's handy to get a few boards quickly done for initial debug (and smoke test).
 
-MikeJ
-
- 
-
- 
+<figure>
 
 ![](@assets/images/20191121_104938-1024x768.jpg)
+
+</figure>

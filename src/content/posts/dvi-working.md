@@ -11,6 +11,8 @@ A brief update to say the video output is working well. I've tested DVI -> HDMI 
 
 I will implement some other standards, 480i/60Hz (NTSC) and the progressive versions. I think the default menu screen will be 480i/60Hz or 720P/60Hz to give most compatibility.
 
- 
+<figure>
 
-[![replay_july_dvi](@assets/images/replay_july_dvi.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_july_dvi.jpg)
+![replay_july_dvi](@assets/images/replay_july_dvi.jpg)
+
+</figure>

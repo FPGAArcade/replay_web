@@ -13,4 +13,8 @@ Waiting for the components has given me time to refine the layout a bit and I'm 
 
 Some of the internal layers :
 
-[![replay_b01_layout](@assets/images/replay_b01_layout.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_b01_layout.jpg)
+<figure>
+
+![replay_b01_layout](@assets/images/replay_b01_layout.jpg)
+
+</figure>

@@ -15,4 +15,8 @@ A number of developer boards have gone out this week. The boards below have all 
 
 /MikeJ
 
-[![20150615_222906](@assets/images/20150615_222906-e1434666422206.jpg)](http://www.fpgaarcade.com/wp4/wp-content/uploads/2015/06/20150615_222906-e1434666422206.jpg)
+<figure>
+
+![20150615_222906](@assets/images/20150615_222906-e1434666422206.jpg)
+
+</figure>

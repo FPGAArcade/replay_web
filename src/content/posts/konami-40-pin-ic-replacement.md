@@ -15,6 +15,8 @@ Assuming these new parts function as expected the completed modules should work 
 
 I appear to have got a bit carried away when ordering these boards, so if you want any let me know!
 
- 
+<figure>
 
 ![](@assets/images/20190220_204928.jpg)
+
+<!-- <figure> -->

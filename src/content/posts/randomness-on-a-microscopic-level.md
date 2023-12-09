@@ -10,7 +10,11 @@ authors:
 image: "@assets/images/vlm5030_detail.png"
 ---
 
+<figure>
+
 ![](@assets/images/vlm5030_detail.png)
+
+</figure>
 
 Quite a couple of Konami cores use the [VLM5030](http://www.vgmpf.com/Wiki/index.php?title=VLM5030) chip to generate human-like speech for in-game effects. While the replacement design created for the replay library does its job, it still falls behind the audio of an original chip. This is mainly due to the fact that the design was built based on [MAME's C model](https://github.com/mamedev/mame/blob/master/src/devices/sound/vlm5030.cpp) without detailed information of the chip's (micro) architecture.
 
@@ -22,7 +26,11 @@ Finding the random source was a bit like searching for the needle in a haystack 
 
 Long story short - probably the 4th or 5th LFSR turned out to be the one that generates randomness. It's built from the cells inside the shaded area:
 
-[![](@assets/images/vlm5030_lfsr-1024x445.png)](https://www.fpgaarcade.com/wp4/wp-content/uploads/2021/08/vlm5030_lfsr.png)
+<figure>
+
+![](@assets/images/vlm5030_lfsr.png)
+
+</figure>
 
 The 10 regular patterns on the left side are positive-edge-triggered D flip-flops forming the shift register chain. The 4 logic cells on the bottom right generate clock, reset and the feedback function.
 

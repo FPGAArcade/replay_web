@@ -11,4 +11,8 @@ I've just been finishing off the layout of the 68K daughter board and the video 
 
 These are needed to finish testing the main board before I can build some more. Testing of the main card is going well.
 
-[![replay_io](@assets/images/replay_io.gif)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/replay_io.gif)
+<figure>
+
+![replay_io](@assets/images/replay_io.gif)
+
+</figure>

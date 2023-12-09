@@ -9,4 +9,8 @@ authors:
 
 And production has started...
 
-[![buttons](@assets/images/buttons.jpg)](http://fpgaarcade.com/wp4/wp-content/uploads/2015/06/buttons.jpg)
+<figure>
+
+![buttons](@assets/images/buttons.jpg)
+
+</figure>

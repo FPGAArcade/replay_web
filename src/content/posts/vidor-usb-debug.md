@@ -15,8 +15,8 @@ A parallel track is to add a MAX3421E which works correctly. This work is import
 
 This scales to the Zynq Ultrascale where the CPU and FPGA are on the same die, connected with a high bandwidth AXI interface.
 
- 
-
- 
+<figure>
 
 ![](@assets/images/IMG_20190613_233724-1024x768.jpg)
+
+</figure>

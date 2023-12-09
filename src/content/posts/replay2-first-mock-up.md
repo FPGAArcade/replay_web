@@ -7,7 +7,11 @@ authors:
   - mikej
 ---
 
+<figure>
+
 ![](@assets/images/Replay2-1024x834.jpg)
+
+</figure>
 
 Very rough CAD drawing to play with IO connectors
 
