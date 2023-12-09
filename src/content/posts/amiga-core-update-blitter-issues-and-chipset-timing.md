@@ -16,7 +16,7 @@ This was a fairly simple sub-section of the game which showed how the parallax s
 
 <figure>
 
-![sim](@assets/images/sim-300x174.gif)
+![sim](@assets/images/sim.gif)
 
 </figure>
 
