@@ -18,6 +18,6 @@ Finally, here's a super die scan of the MMU C0205912-38 by Ijor.
  
 <figure>
 
-![](@assets/images/TOP-50X.jpg)
+![](@assets/images/TOP-50X-1.jpg)
 
 </figure>
