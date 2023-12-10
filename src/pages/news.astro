@@ -46,7 +46,7 @@ const posts = (await getCollection("posts")).sort((a,b) => b.data.created - a.da
                       />
                     )}
                   </div>
-                  <div class="post__description">{post.data.description ?? post.body.slice(0,140np)}</div>
+                  <div class="post__description">{post.data.description ?? post.body.slice(0,140)}</div>
                 </a>
               </article>
             </>
