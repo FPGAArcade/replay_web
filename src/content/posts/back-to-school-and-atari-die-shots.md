@@ -6,6 +6,7 @@ categories:
 authors: 
   - mikej
 image: "@assets/images/TOP-50X-1.jpg"
+description: "Die scan of the MMU C0205912-38"
 ---
 
 Well, summer is now over and it's time to crack on with the FPGA work. I'm still busy repairing the last few boards, and work is well under way on the daughterboard and new production run.
