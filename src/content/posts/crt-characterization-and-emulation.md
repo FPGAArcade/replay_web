@@ -13,7 +13,7 @@ I've got a small Sony PVM I use for testing, and a large Sony broadcast monitor 
 
 <figure>
 
-![](@assets/images/20200619_211849-scaled.jpg)
+![](@assets/images/post/20200619_211849-scaled.jpg)
 
 </figure>
 

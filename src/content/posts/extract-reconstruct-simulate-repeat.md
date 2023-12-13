@@ -7,12 +7,12 @@ tags:
   - vlm5030
 authors: 
   - fangviech
-image: "@assets/images/vlm5030_clocks.png"
+image: "@assets/images/post/vlm5030_clocks.png"
 ---
 
 <figure>
 
-![VLM5030 die, highlighted ROMs](@assets/images/vlm5030_rom.png)
+![VLM5030 die, highlighted ROMs](@assets/images/post/vlm5030_rom.png)
 
 </figure>
 
@@ -20,7 +20,7 @@ When I started to search for the [random generator](https://www.fpgaarcade.com/r
 
 <figure>
 
-![VLM5030 die, highlighted pad ring](@assets/images/vlm5030_pads.png)
+![VLM5030 die, highlighted pad ring](@assets/images/post/vlm5030_pads.png)
 
 </figure>
 
@@ -28,7 +28,7 @@ Next on the list of obvious items are the pads of course. They neatly follow the
 
 <figure>
 
-![VLM5030 OSC1 and OSC2 surrounding the oscillator circuit](@assets/images/vlm5030_osc.png)
+![VLM5030 OSC1 and OSC2 surrounding the oscillator circuit](@assets/images/post/vlm5030_osc.png)
 
 </figure>
 
@@ -38,7 +38,7 @@ The OSC2 pin feeds directly into the clock generation system where the 3.58 MHz 
 
 <figure>
 
-![Transistor-level circuit of the OSC2 clock divider](@assets/images/vlm5030_clk2div_schem.png)
+![Transistor-level circuit of the OSC2 clock divider](@assets/images/post/vlm5030_clk2div_schem.png)
 
 <figcaption>OSC2 /2 divider</figcaption>
 </figure>
@@ -47,7 +47,7 @@ Curiosity was fueled enough to tackle further gates in the neighbourhood to the 
 
 <figure>
 
-![Simulation waveforms of VLM5030's derived clocks](@assets/images/vlm5030_clocks.png)
+![Simulation waveforms of VLM5030's derived clocks](@assets/images/post/vlm5030_clocks.png)
 
 <figcaptionCore clocks of the VLM5030, clk2 is oscillator /2</figcaption>
 </figure>

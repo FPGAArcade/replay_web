@@ -5,7 +5,7 @@ categories:
   - core-news
 authors: 
   - mikej
-image: "@assets/images/amiga500.jpg"
+image: "@assets/images/post/amiga500.jpg"
 ---
 
 The AGA core is pretty stable now, but one issue which has been haunting me for ages is some blitter operations go wrong and leave garbage on the screen.
@@ -16,7 +16,7 @@ This was a fairly simple sub-section of the game which showed how the parallax s
 
 <figure>
 
-![sim](@assets/images/sim.gif)
+![sim](@assets/images/post/sim.gif)
 
 </figure>
 

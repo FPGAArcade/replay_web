@@ -15,7 +15,7 @@ The power adapter board is plugged directly into the ATX PSU
 
 <figure>
 
-![itx_1](@assets/images/itx_1.jpg)
+![itx_1](@assets/images/post/itx_1.jpg)
 
 </figure> 
 
@@ -23,6 +23,6 @@ Normally a connector would be fitted on the controller board and then it could b
 
 <figure>
 
-![itx_2](@assets/images/itx_2.jpg)
+![itx_2](@assets/images/post/itx_2.jpg)
 
 </figure>

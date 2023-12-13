@@ -11,6 +11,6 @@ Just appeared on a new building here, I thought this was rather cool ;)
 
 <figure>
 
-![20150618_144907](@assets/images/20150618_144907.jpg)
+![20150618_144907](@assets/images/post/20150618_144907.jpg)
 
 </figure>

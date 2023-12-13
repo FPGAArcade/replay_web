@@ -11,7 +11,7 @@ Prototype board production is continuing. All beta test boards are assembled and
 
 <figure>
 
-![replay_production_small](@assets/images/replay_production_small.jpg)
+![replay_production_small](@assets/images/post/replay_production_small.jpg)
 
 </figure>
 

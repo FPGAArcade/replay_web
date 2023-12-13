@@ -13,6 +13,6 @@ Now I'm going through the pricing and starting to kit for assembly.... New conne
 
 <figure>
 
-![replay_b01_pcb_con](@assets/images/replay_b01_pcb_con.jpg)
+![replay_b01_pcb_con](@assets/images/post/replay_b01_pcb_con.jpg)
 
 </figure>

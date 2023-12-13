@@ -36,7 +36,7 @@ Finally, the last few 68060 Daughterboards - if you have a Replay1 board and you
 
 <figure>
 
-![](@assets/images/68060dbs.jpg)
+![](@assets/images/post/68060dbs.jpg)
 
 </figure>
 

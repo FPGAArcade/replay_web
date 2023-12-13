@@ -7,7 +7,7 @@ tags:
   - vlm5030
 authors: 
   - fangviech
-image: "@assets/images/destroy_gl_chip_chip2nd_020ms.png"
+image: "@assets/images/post/destroy_gl_chip_chip2nd_020ms.png"
 ---
 
 Now with the [extracted gate-level design](https://www.fpgaarcade.com/extract-reconstruct-simulate-repeat/) in place, how does it perform?
@@ -23,7 +23,7 @@ To bridge both worlds, I created a test rig consisting of a small Cyclone II boa
 
 <figure>
 
-![](@assets/images/test_rig_block_diagram.png) 
+![](@assets/images/post/test_rig_block_diagram.png) 
 
 <figcaption>Block diagram of the VLM5030 test rig</figcaption>
 </figure>
@@ -34,7 +34,7 @@ The results are quite impressing - the screenshot below shows a range of Salaman
 
 <figure>
 
-![](@assets/images/destroy_gl_chip_chip2nd_020ms.png)
+![](@assets/images/post/destroy_gl_chip_chip2nd_020ms.png)
 
 <figcaption>Detail of Salamander's "Destroy them all!" at 20 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption
 </figure>
@@ -43,7 +43,7 @@ However, there are locations where all three waveforms begin to diverge (around 
 
 <figure>
 
-![](@assets/images/destroy_gl_chip_chip2nd_100ms.png)
+![](@assets/images/post/destroy_gl_chip_chip2nd_100ms.png)
 
 <figcaption>Detail of Salamander's "Destroy them all!" at 100 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption>
 </figure>
@@ -52,7 +52,7 @@ All three converge later at the 0.270 s mark and continue in lock-step:
 
 <figure>
 
-![](@assets/images/destroy_gl_chip_chip2nd_255ms.png)
+![](@assets/images/post/destroy_gl_chip_chip2nd_255ms.png)
 
 <figcaption>Detail of Salamander's "Destroy them all!" at 255 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption>
 </figure>

@@ -13,6 +13,6 @@ I am ordering some more PCBs so I did a quick layout of a daughter board for the
 
 <figure>
 
-![fpgaarcade_layout_lcd](@assets/images/fpgaarcade_layout_lcd.gif)
+![fpgaarcade_layout_lcd](@assets/images/post/fpgaarcade_layout_lcd.gif)
 
 </figure>

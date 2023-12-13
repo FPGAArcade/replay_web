@@ -17,7 +17,7 @@ These are all the source files in the core/rtl directory:
 
 <figure>
 
-![](@assets/images/loader_files.gif)
+![](@assets/images/post/loader_files.gif)
 
 </figure>
 
@@ -45,7 +45,7 @@ and we can also rmake viv for Xilinx Vivado, targeting the Zynq Ultrascale curre
 
 <figure>
 
-![](@assets/images/ladybug_build-1024x654.gif)
+![](@assets/images/post/ladybug_build-1024x654.gif)
 
 </figure>
 
@@ -57,6 +57,6 @@ Having the same build system for simulation makes it really easy to test the cor
 
 <figure>
 
-![](@assets/images/vga.gif)
+![](@assets/images/post/vga.gif)
 
 </figure>

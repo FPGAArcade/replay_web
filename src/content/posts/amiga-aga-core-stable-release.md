@@ -5,7 +5,7 @@ categories:
   - core-news
 authors: 
   - mikej
-image: "@assets/images/amiga500.jpg"
+image: "@assets/images/post/amiga500.jpg"
 ---
 
 I've released a new version of the Amiga core ([https://github.com/FPGAArcade](https://github.com/FPGAArcade/replay_release)).

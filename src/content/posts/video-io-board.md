@@ -13,6 +13,6 @@ These are needed to finish testing the main board before I can build some more. 
 
 <figure>
 
-![replay_io](@assets/images/replay_io.gif)
+![replay_io](@assets/images/post/replay_io.gif)
 
 </figure>

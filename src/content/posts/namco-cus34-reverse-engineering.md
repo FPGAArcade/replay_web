@@ -13,19 +13,19 @@ The test framework is written in Python, and then wavedrom (https://wavedrom.com
 
 <figure>
 
-![](@assets/images/20230206_121314-scaled.jpg)
+![](@assets/images/post/20230206_121314-scaled.jpg)
 
 </figure>
 
 <figure>
 
-![](@assets/images/capture_main_read.png)
+![](@assets/images/post/capture_main_read.png)
 
 </figure>
 
 <figure>
 
-![](@assets/images/logic_main_read.png)
+![](@assets/images/post/logic_main_read.png)
 
 </figure>
 
@@ -37,19 +37,19 @@ Unlike the other boards which use this chip - Dragon Buster for example - pin 13
 
 <figure>
 
-![](@assets/images/toypop-scaled.jpeg)
+![](@assets/images/post/toypop-scaled.jpeg)
 
 </figure>
 
 <figure>
 
-![](@assets/images/cus34_logic-scaled.jpeg)
+![](@assets/images/post/cus34_logic-scaled.jpeg)
 
 </figure>
 
 <figure>
 
-![](@assets/images/agilent_cus34-scaled.jpeg)
+![](@assets/images/post/agilent_cus34-scaled.jpeg)
 
 </figure>
 

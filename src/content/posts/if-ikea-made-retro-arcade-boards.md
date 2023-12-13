@@ -12,7 +12,7 @@ Sorry, living in Sweden I couldn't resist this. This is what a Replay parts kit 
  
 <figure>
 
-![replay_ikea](@assets/images/replay_ikea.jpg)
+![replay_ikea](@assets/images/post/replay_ikea.jpg)
 
 </figure>
 
@@ -24,6 +24,6 @@ These IO cards are also available if anybody wants them.
 
 <figure>
 
-![replay_68k](@assets/images/replay_68k.jpg)
+![replay_68k](@assets/images/post/replay_68k.jpg)
 
 </figure>

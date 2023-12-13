@@ -12,7 +12,7 @@ I wrote the first FPGA Scramble/Frogger core way back in 2007 (when we were all 
  
 <figure>
 
-![](@assets/images/scramble_website-1-300x278.jpg)
+![](@assets/images/post/scramble_website-1-300x278.jpg)
 
 </figure> 
 
@@ -24,7 +24,7 @@ I learnt a trick from Chris Brenner who wrote a script which ran through every c
 
 <figure>
 
-![](@assets/images/scramble_output.gif)
+![](@assets/images/post/scramble_output.gif)
 
 </figure>
 

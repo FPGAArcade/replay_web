@@ -5,7 +5,7 @@ categories:
   - core-news
 authors: 
   - mikej
-image: "@assets/images/amiga500.jpg"
+image: "@assets/images/post/amiga500.jpg"
 ---
 
 A lot of work has been done both on the CPU to increase compatibility, and the core to get the cache working and timing closure.

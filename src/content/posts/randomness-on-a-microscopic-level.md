@@ -7,12 +7,12 @@ tags:
   - vlm5030
 authors: 
   - fangviech
-image: "@assets/images/vlm5030_detail.png"
+image: "@assets/images/post/vlm5030_detail.png"
 ---
 
 <figure>
 
-![](@assets/images/vlm5030_detail.png)
+![](@assets/images/post/vlm5030_detail.png)
 
 </figure>
 
@@ -28,7 +28,7 @@ Long story short - probably the 4th or 5th LFSR turned out to be the one that ge
 
 <figure>
 
-![](@assets/images/vlm5030_lfsr.png)
+![](@assets/images/post/vlm5030_lfsr.png)
 
 </figure>
 

@@ -17,7 +17,7 @@ Contact me if you want one. It only fits on B2 boards (not 1.0B) without modific
 
 <figure>
 
-![](@assets/images/db_io-1024x491.jpg)
+![](@assets/images/post/db_io-1024x491.jpg)
 
 <figcaption>Daughterboard IO shield</figcaption>
 </figure>

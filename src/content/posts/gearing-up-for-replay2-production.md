@@ -17,6 +17,6 @@ The production boards will most likely be massed produced by a well known hobby 
 
 <figure>
 
-![](@assets/images/20191121_104938-scaled.jpg)
+![](@assets/images/post/20191121_104938-scaled.jpg)
 
 </figure>

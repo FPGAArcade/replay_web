@@ -7,7 +7,7 @@ tags:
   - vlm5030
 authors: 
   - fangviech
-image: "@assets/images/fat-lady.png"
+image: "@assets/images/post/fat-lady.png"
 ---
 
 The [previous post](https://www.fpgaarcade.com/logic-gates-extraction/) introduced a tracing procedure to extract logic gates from VLM5030's layout information. This post shows how the procedure can be extended to extract VLM5030's embedded ROMs.
@@ -18,7 +18,7 @@ The image below shows a portion of the sequencer ROM:
 
 <figure>
 
-![Tracing of sequencer ROM bitline 0 and equivelant circuit](@assets/images/rom_example.png)
+![Tracing of sequencer ROM bitline 0 and equivelant circuit](@assets/images/post/rom_example.png)
 
 <figcaption>Bitline 0 in the sequencer ROM</figcaption>
 </figure>
@@ -56,7 +56,7 @@ Shown below is bitline 0 exhibiting the same composition of word line transistor
 
 <figure>
 
-![Bitline 0 in KROM slice 2](@assets/images/krom.png)
+![Bitline 0 in KROM slice 2](@assets/images/post/krom.png)
 
 <figcaption>Bitline 0 in KROM table 2</figcaption>
 </figure>
@@ -67,7 +67,7 @@ Tracing back further, we end up at a fat pull-up transistor that finally termina
 
 <figure>
 
-![KROM bit 0 as distributed complex NOR](@assets/images/krom_termination.png)
+![KROM bit 0 as distributed complex NOR](@assets/images/post/krom_termination.png)
 
 </figure>
 
@@ -82,7 +82,7 @@ The corresponding logic function follows the hierarchical structure of the K-fac
 
 <figure>
 
-![Fat lady by カロリーネ](@assets/images/fat-lady-300x80.png)
+![Fat lady by カロリーネ](@assets/images/post/fat-lady-300x80.png)
 
 </figure>
 

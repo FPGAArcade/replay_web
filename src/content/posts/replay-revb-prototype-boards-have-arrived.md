@@ -11,6 +11,6 @@ The first 10 prototype boards came back today. I will post some more pictures af
 
 <figure>
 
-![replay_b_1_small](@assets/images/replay_b_1_small.jpg)
+![replay_b_1_small](@assets/images/post/replay_b_1_small.jpg)
 
 </figure>

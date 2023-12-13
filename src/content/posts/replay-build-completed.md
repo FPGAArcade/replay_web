@@ -11,6 +11,6 @@ The first Replay board is fully assembled. I am about to power it up.....
 
 <figure>
 
-![replay_assem2](@assets/images/replay_assem2.jpg)
+![replay_assem2](@assets/images/post/replay_assem2.jpg)
 
 </figure>

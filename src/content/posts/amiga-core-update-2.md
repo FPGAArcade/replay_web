@@ -5,7 +5,7 @@ categories:
   - core-news
 authors: 
   - mikej
-image: "@assets/images/amiga500.jpg"
+image: "@assets/images/post/amiga500.jpg"
 ---
 
 I made a few minor improvements to border sprite behaviour (fixes Banshee AGA). The core is in the Amiga news thread in the forum.

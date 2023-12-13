@@ -17,6 +17,6 @@ I appear to have got a bit carried away when ordering these boards, so if you wa
 
 <figure>
 
-![](@assets/images/20190220_204928.jpg)
+![](@assets/images/post/20190220_204928.jpg)
 
 <!-- <figure> -->

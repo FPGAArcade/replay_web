@@ -19,6 +19,6 @@ Including Crystal Castles by the fabulous Chris B.
 
 <figure>
 
-![](@assets/images/crystal_castles-1024x768.jpg)
+![](@assets/images/post/crystal_castles-1024x768.jpg)
 
 </figure>

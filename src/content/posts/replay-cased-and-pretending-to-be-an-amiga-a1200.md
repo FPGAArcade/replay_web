@@ -13,12 +13,12 @@ The hardware is fully tested now and I'm starting to send out more boards to bet
 
 <figure>
 
-![itx](@assets/images/itx.jpg)
+![itx](@assets/images/post/itx.jpg)
 
 </figure>
 
 <figure>
 
-![replay_wb](@assets/images/replay_wb.jpg)
+![replay_wb](@assets/images/post/replay_wb.jpg)
 
 </figure>

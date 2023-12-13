@@ -5,12 +5,12 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/20190217_190845.jpg"
+image: "@assets/images/post/20190217_190845.jpg"
 ---
 
 <figure>
 
-![](@assets/images/20190217_190845-1024x576.jpg)
+![](@assets/images/post/20190217_190845-1024x576.jpg)
 
 </figure>
 
@@ -32,7 +32,7 @@ WARN: !!Match fail Addr: 0
 
 <figure>
 
-![](@assets/images/20190217_153746-1024x576.jpg)
+![](@assets/images/post/20190217_153746-1024x576.jpg)
 
 </figure>
 

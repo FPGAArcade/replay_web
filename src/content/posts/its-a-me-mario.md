@@ -5,12 +5,12 @@ categories:
   - core-news
 authors: 
   - hicks
-image: "@assets/images/NES-Console-Set-scaled.jpg"
+image: "@assets/images/post/NES-Console-Set-scaled.jpg"
 ---
 
 <figure>
 
-![Nintendo entertainment system console with controller](@assets/images/NES-Console-Set-1024x556.jpg)
+![Nintendo entertainment system console with controller](@assets/images/post/NES-Console-Set-1024x556.jpg)
 
 <figcaption>Nintendo Entertainment System - [Evan Amos](https://commons.wikimedia.org/wiki/User:Evan-Amos)</figcaption>
 </figure>

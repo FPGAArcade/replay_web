@@ -17,7 +17,7 @@ Things were delayed slightly due to a quality issue on one of the power regulato
 
 <figure>
 
-![replay_box](@assets/images/replay_box.jpg)
+![replay_box](@assets/images/post/replay_box.jpg)
 
 </figure> 
 
@@ -25,7 +25,7 @@ This is the custom test jig used to speed up production test. A special FPGA des
 
 <figure>
 
-![replay_test](@assets/images/replay_test.jpg)
+![replay_test](@assets/images/post/replay_test.jpg)
 
 </figure>
 
@@ -33,6 +33,6 @@ This is the optional dual host USB interface. Each interface supports a hub, so 
 
 <figure>
 
-![replay_usb2](@assets/images/replay_usb2.jpg)
+![replay_usb2](@assets/images/post/replay_usb2.jpg)
 
 </figure>

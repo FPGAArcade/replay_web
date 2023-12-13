@@ -9,7 +9,7 @@ authors:
 
 <figure>
 
-![](@assets/images/clean_desk-scaled.jpeg)
+![](@assets/images/post/clean_desk-scaled.jpeg)
 
 </figure>
 

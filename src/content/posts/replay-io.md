@@ -11,6 +11,6 @@ Oh, I nearly forgot - here is an overview of the base board and it's connectors.
 
 <figure>
 
-![replay_overview](@assets/images/replay_overview1.jpg)
+![replay_overview](@assets/images/post/replay_overview1.jpg)
 
 </figure>

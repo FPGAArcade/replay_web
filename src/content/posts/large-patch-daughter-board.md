@@ -15,6 +15,6 @@ I've been away for the weekend so not much other progress to report, but hopeful
 
 <figure>
 
-![replay_patch](@assets/images/replay_patch.jpg)
+![replay_patch](@assets/images/post/replay_patch.jpg)
 
 </figure>

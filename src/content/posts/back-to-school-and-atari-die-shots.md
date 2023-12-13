@@ -5,7 +5,7 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/TOP-50X-1.jpg"
+image: "@assets/images/post/TOP-50X-1.jpg"
 description: "Die scan of the MMU C0205912-38"
 ---
 
@@ -19,6 +19,6 @@ Finally, here's a super die scan of the MMU C0205912-38 by Ijor.
  
 <figure>
 
-![](@assets/images/TOP-50X-1.jpg)
+![](@assets/images/post/TOP-50X-1.jpg)
 
 </figure>

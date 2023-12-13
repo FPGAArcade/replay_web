@@ -21,12 +21,12 @@ The picture below shows Erique's homebrew SD card adapter. This allows him to co
 
 <figure>
 
-![](@assets/images/IMG_20190925_222229-1024x768.jpg) 
+![](@assets/images/post/IMG_20190925_222229-1024x768.jpg) 
 
 </figure>
 
 <figure>
 
-![](@assets/images/IMG_20191025_084521_3-768x1024.jpg)
+![](@assets/images/post/IMG_20191025_084521_3-768x1024.jpg)
 
 </figure>

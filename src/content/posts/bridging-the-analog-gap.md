@@ -7,7 +7,7 @@ tags:
   - vlm5030
 authors: 
   - fangviech
-image: "@assets/images/vlm5030_dac_ladder.png"
+image: "@assets/images/post/vlm5030_dac_ladder.png"
 ---
 
 The investigations up to this point remained entirely in the digital domain. Waveforms like the ones shown in the [VLM5030 gate-level design validation and lock-step comparison](https://www.fpgaarcade.com/vlm5030-gate-level-design-validation-and-lock-step-comparison/) post were derived from the PCM data right before it enters the DAC. This is most suitable to obtain precise information about the cycle behaviour of the design but neglects the final conversion step from digital to the analog output at the DAO pin.
@@ -22,14 +22,14 @@ Let's have a look at the DAC layout.
 
 <figure>
 
-![](@assets/images/DAC_layout_annotated-1024x374.png)
+![](@assets/images/post/DAC_layout_annotated-1024x374.png)
 
 <figcaption>DAC layout</figcaption>
 </figure>
 
 <figure>
 
-![](@assets/images/vlm5030_dac_schema-138x300.png)
+![](@assets/images/post/vlm5030_dac_schema-138x300.png)
 
 <figcaption>DAC schematic</figcaption>
 </figure>
@@ -54,7 +54,7 @@ Testing the DAC requires controllability of /DAC\[4:0\] inputs and observability
 
 <figure>
 
-![](@assets/images/vlm5030_audio_out-300x196.png)
+![](@assets/images/post/vlm5030_audio_out-300x196.png)
 
 <figcaption>VREF bias, DAO buffered output, TST2 direct output</figcaption>
 </figure>
@@ -71,7 +71,7 @@ The situation for control at /DAC\[4:0\] is more complex since they are internal
 
 <figure>
 
-![](@assets/images/vlm5030_test_modes-300x126.png)
+![](@assets/images/post/vlm5030_test_modes-300x126.png)
 
 <figcaption>VLM5030 test modes</figcaption>
 </figure>
@@ -86,7 +86,7 @@ The final measurement setup is straight forward now. A modified FSM inside the [
 
 <figure>
 
-![](@assets/images/vlm5030_dac_sweep.jpg)
+![](@assets/images/post/vlm5030_dac_sweep.jpg)
 
 <figcaption>DAC output voltage sweep</figcaption>
 </figure>

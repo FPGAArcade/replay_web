@@ -13,6 +13,6 @@ I will implement some other standards, 480i/60Hz (NTSC) and the progressive vers
 
 <figure>
 
-![replay_july_dvi](@assets/images/replay_july_dvi.jpg)
+![replay_july_dvi](@assets/images/post/replay_july_dvi.jpg)
 
 </figure>

@@ -5,7 +5,7 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/n5998.jpg"
+image: "@assets/images/post/n5998.jpg"
 ---
 
 Well, more time has passed. I had surgery on my jaw a few weeks ago in an attempt to remove part of a wisdom tooth that was left behind a few years ago. I'm in recovery, but it really knocked me out for a bit.
@@ -16,7 +16,7 @@ I saw the C65 group had invested in a HDMI analyzer box and I decided we should 
 
 <figure>
 
-![](@assets/images/n5998-1024x576.jpg)
+![](@assets/images/post/n5998-1024x576.jpg)
 
 </figure>
 

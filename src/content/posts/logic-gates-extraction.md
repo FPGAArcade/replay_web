@@ -7,7 +7,7 @@ tags:
   - vlm5030
 authors: 
   - fangviech
-image: "@assets/images/gate_examples.png"
+image: "@assets/images/post/gate_examples.png"
 ---
 
 # The technology
@@ -40,7 +40,7 @@ To understand which kind of logic gate is built by a particular group of transis
 
 <figure>
 
-![Basic logic gates NOT, NAND, NOR, XOR. Layout and schematic](@assets/images/gate_examples.png)
+![Basic logic gates NOT, NAND, NOR, XOR. Layout and schematic](@assets/images/post/gate_examples.png)
 
 <figcaption>Tracing procedure applied to basic logic gates</figcaption>
 </figure>

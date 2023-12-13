@@ -5,7 +5,7 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/22406235_10154836493611366_111471250334156113_n.jpg"
+image: "@assets/images/post/22406235_10154836493611366_111471250334156113_n.jpg"
 ---
 
 We commissioned the decap and scanning of Alice, probably the most important custom chip in the Amiga.
@@ -20,6 +20,6 @@ Dropbox for analysis : [https://www.dropbox.com/sh/kwz68yqmczdu1tz/AAADVbMhWohmc
 
 <figure>
 
- ![](@assets/images/22406235_10154836493611366_111471250334156113_n.jpg)
+ ![](@assets/images/post/22406235_10154836493611366_111471250334156113_n.jpg)
 
 </figure>

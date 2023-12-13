@@ -27,7 +27,7 @@ The nice thing with the new build system is I can easily take a library module a
 
 <figure>
 
-![](@assets/images/m68k_viv.gif)
+![](@assets/images/post/m68k_viv.gif)
 
 </figure>
 

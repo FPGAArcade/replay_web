@@ -11,6 +11,6 @@ The Replay RevB PCBs have been delivered - they are still in China but I am head
 
 <figure>
 
-![replay_b_pcbpic_large](@assets/images/replay_b_pcbpic_large.jpg)
+![replay_b_pcbpic_large](@assets/images/post/replay_b_pcbpic_large.jpg)
 
 </figure>

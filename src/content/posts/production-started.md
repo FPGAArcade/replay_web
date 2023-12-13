@@ -11,6 +11,6 @@ And production has started...
 
 <figure>
 
-![buttons](@assets/images/buttons.jpg)
+![buttons](@assets/images/post/buttons.jpg)
 
 </figure>

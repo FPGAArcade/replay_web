@@ -17,6 +17,6 @@ Meanwhile, testing continues :
 
 <figure>
 
-![20131025_001331](@assets/images/20131025_001331.jpg)
+![20131025_001331](@assets/images/post/20131025_001331.jpg)
 
 </figure>

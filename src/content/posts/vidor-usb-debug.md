@@ -17,6 +17,6 @@ This scales to the Zynq Ultrascale where the CPU and FPGA are on the same die, c
 
 <figure>
 
-![](@assets/images/IMG_20190613_233724-1024x768.jpg)
+![](@assets/images/post/IMG_20190613_233724-1024x768.jpg)
 
 </figure>

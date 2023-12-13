@@ -7,7 +7,7 @@ tags:
   - vlm5030
 authors: 
   - fangviech
-image: "@assets/images/vlm5030_lfsr_async_rst.png"
+image: "@assets/images/post/vlm5030_lfsr_async_rst.png"
 ---
 
 What could cause that the [VLM5030 partially behaves non-deterministic](https://www.fpgaarcade.com/vlm5030-gate-level-design-validation-and-lock-step-comparison/) for certain frames? The usual suspects are incomplete reset and ...randomness. Lots of internal states / flip-flops aren't affected by the RST input, so that could be a cause for repeated execution of the same speech sample. The random source is not strictly random, however. It's an LFSR and as such it has a fixed sequence of 0s & 1s and is thus fully deterministic when starting from a known initial value. It's even reset by RST, so what could go wrong?
@@ -18,7 +18,7 @@ The issue is 100% reproducible in a controlled environment and the time slots of
 
 <figure>
 
-![](@assets/images/vlm5030_sim_destroy_gl_100ms.png)
+![](@assets/images/post/vlm5030_sim_destroy_gl_100ms.png)
 
 <figcaption>Loading the registerfile slots with new frame data at 0x1FF8, write strobe by rflatchwen</figcaption>
 </figure>
@@ -31,7 +31,7 @@ Revisiting [Randomness on a microscopic level](https://www.fpgaarcade.com/random
 
 <figure>
 
-![](@assets/images/vlm5030_sim_rst.png)
+![](@assets/images/post/vlm5030_sim_rst.png)
 
 <figcaption>Derived VLM5030 clocks during RST sequence</figcaption>
 </figure>
@@ -48,7 +48,7 @@ The chip can't be changed of course, but we can run this experiment with the gat
 
 <figure>
 
-![](@assets/images/vlm5030_lfsr_async_rst.png)
+![](@assets/images/post/vlm5030_lfsr_async_rst.png)
 
 <figcaption>Left: LFSR with synchronous clear. Right: Modification for asynchronous clear</figcaption>
 </figure>

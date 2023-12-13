@@ -15,7 +15,7 @@ I have just got a small TV I can dedicate to this, so the current focus is to br
 
 <figure>
 
-![replay_july_cabled](@assets/images/replay_july_cabled.jpg)
+![replay_july_cabled](@assets/images/post/replay_july_cabled.jpg)
 
 </figure>
 
@@ -23,7 +23,7 @@ Picture above shows the board cabled up and connected to the digital TV. I'm usi
 
 <figure>
 
-[![replay_io](@assets/images/replay_io.jpg)
+[![replay_io](@assets/images/post/replay_io.jpg)
 
 </figure>
 
@@ -31,7 +31,7 @@ Replay board with the optional AV expansion card. The AV card provides PAL & NTS
 
 <figure>
 
-![replay_july_io_back_large](@assets/images/replay_july_io_back_large.jpg)
+![replay_july_io_back_large](@assets/images/post/replay_july_io_back_large.jpg)
 
 </figure>
 
@@ -39,7 +39,7 @@ Back of the IO board. Not too interesting.
 
 <figure>
 
-![replay_july_lcd](@assets/images/replay_july_lcd.jpg)
+![replay_july_lcd](@assets/images/post/replay_july_lcd.jpg)
 
 </figure> 
 
@@ -48,7 +48,7 @@ This is the LCD panel. This is really just for fun and this expansion board is n
 
 <figure>
 
-![replay_july_lcd_back](@assets/images/replay_july_lcd_back.jpg)
+![replay_july_lcd_back](@assets/images/post/replay_july_lcd_back.jpg)
 
 </figure>
 
@@ -56,7 +56,7 @@ The back of it. The wire is needed as I can't fit the front connector as the LCD
 
 <figure>
 
-![replay_july_68030](@assets/images/replay_july_68030.jpg)
+![replay_july_68030](@assets/images/post/replay_july_68030.jpg)
 
 </figure>
 
@@ -64,7 +64,7 @@ Here is the board in it's development mode with the 68030 expansion board.
 
 <figure>
 
-![replay_july_scale](@assets/images/replay_july_scale.jpg)
+![replay_july_scale](@assets/images/post/replay_july_scale.jpg)
 
 </figure>
 

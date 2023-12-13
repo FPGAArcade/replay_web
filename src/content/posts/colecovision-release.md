@@ -15,6 +15,6 @@ I have now got most of the kit over here in Sweden (including a computer) so hop
 
 <figure>
 
-![ColecoVision_Boxed](@assets/images/ColecoVision_Boxed.jpg)
+![ColecoVision_Boxed](@assets/images/post/ColecoVision_Boxed.jpg)
 
 </figure>

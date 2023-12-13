@@ -21,6 +21,6 @@ Exciting times!
 
 <figure>
 
-![](@assets/images/generations-1024x768.jpg)
+![](@assets/images/post/generations-1024x768.jpg)
 
 </figure>

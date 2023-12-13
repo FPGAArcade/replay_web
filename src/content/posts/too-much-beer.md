@@ -17,6 +17,6 @@ Next is to make some measurements of the DRAM signal quality.
 
 <figure>
 
-![dvitrace](@assets/images/dvitrace.gif)
+![dvitrace](@assets/images/post/dvitrace.gif)
 
 </figure>

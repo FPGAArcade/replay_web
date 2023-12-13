@@ -17,7 +17,7 @@ Now I understand what the chip does, I can put it back on the Zynq tester shown 
 
 <figure>
 
-![](@assets/images/20230704_230252-scaled.jpg)
+![](@assets/images/post/20230704_230252-scaled.jpg)
 
 </figure>
 

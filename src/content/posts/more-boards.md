@@ -11,6 +11,6 @@ Some of the new toys... Sorry for the lack of updates, still working on the new 
 
 <figure>
 
-![replay_lots](@assets/images/replay_lots.jpg)
+![replay_lots](@assets/images/post/replay_lots.jpg)
 
 </figure>

@@ -19,7 +19,7 @@ Here we have the Videopac core with KC Munchkin on V4
 
 <figure>
 
-![](@assets/images/V4-Videopac-1024x748.jpg)
+![](@assets/images/post/V4-Videopac-1024x748.jpg)
 
 </figure> 
 
@@ -27,7 +27,7 @@ And here Colecovision Frogger on the V4, with Frogger on Replay1's Videopac core
 
 <figure>
 
-![](@assets/images/V4-Colecovision-R1-Videopac-1024x811.jpg)
+![](@assets/images/post/V4-Colecovision-R1-Videopac-1024x811.jpg)
 
 </figure>
 
@@ -35,7 +35,7 @@ Ignore the configured time here, we had a bug....
 
 <figure>
 
-![](@assets/images/IMG_20190515_122439-768x1024.jpg)
+![](@assets/images/post/IMG_20190515_122439-768x1024.jpg)
 
 </figure> 
 

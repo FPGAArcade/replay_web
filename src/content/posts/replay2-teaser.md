@@ -11,12 +11,12 @@ It's been a long time coming, but we are really excited to announce that Replay2
 
 <figure>
 
-![](@assets/images/Replay2_teaser_1.jpg)
+![](@assets/images/post/Replay2_teaser_1.jpg)
 
 </figure>
 
 <figure>
 
-![](@assets/images/Replay2.png)
+![](@assets/images/post/Replay2.png)
 
 </figure>

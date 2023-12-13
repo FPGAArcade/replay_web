@@ -15,7 +15,7 @@ Workbench is full, this is the overflow storage!
 
 <figure>
 
-![boards](@assets/images/boards-300x169.jpg)
+![boards](@assets/images/post/boards-300x169.jpg)
 
 </figure>
 /MikeJ

@@ -9,7 +9,7 @@ authors:
 
 <figure>
 
-![champagne](@assets/images/champagne.png)
+![champagne](@assets/images/post/champagne.png)
 
 <figcaption>The first board was shipped out to another developer today!</figcaption>
 </figure>

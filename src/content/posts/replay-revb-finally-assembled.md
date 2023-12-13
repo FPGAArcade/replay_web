@@ -13,18 +13,18 @@ You can see one board does not have the components on the backside, this is the 
 
 <figure>
 
-![replay_b_2_a](@assets/images/replay_b_2_a.jpg)
+![replay_b_2_a](@assets/images/post/replay_b_2_a.jpg)
 
 </figure>
 
 <figure>
 
-![replay_b_2_b](@assets/images/replay_b_2_b.jpg)
+![replay_b_2_b](@assets/images/post/replay_b_2_b.jpg)
 
 </figure>
 
 <figure>
 
-![replay_b_2_back](@assets/images/replay_b_2_back.jpg)
+![replay_b_2_back](@assets/images/post/replay_b_2_back.jpg)
 
 </figure>

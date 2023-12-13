@@ -15,7 +15,7 @@ I've been working with some new suppliers and assemblers, using my Namco 28 pin 
 
 <figure>
 
-![namco28c](@assets/images/namco28c-259x300.jpg)
+![namco28c](@assets/images/post/namco28c-259x300.jpg)
 
 </figure>
  
@@ -32,6 +32,6 @@ I've managed thanks to Samtec to get a smaller amount, so I can get on and produ
 
 <figure>
 
-![samtec](@assets/images/samtec-300x169.jpg)
+![samtec](@assets/images/post/samtec-300x169.jpg)
 
 </figure>

@@ -5,7 +5,7 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/p96.jpg"
+image: "@assets/images/post/p96.jpg"
 ---
 
 \[et\_pb\_section bb\_built="1"\]\[et\_pb\_row\]\[et\_pb\_column type="4\_4"\]\[et\_pb\_text\]

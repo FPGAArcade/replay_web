@@ -5,7 +5,7 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/replay2.jpeg"
+image: "@assets/images/post/replay2.jpeg"
 ---
 
 Over the years there has been a lot of frustration about the lack of Replay boards. The main issue was the lack of quality control on components from China which caused a lot of rework effort. In retrospect, we should probably have thrown these away and built new ones....
@@ -24,6 +24,6 @@ It's currently being prototyped and the design is in PCB layout. I hope we will 
 
 <figure>
 
-![](@assets/images/replay2.jpeg)
+![](@assets/images/post/replay2.jpeg)
 
 </figure>

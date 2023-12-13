@@ -13,6 +13,6 @@ I have quite a lot of most parts already though...
 
 <figure>
 
-![replay_parts](@assets/images/replay_parts.jpg)
+![replay_parts](@assets/images/post/replay_parts.jpg)
 
 </figure>

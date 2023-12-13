@@ -11,13 +11,13 @@ The latest Amiga AGA core is in beta with support for P96 compatible RTG. It als
 
 <figure>
 
-![rtg2](@assets/images/rtg2-300x225.jpg)
+![rtg2](@assets/images/post/rtg2-300x225.jpg)
 
 </figure>
 
 <figure>
 
-![rtg1](@assets/images/rtg1-300x225.jpg)
+![rtg1](@assets/images/post/rtg1-300x225.jpg)
 
 </figure> 
 

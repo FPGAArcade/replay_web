@@ -15,6 +15,6 @@ You can see the new 40 pin module working on the board below. I've got some left
  
 <figure>
 
-![](@assets/images/gyruss.jpg)
+![](@assets/images/post/gyruss.jpg)
 
 </figure>

@@ -5,12 +5,12 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/gyruss-1.png"
+image: "@assets/images/post/gyruss-1.png"
 ---
 
 <figure>
 
-![](@assets/images/gyruss-1.png)
+![](@assets/images/post/gyruss-1.png)
 
 </figure>
 
@@ -24,7 +24,7 @@ In the picture below, I'm using a Replay1 board with it's debug daughterboard. T
 
 <figure>
 
-![](@assets/images/Gyruss_debug.png)
+![](@assets/images/post/Gyruss_debug.png)
 
 </figure>
 
@@ -32,7 +32,7 @@ Modern and retro hardware in perfect union
 
 <figure>
 
-![](@assets/images/cpld40.gif)
+![](@assets/images/post/cpld40.gif)
 
 </figure>
 

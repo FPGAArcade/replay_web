@@ -9,7 +9,7 @@ authors:
 
 <figure>
 
-![](@assets/images/Replay2-1024x834.jpg)
+![](@assets/images/post/Replay2-1024x834.jpg)
 
 </figure>
 

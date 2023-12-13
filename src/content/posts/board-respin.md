@@ -17,7 +17,7 @@ It would look something like this :
 
 <figure>
 
-![replayb_demo](@assets/images/replayb_demo.jpg)
+![replayb_demo](@assets/images/post/replayb_demo.jpg)
 
 </figure>
 
@@ -25,7 +25,7 @@ I didn't get the PCB changes done in time, so I had to bring home a whole load o
 
 <figure>
 
-![replayb_comps](@assets/images/replayb_comps.jpg)
+![replayb_comps](@assets/images/post/replayb_comps.jpg)
 
 </figure>
 

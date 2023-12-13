@@ -17,7 +17,7 @@ Here you can see the 68K prefetch behaviour for a move instruction (click for a 
 
 <figure>
 
-![68_prefetch](@assets/images/68_prefetch.gif)
+![68_prefetch](@assets/images/post/68_prefetch.gif)
 
 </figure>
 

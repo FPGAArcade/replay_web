@@ -17,6 +17,6 @@ A number of developer boards have gone out this week. The boards below have all 
 
 <figure>
 
-![20150615_222906](@assets/images/20150615_222906-e1434666422206.jpg)
+![20150615_222906](@assets/images/post/20150615_222906-e1434666422206.jpg)
 
 </figure>

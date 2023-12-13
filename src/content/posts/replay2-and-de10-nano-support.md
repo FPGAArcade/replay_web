@@ -5,7 +5,7 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/20200615_150601-scaled.jpg"
+image: "@assets/images/post/20200615_150601-scaled.jpg"
 ---
 
 Sorry it's been a bit quiet here for the last few months. I had to move flat three times since January and all the retro kit has been in storage. Work has been intense and it's only the last week or two that life is calming down enough to get the Retro stuff back on track.
@@ -14,13 +14,13 @@ The initial plan was to launch our new board (Replay2) at the Revision demo part
 
 <figure>
 
-![](@assets/images/20200608_143832-225x300.jpg)
+![](@assets/images/post/20200608_143832-225x300.jpg)
 
 </figure>
 
 <figure>
 
-![](@assets/images/20200615_150601-225x300.jpg)
+![](@assets/images/post/20200615_150601-225x300.jpg)
 
 </figure>
 
@@ -36,6 +36,6 @@ My aim since the first design releases (nearly 20 years ago) was to bring FPGA r
 
 <figure>
 
-![](@assets/images/pacman.gif)
+![](@assets/images/post/pacman.gif)
 
 </figure>

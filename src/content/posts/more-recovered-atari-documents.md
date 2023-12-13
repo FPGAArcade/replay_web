@@ -5,7 +5,7 @@ categories:
   - news
 authors: 
   - mikej
-image: "@assets/images/recovered_atari_docs.png"
+image: "@assets/images/post/recovered_atari_docs.png"
 ---
 
 Still working on reformatting the archive, hopefully Christian well get some time to tidy up the PDFs.

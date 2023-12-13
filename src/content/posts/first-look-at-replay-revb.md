@@ -13,6 +13,6 @@ All in all I'm pretty happy with it, it's a good improvement. The PCB is due to 
 
 <figure>
 
-![fpgaarcade_revb_layout](@assets/images/fpgaarcade_revb_layout.gif)
+![fpgaarcade_revb_layout](@assets/images/post/fpgaarcade_revb_layout.gif)
 
 </figure>

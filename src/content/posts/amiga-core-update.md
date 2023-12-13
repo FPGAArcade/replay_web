@@ -5,7 +5,7 @@ categories:
   - core-news
 authors: 
   - mikej
-image: "@assets/images/amiga500.jpg"
+image: "@assets/images/post/amiga500.jpg"
 ---
 
 I've been testing a new version of my Amiga AGA core. It's checked into the private repository. I'm working this week to make binary releases (and source ASAP) on the public mirror.

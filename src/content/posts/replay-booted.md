@@ -13,6 +13,6 @@ The next stage is to read the file Replay\\boot.bit and configure the FPGA with 
 
 <figure>
 
-![boot](@assets/images/boot.gif)
+![boot](@assets/images/post/boot.gif)
 
 </figure>

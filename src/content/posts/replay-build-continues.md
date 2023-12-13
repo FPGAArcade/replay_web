@@ -11,6 +11,6 @@ Here is a picture of the Replay board mid assembly. The BGA has been mounted as 
 
 <figure>
 
-![replay_assem1](@assets/images/replay_assem1.jpg)
+![replay_assem1](@assets/images/post/replay_assem1.jpg)
 
 </figure>

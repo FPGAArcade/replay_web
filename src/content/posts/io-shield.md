@@ -13,6 +13,6 @@ I also got the IO shields back, they look rather nice :
 
 <figure>
 
-![replay_io_pan](@assets/images/replay_io_pan.jpg)
+![replay_io_pan](@assets/images/post/replay_io_pan.jpg)
 
 </figure>

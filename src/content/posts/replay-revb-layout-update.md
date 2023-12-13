@@ -15,6 +15,6 @@ Some of the internal layers :
 
 <figure>
 
-![replay_b01_layout](@assets/images/replay_b01_layout.jpg)
+![replay_b01_layout](@assets/images/post/replay_b01_layout.jpg)
 
 </figure>

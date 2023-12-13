@@ -15,6 +15,6 @@ More news to follow ....
 
 <figure>
 
-![usb](@assets/images/usb.jpg)
+![usb](@assets/images/post/usb.jpg)
 
 </figure>
