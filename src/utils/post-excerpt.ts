@@ -26,7 +26,7 @@ export async function createExcerpt(md: string, options: ExcerptOptions = {}): P
         identifier: opt.marker
       })
       .use(stripMarkdown, {
-        remove: ["heading"],
+        remove: ["heading","image", "imageReference", "link", "linkReference"],
       })
       .process(md)
   )
