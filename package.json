@@ -18,5 +18,10 @@
     "astro-icon": "^0.8.2",
     "vue-material-design-icons": "^5.2.0",
     "vue3-simple-icons": "^10.0.0"
+  },
+  "devDependencies": {
+    "remark": "^15.0.1",
+    "remark-excerpt": "^1.0.0-beta.1",
+    "strip-markdown": "^6.0.0"
   }
 }
