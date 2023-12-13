@@ -1,0 +1,8 @@
+---
+import {createExcerpt} from "src/utils/post-excerpt"
+
+const {post} = Astro.props
+const postExcerpt = post.data.description ?? await createExcerpt(post.body, {markerLimit: false})
+---
+
+{postExcerpt} 

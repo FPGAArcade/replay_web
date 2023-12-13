@@ -3,8 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import { getCollection, getEntries } from "astro:content";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon";
-
-import {createExcerpt} from "src/utils/post-excerpt"
+import PostExcerpt from "@components/PostExcerpt.astro";
 
 const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
 ---
@@ -48,7 +47,7 @@ const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTim
                       />
                     )}
                   </div>
-                  <div class="post__description">{post.data.description ?? createExcerpt(post.body)}</div>
+                  <PostExcerpt class="post__description" post={post}></PostExcerpt>
                 </a>
               </article>
             </>
