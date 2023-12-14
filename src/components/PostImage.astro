@@ -1,0 +1,25 @@
+---
+// Post image with fallback to category image
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+  height?: number;
+}
+
+const { post, height } = Astro.props;
+
+const images = import.meta.glob<{default: ImageMetadata}>('/src/assets/images/category/*.jpg');
+const imageSrc = post.data.image ?? images[`/src/assets/images/category/${post.data.categories[0]}.jpg`]()
+---
+<div class="post__image">
+    <Image src={imageSrc} alt={post.data.imageAlt ?? `${post.data.categories[0]} post category image`} />
+</div>
+
+<style define:vars={{ height }}>
+    img {
+        height: calc(var(--height, 180) * 1px);
+        object-fit: cover;
+    }
+</style>

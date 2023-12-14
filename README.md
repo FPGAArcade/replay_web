@@ -9,13 +9,17 @@ Built using Astro.build and vuejs.
 News posts are .md files in the src/content/posts/ directory. Create the post
 using [standard markdown](https://www.markdownguide.org/basic-syntax/).
 
+Post excerpts will be automatically generated, although if you need a finer level of control
+you can end an except early with the "<!-- more -->" tag. Or you can enter a "description"
+in the front matter.
+
 ### Images
 
-Images should be copied into the src/assets/images/ directory. They can be used
+Images should be copied into the src/assets/images/post/ directory. They can be used
 within a news post with the standard markdown:
 
 ```
-![](@assets/images/db_io-1024x491.jpg)
+![](@assets/images/post/db_io-1024x491.jpg)
 ```
 
 If you wish to caption an image, wrap the normal image markdown in a "figure" tag.
@@ -23,7 +27,7 @@ If you wish to caption an image, wrap the normal image markdown in a "figure" ta
 ```
 <figure>
 
-![](@assets/images/db_io-1024x491.jpg)
+![](@assets/images/post/db_io-1024x491.jpg)
 
 <figcaption>Daughterboard IO shield</figcaption>
 </figure>
