@@ -1,0 +1,122 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import { getEntries } from "astro:content";
+import { Icon } from "astro-icon";
+import PostExcerpt from "@components/PostExcerpt.astro";
+import PostImage from "@components/PostImage.astro";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props;
+
+const authors = await getEntries(post.data.authors);
+const published = new Date(post.data.created).toLocaleDateString("en-GB", {
+  weekday: "short",
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
+---
+
+<article class="post">
+  <a href={`/news/${post.slug}`}>
+    <div class="post__title">{post.data.title}</div>
+    <div class="meta">
+      <span>
+        <Icon name="mdi:calendar-month" /><span>{published}</span>
+      </span>
+      <span>
+        <Icon name="mdi:account" />{
+          authors.map((author) => (
+            <span class="meta__author">{author.data.name}</span>
+          ))
+        }
+      </span>
+      {
+        false && (
+          <span>
+            <>
+              <Icon name="mdi:book-open-variant" />
+              <span>?? minutes</span>
+            </>
+          </span>
+        )
+      }
+    </div>
+    <PostImage post={post} />
+    <PostExcerpt post={post} />
+  </a>
+</article>
+
+<style is:global>
+  .post a > div:not(:first-child) {
+    margin: 0.5rem;
+  }
+</style>
+<style>
+  .post {
+    display: flex;
+    border: 1px solid darkgrey;
+    background: white;
+    min-height: 20rem;
+  }
+
+  .post a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+  }
+
+  .post:is(:hover, :focus-within) {
+    opacity: 0.8;
+  }
+
+  .post__title {
+    background: var(--rpl-header-background-color);
+    color: var(--rpl-link-color);
+    height: 2lh;
+
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @supports (-webkit-line-clamp: 2) {
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  .meta {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+
+  .meta > span {
+    margin-inline-end: 0.5rem;
+  }
+
+  .meta * {
+    vertical-align: middle;
+  }
+
+  .meta svg {
+    height: 0.7rem;
+    padding-inline-end: 0.1rem;
+  }
+
+  .meta__author:not(:last-child)::after {
+    content: ", ";
+  }
+</style>
