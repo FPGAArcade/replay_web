@@ -1,11 +1,45 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Post from "@components/Post.astro";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.created.getTime() - a.data.created.getTime()
+);
 ---
 
-<Layout title="About">
+<Layout title="FPGA Arcade">
   <section class="full-width">Full width HERO goes here</section>
   <main>
+    <h1>Recent News</h1>
+    
+    <section class="featured-posts">
+      {posts.slice(0, 3).map(async (post) => <Post post={post} summary />)}
+    </section>
+
+    <div><a href="/news/">All News</a></div>
+
     <p>Main content here...</p>
     <p>Coming Soon(tm)</p>
   </main>
 </Layout>
+
+<style>
+  .featured-posts {
+    --max-col-count: 3;
+    --grid-gap: 1rem;
+    --total-grid-gap: calc(var(--max-col-count) * var(--grid-gap));
+
+    display: grid;
+
+    /* Auto fill grid but limit to at most N cols regardless of browser width */
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(
+        max(14rem, calc((100% - var(--total-grid-gap)) / var(--max-col-count))),
+        1fr
+      )
+    );
+    grid-gap: var(--grid-gap);
+  }
+</style>
