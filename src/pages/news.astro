@@ -8,11 +8,19 @@ const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTim
 
 <Layout title="News">
   <main>
-    <h1>News</h1>
+    <h1>Latest News</h1>
+    <p>Test card based layout for recent news items.</p>
+    <section class="featured-posts">
+      {
+        posts.slice(0,3).map(async (post) => <Post post={post} summary></Post>)
+      }
+    </section>
 
+    <h1>News</h1>
+    <p>Test layout for full summary news items.</p>
     <section class="posts">
       {
-        posts.map(async (post) => <Post post={post}></Post>)
+        posts.map(async (post) => <Post post={post} summary></Post>)
       }
     </section>
   </main>
@@ -20,6 +28,11 @@ const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTim
 
 <style>
   .posts {
+    display: grid;
+    grid-gap: 1rem;
+  }
+
+  .featured-posts {
     --max-col-count: 3;
     --grid-gap: 1rem;
     --total-grid-gap: calc(var(--max-col-count) * var(--grid-gap));

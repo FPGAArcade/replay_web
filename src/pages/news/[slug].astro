@@ -1,11 +1,13 @@
 ---
-import Layout from "@layouts/Layout.astro";
 import type {
   InferGetStaticParamsType,
   InferGetStaticPropsType,
   GetStaticPaths,
 } from "astro";
 import { getCollection } from "astro:content";
+
+import Layout from "@layouts/Layout.astro";
+import Post from "@components/Post.astro";
 
 export const getStaticPaths = (async () => {
   const posts = await getCollection("posts");
@@ -22,14 +24,11 @@ export const getStaticPaths = (async () => {
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { post } = Astro.props;
-const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
   <main>
-    <h1>{post.data.title}</h1>
-
-    <Content />
+    <Post post={post} summary={false}></Post>
   </main>
 </Layout>
 

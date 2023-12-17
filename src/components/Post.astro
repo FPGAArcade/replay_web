@@ -8,9 +8,10 @@ import PostImage from "@components/PostImage.astro";
 
 interface Props {
   post: CollectionEntry<"posts">;
+  summary?: boolean;
 }
 
-const { post } = Astro.props;
+const { post, summary=false } = Astro.props;
 
 const authors = await getEntries(post.data.authors);
 const published = new Date(post.data.created).toLocaleDateString("en-GB", {
@@ -19,67 +20,54 @@ const published = new Date(post.data.created).toLocaleDateString("en-GB", {
   month: "short",
   day: "numeric",
 });
+
+const {Content} = await post.render()
 ---
 
 <article class="post">
-  <a href={`/news/${post.slug}`}>
-    <div class="post__title">{post.data.title}</div>
-    <div class="meta">
-      <span>
-        <Icon name="mdi:calendar-month" /><span>{published}</span>
-      </span>
-      <span>
-        <Icon name="mdi:account" />{
-          authors.map((author) => (
-            <span class="meta__author">{author.data.name}</span>
-          ))
-        }
-      </span>
-      {
-        false && (
-          <span>
-            <>
-              <Icon name="mdi:book-open-variant" />
-              <span>?? minutes</span>
-            </>
-          </span>
-        )
+  <div class="post__title">
+    <a href={`/news/${post.slug}`}>{post.data.title}</a>
+  </div>
+  <div class="meta">
+    <span>
+      <Icon name="mdi:calendar-month" /><span>{published}</span>
+    </span>
+    <span>
+      <Icon name="mdi:account" />{
+        authors.map((author) => (
+          <span class="meta__author">{author.data.name}</span>
+        ))
       }
-    </div>
-    <PostImage post={post} />
-    <PostExcerpt post={post} />
-  </a>
+    </span>
+    {
+      false && (
+        <span>
+          <>
+            <Icon name="mdi:book-open-variant" />
+            <span>?? minutes</span>
+          </>
+        </span>
+      )
+    }
+  </div>
+  {summary ? <a href={`/news/${post.slug}`}><PostImage post={post} /></a> : <PostImage post={post} />}
+  {summary ? <PostExcerpt post={post} /> : <Content />}
+  {summary && <div class="post__continue"><a href={`/news/${post.slug}`}>Continue reading...</a></div>}
 </article>
 
-<style is:global>
-  .post a > div:not(:first-child) {
-    margin: 0.5rem;
-  }
-</style>
 <style>
   .post {
-    display: flex;
+    display: grid;
+    grid-template-rows: min-content min-content min-content 1fr min-content;
+    
     border: 1px solid darkgrey;
     background: white;
     min-height: 20rem;
-  }
 
-  .post a {
-    width: 100%;
-    text-decoration: none;
-    color: black;
-  }
-
-  .post:is(:hover, :focus-within) {
-    opacity: 0.8;
+    padding: 0.5rem;
   }
 
   .post__title {
-    background: var(--rpl-header-background-color);
-    color: var(--rpl-link-color);
-    height: 2lh;
-
-    text-align: center;
     font-size: 1.25em;
     font-weight: bold;
 
@@ -99,8 +87,12 @@ const published = new Date(post.data.created).toLocaleDateString("en-GB", {
     display: inline-flex;
     justify-content: start;
     align-items: center;
+
     font-size: 0.7rem;
     text-transform: uppercase;
+
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 1rem;
   }
 
   .meta > span {
@@ -119,4 +111,5 @@ const published = new Date(post.data.created).toLocaleDateString("en-GB", {
   .meta__author:not(:last-child)::after {
     content: ", ";
   }
+
 </style>
