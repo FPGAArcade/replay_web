@@ -50,24 +50,32 @@ const {Content} = await post.render()
       )
     }
   </div>
-  {summary ? <a href={`/news/${post.slug}`}><PostImage post={post} /></a> : <PostImage post={post} />}
-  {summary ? <PostExcerpt post={post} /> : <Content />}
+  <div>{summary ? <a href={`/news/${post.slug}`}><PostImage post={post} /></a> : <PostImage post={post} />}</div>
+  <div>{summary ? <PostExcerpt post={post} /> : <Content />}</div>
   {summary && <div class="post__continue"><a href={`/news/${post.slug}`}>Continue reading...</a></div>}
 </article>
 
 <style>
+  
   .post {
+    --item-spacing: 1rem;
+    
     display: grid;
     grid-template-rows: min-content min-content min-content 1fr min-content;
     
     border: 1px solid darkgrey;
     background: white;
     min-height: 20rem;
+  }
 
-    padding: 0.5rem;
+  .post > * {
+    margin-inline: var(--item-spacing);
+    margin-bottom: var(--item-spacing);
   }
 
   .post__title {
+    margin-top: var(--item-spacing);
+
     font-size: 1.25em;
     font-weight: bold;
 
