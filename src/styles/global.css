@@ -19,10 +19,16 @@ html {
 }
 
 body {
-    margin: 0;
     display: grid;
-    min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+    
+    min-height: 100svh;
+
+    /* Workaround to allow .full-width usage */
+    width: 100svw;
+    overflow-x: hidden;
+    
+    margin: 0;
 }
 
 code {

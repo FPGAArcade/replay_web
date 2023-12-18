@@ -9,7 +9,7 @@ const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTim
 <Layout title="News">
   <main>
     <h1>News</h1>
-
+    
     <section class="posts">
       {
         posts.map(async (post) => <Post post={post} summary></Post>)
