@@ -9,15 +9,16 @@ const posts = (await getCollection("posts")).sort(
 ---
 
 <Layout title="FPGA Arcade">
-  <section slot="Hero" class="full-width">Full width HERO goes here</section>
+  <section slot="Hero" class="u-full-width">Full width HERO goes here</section>
   <main>
-    <h1>Recent News</h1>
+    <div class="news-header">
+      <h1>Recent News</h1>
+      <div><a href="/news/">View all News</a></div>
+    </div>
 
     <section class="featured-posts">
       {posts.slice(0, 3).map(async (post) => <Post post={post} summary />)}
     </section>
-
-    <div><a href="/news/">All News</a></div>
 
     <div>
       <p>Main content here... Coming Soon(tm)</p>
@@ -28,6 +29,17 @@ const posts = (await getCollection("posts")).sort(
 <style>
   main > * {
     margin-block: 1rem;
+  }
+
+  .news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid lightgray;
+  }
+
+  h1 {
+    margin-bottom: 0;
   }
 
   .featured-posts {

@@ -24,7 +24,7 @@ body {
     
     min-height: 100svh;
 
-    /* Workaround to allow .full-width usage */
+    /* Workaround to allow .u-full-width usage */
     width: 100svw;
     overflow-x: hidden;
     
