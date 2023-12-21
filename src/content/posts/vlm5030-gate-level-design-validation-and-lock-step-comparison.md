@@ -36,7 +36,7 @@ The results are quite impressing - the screenshot below shows a range of Salaman
 
 ![](@assets/images/post/destroy_gl_chip_chip2nd_020ms.png)
 
-<figcaption>Detail of Salamander's "Destroy them all!" at 20 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption
+<figcaption>Detail of Salamander's "Destroy them all!" at 20 ms. From top to bottom: GL design, VLM5030, VLM5030 2nd run</figcaption>
 </figure>
 
 However, there are locations where all three waveforms begin to diverge (around the 0.108 s mark). It's not necessarily just a difference between the gate-level design and the chip, but also the chip produces a different waveform during its 2nd run:
