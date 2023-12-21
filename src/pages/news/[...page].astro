@@ -1,0 +1,53 @@
+---
+import type {
+  InferGetStaticPropsType,
+  GetStaticPaths,
+} from "astro";
+import { getCollection } from "astro:content";
+
+import Layout from "@layouts/Layout.astro";
+import Post from "@components/Post.astro"
+
+export const getStaticPaths = (async ({paginate}) => {
+  const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
+  return paginate(posts, {pageSize: 3})
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { page } = Astro.props
+---
+
+<Layout title="News">
+  <main>
+    <h1>News</h1>
+    <ul>
+      <li>start: {page.start}</li>
+      <li>end: {page.end}</li>
+      <li>size: {page.size} of {page.total}</li>
+      <li>page: {page.currentPage} / {page.lastPage}</li>
+      <li>current: {page.url.current}</li>
+      <li>next: {page.url.next}</li>
+    </ul>
+
+    <section class="posts">
+      {
+        page.data.map(async (post) => <Post post={post} summary></Post>)
+      }
+    </section>
+
+    
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-inline: auto;
+    max-width: 80ch;
+  }
+  
+  .posts {
+    display: grid;
+    grid-gap: 1rem;
+    max-width: 80ch;
+  }
+</style>
