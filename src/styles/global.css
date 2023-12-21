@@ -89,3 +89,19 @@ figcaption {
     caption-side: bottom;
     font-size: 0.75rem;
 }
+
+.pagination {
+    display: contents;
+}
+
+.pagination ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    padding: 1rem;
+}
