@@ -13,19 +13,19 @@ import { Icon } from "astro-icon";
 export const getStaticPaths = (async () => {
     const posts = await getCollection("posts");
 
-    return [
-        { params: { tag: "vidor" }, props: {posts: posts}},
-        { params: { tag: "replay1" }, props: {posts: posts}},
-        { params: { tag: "vlm5030"}, props: {posts: posts}},
-    ]
+    const tags = [...new Set(posts.map(post => post.data?.tags ?? []).flat())]
+    
+    return Array.from(tags).map(tag => {
+      const taggedPosts = posts.filter(post => post.data.tags?.includes(tag))
+      return {params: {tag: tag}, props: {posts: taggedPosts}}
+    })
+
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-
-const taggedPosts = posts.filter(post => post.data.tags?.includes(tag))
 ---
 
 <Layout title={tag}>
@@ -36,7 +36,7 @@ const taggedPosts = posts.filter(post => post.data.tags?.includes(tag))
            or do similar to categories when added to specific category
            listing -->
       {
-        taggedPosts.map(async post => {
+        posts.map(async post => {
           const authors = await getEntries(post.data.authors);
 
           return (
