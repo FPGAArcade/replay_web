@@ -11,7 +11,7 @@ const posts = (await getCollection("posts")).sort(
 <Layout title="FPGA Arcade">
   <section slot="Hero" class="u-full-width">Full width HERO goes here</section>
   <main>
-    <div class="news-header">
+    <div class="section-header underlined">
       <h1>Recent News</h1>
       <div><a href="/news/">View all News</a></div>
     </div>
@@ -29,17 +29,6 @@ const posts = (await getCollection("posts")).sort(
 <style>
   main > * {
     margin-block: 1rem;
-  }
-
-  .news-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px solid lightgray;
-  }
-
-  h1 {
-    margin-bottom: 0;
   }
 
   .featured-posts {

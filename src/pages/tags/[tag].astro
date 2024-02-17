@@ -7,7 +7,6 @@ import { getCollection } from "astro:content";
 import { getEntries } from "astro:content";
 
 import Layout from "@layouts/Layout.astro";
-import Post from "@components/Post.astro";
 import { Icon } from "astro-icon";
 
 export const getStaticPaths = (async () => {
@@ -30,11 +29,12 @@ const { posts } = Astro.props;
 
 <Layout title={tag}>
   <main>
-    <section class="posts">
-      <h1>Posts tagged {tag}</h1>
-      <!-- TODO: [Gary] Link to all tags page? similar to view all news on posts page?
-           or do similar to categories when added to specific category
-           listing -->
+    <section class="posts">      
+      <div class="section-header underlined">
+        <h1>Posts tagged {tag}</h1>
+        <div><a href="/tags/">View all Tags</a></div>
+      </div>
+
       {
         posts.map(async post => {
           const authors = await getEntries(post.data.authors);

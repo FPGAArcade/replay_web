@@ -1,107 +1,127 @@
 :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg,
-            rgb(var(--accent)),
-            #da62c4 30%,
-            white 60%);
-    --rpl-header-background-color: #161616;
-    --rpl-header-text-color: #a1a1a1;
-    --rpl-footer-background-color: var(--rpl-header-background-color);
-    --rpl-footer-text-color: var(--rpl-header-text-color);
-    --rpl-link-color: #e7501e;
-    --rpl-link-underline-color: var(--rpl-link-color);
-    --rpl-border-color: var(--rpl-link-color);
+  --accent: 124, 58, 237;
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--accent)),
+    #da62c4 30%,
+    white 60%
+  );
+  --rpl-header-background-color: #161616;
+  --rpl-header-text-color: #a1a1a1;
+  --rpl-footer-background-color: var(--rpl-header-background-color);
+  --rpl-footer-text-color: var(--rpl-header-text-color);
+  --rpl-link-color: #e7501e;
+  --rpl-link-underline-color: var(--rpl-link-color);
+  --rpl-border-color: var(--rpl-link-color);
 }
 
 html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
+  font-family: system-ui, sans-serif;
+  background-color: #f6f6f6;
 }
 
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    
-    min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 
-    /* Workaround to allow .u-full-width usage */
-    width: 100svw;
-    overflow-x: hidden;
-    
-    margin: 0;
+  min-height: 100svh;
+
+  /* Workaround to allow .u-full-width usage */
+  width: 100svw;
+  overflow-x: hidden;
+
+  margin: 0;
+}
+
+h1 {
+    margin-block: 1rem;
 }
 
 code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 a {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 
-    color: var(--rpl-link-color);
-    text-decoration: none;
+  color: var(--rpl-link-color);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:hover img {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
 /* Responsive images by default */
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* following three classes work around min-content breaking responsive images
    within the figure */
 figure {
-    display: inline-block;
+  display: inline-block;
 
-    background: white;
-    border: 1px solid darkgrey;
+  background: white;
+  border: 1px solid darkgrey;
 
-    padding: 0.5rem;
-    margin: 1rem;
-    max-width: max(80ch, 50%);
+  padding: 0.5rem;
+  margin: 1rem;
+  max-width: max(80ch, 50%);
 
-    text-align: center;
+  text-align: center;
 }
 
 figure.center {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%)
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 figure p {
-    margin: 0;
+  margin: 0;
 }
 
 figcaption {
-    display: block;
-    caption-side: bottom;
-    font-size: 0.75rem;
+  display: block;
+  caption-side: bottom;
+  font-size: 0.75rem;
 }
 
 .pagination {
-    display: contents;
+  display: contents;
 }
 
 .pagination ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
 .pagination li {
-    padding: 1rem;
+  padding: 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.section-header.underlined {
+  border-bottom: 1px solid lightgray;
+}
+
+.section-header > h1 {
+  margin-bottom: 0;
 }
