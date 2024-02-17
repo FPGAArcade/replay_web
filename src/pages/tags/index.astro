@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "@layouts/Layout.astro";
+
+const posts = await getCollection("posts");
+
+const sortedTags = [
+  ...posts.map((post) => post.data?.tags ?? ["untagged"]).flat(),
+].sort((a, b) => a.localeCompare(b));
+
+const tags = sortedTags.reduce((acc, val) => {
+  acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
+  return acc;
+}, {});
+---
+
+<Layout title="Tags">
+  <main>
+    <div class="section-header underlined">
+      <h1>Tags</h1>
+    </div>
+    <ul>
+      {
+        Object.values(tags).map((tag) => (
+          <li>
+            <a href={`/tags/${tag.name}`}>{tag.name}</a> ({tag.count})
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>

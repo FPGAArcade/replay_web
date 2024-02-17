@@ -14,10 +14,13 @@ export const getStaticPaths = (async () => {
 
     const tags = [...new Set(posts.map(post => post.data?.tags ?? []).flat())]
     
-    return Array.from(tags).map(tag => {
+    const paths = Array.from(tags).map(tag => {
       const taggedPosts = posts.filter(post => post.data.tags?.includes(tag))
       return {params: {tag: tag}, props: {posts: taggedPosts}}
     })
+
+    const untaggedPosts = posts.filter(post => (post.data.tags ?? []).length === 0)
+    return [...paths, {params: {tag: 'untagged'}, props: {posts: untaggedPosts}}]
 
 }) satisfies GetStaticPaths;
 
