@@ -1,0 +1,126 @@
+---
+import type {
+  InferGetStaticPropsType,
+  GetStaticPaths,
+} from "astro";
+import { getCollection } from "astro:content";
+import { getEntries } from "astro:content";
+
+import Layout from "@layouts/Layout.astro";
+import Post from "@components/Post.astro";
+import { Icon } from "astro-icon";
+
+export const getStaticPaths = (async () => {
+    const posts = await getCollection("posts");
+
+    return [
+        { params: { tag: "vidor" }, props: {posts: posts}},
+        { params: { tag: "replay1" }, props: {posts: posts}},
+        { params: { tag: "vlm5030"}, props: {posts: posts}},
+    ]
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const taggedPosts = posts.filter(post => post.data.tags?.includes(tag))
+---
+
+<Layout title={tag}>
+  <main>
+    <section class="posts">
+      <h1>Posts tagged {tag}</h1>
+      <!-- TODO: [Gary] Link to all tags page? similar to view all news on posts page?
+           or do similar to categories when added to specific category
+           listing -->
+      {
+        taggedPosts.map(async post => {
+          const authors = await getEntries(post.data.authors);
+
+          return (
+            <section class="post">
+              <div class="post__title">
+              <a href={`/post/${post.slug}`}>{post.data.title}</a>
+              </div>
+              <div class="meta">
+                <span>
+                  <Icon name="mdi:calendar-month" />
+                  <span>
+                    {
+                      new Date(post.data.created).toLocaleDateString("en-GB", {
+                        weekday: "short",
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })
+                    }
+                  </span>
+                </span>
+                <span>
+                  <Icon name="mdi:account" /> 
+                  {
+                    authors.map((author) => <span class="meta__author">{author.data.name}</span>)
+                  }
+                </span>
+              </div>
+            </section>
+          )
+        })
+      }
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-inline: auto;
+  }
+
+  .posts {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .post {
+    display: grid;
+    grid-template-rows: min-content min-content;
+  }
+
+  .post__title {
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+
+  .meta {
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }
+
+  .meta > span {
+    margin-inline-end: 0.5rem;
+  }
+
+  .meta * {
+    vertical-align: middle;
+  }
+
+  main svg {
+    height: 2rem;
+    padding-inline-end: 0.1rem;
+  }
+
+  .meta svg {
+    height: 0.7rem;
+    padding-inline-end: 0.1rem;
+  }
+
+  .meta__author:not(:last-child)::after {
+    content: ", ";
+  }
+</style>
