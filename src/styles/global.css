@@ -116,6 +116,7 @@ figcaption {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 1rem;
 }
 
 .section-header.underlined {

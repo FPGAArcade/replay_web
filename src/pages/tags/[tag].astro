@@ -29,46 +29,48 @@ const { posts } = Astro.props;
 
 <Layout title={tag}>
   <main>
-    <section class="posts">      
+    <section>      
       <div class="section-header underlined">
         <h1>Posts tagged {tag}</h1>
         <div><a href="/tags/">View all Tags</a></div>
       </div>
 
-      {
-        posts.map(async post => {
-          const authors = await getEntries(post.data.authors);
+      <div class="posts">
+        {
+          posts.map(async post => {
+            const authors = await getEntries(post.data.authors);
 
-          return (
-            <section class="post">
-              <div class="post__title">
-              <a href={`/post/${post.slug}`}>{post.data.title}</a>
-              </div>
-              <div class="meta">
-                <span>
-                  <Icon name="mdi:calendar-month" />
+            return (
+              <section class="post">
+                <div class="post__title">
+                <a href={`/post/${post.slug}`}>{post.data.title}</a>
+                </div>
+                <div class="meta">
                   <span>
+                    <Icon name="mdi:calendar-month" />
+                    <span>
+                      {
+                        new Date(post.data.created).toLocaleDateString("en-GB", {
+                          weekday: "short",
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })
+                      }
+                    </span>
+                  </span>
+                  <span>
+                    <Icon name="mdi:account" /> 
                     {
-                      new Date(post.data.created).toLocaleDateString("en-GB", {
-                        weekday: "short",
-                        year: "numeric",
-                        month: "short",
-                        day: "numeric",
-                      })
+                      authors.map((author) => <span class="meta__author">{author.data.name}</span>)
                     }
                   </span>
-                </span>
-                <span>
-                  <Icon name="mdi:account" /> 
-                  {
-                    authors.map((author) => <span class="meta__author">{author.data.name}</span>)
-                  }
-                </span>
-              </div>
-            </section>
-          )
-        })
-      }
+                </div>
+              </section>
+            )
+          })
+        }
+      </div>
     </section>
   </main>
 </Layout>
