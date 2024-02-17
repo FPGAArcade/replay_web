@@ -14,6 +14,7 @@ interface Props {
 const { post, summary=false } = Astro.props;
 
 const authors = await getEntries(post.data.authors);
+
 const published = new Date(post.data.created).toLocaleDateString("en-GB", {
   weekday: "short",
   year: "numeric",
@@ -49,6 +50,8 @@ const {Content} = await post.render()
         </span>
       )
     }
+    <!-- TODO: RSS feed link -->
+    <!-- TODO: list of tags limited to first N? -->
   </div>
   <div>{summary ? <a href={`/post/${post.slug}`}><PostImage post={post} /></a> : <PostImage post={post} />}</div>
   <div>{summary ? <PostExcerpt post={post} /> : <Content />}</div>

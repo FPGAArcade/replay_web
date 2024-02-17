@@ -3,6 +3,8 @@ title: "USB interface"
 created: 2013-02-03
 categories: 
   - news
+tags:
+  - replay1
 authors: 
   - mikej
 ---
