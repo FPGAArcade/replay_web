@@ -10,19 +10,28 @@ import Layout from "@layouts/Layout.astro";
 import Post from "@components/Post.astro"
 
 export const getStaticPaths = (async ({paginate}) => {
+  // TODO: Fetch from front matter
+  // TODO: Switch to reference to allow name/description/logo similar to authors?
+  const categories = ["news", "core-news"]
   const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
-  return paginate(posts, {pageSize: 8})
+  
+  return categories.flatMap(category => {
+    const categoryPosts = posts.filter(post => post.data.categories.includes(category))
+    return paginate(categoryPosts, {pageSize: 8, params: {category: category}})
+  })
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props
+const params = Astro.params
 ---
 
-<Layout title="News">
+<Layout title={params.category}>
   <main>
     <section>
       <div class="section-header underlined">
-        <h1>News</h1>
+        <h1>{params.category}</h1>
+        <div><a href="/categories/">View all News</a></div>
       </div>
 
       <div class="posts">
@@ -33,7 +42,7 @@ const { page } = Astro.props
     </section>
 
     <div class="pagination">
-      <Pagination page={page} urlPattern="/news/{}" previousLabel="« Newer" nextLabel="Older »" /> 
+      <Pagination page={page} urlPattern={`/categories/${params.category}/{}`} previousLabel="« Newer" nextLabel="Older »" /> 
     </div>
   </main>
 </Layout>
