@@ -9,7 +9,12 @@ const sortedTags = [
   ...posts.map((post) => post.data?.tags ?? ["untagged"]).flat(),
 ].sort((a, b) => a.localeCompare(b));
 
-const tags = sortedTags.reduce((acc, val) => {
+interface TagInfo {
+  name: string,
+  count: number
+}
+
+const tags = sortedTags.reduce((acc: Record<string,TagInfo>, val) => {
   acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
   return acc;
 }, {});
