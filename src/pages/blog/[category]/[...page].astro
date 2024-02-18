@@ -31,7 +31,7 @@ const params = Astro.params
     <section>
       <div class="section-header underlined">
         <h1>{params.category}</h1>
-        <div><a href="/categories/">View all categories</a></div>
+        <div><a href="/blog/">View all</a></div>
       </div>
 
       <div class="posts">
@@ -42,7 +42,7 @@ const params = Astro.params
     </section>
 
     <div class="pagination">
-      <Pagination page={page} urlPattern={`/categories/${params.category}/{}`} previousLabel="« Newer" nextLabel="Older »" /> 
+      <Pagination page={page} urlPattern={`/blog/${params.category}/{}`} previousLabel="« Newer" nextLabel="Older »" /> 
     </div>
   </main>
 </Layout>
