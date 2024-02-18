@@ -14,7 +14,7 @@ interface CategoryInfo {
   count: number
 }
 
-const categoryInfo = categories.reduce((acc: Record<string,TagInfo>, val) => {
+const categoryInfo = categories.reduce((acc: Record<string,CategoryInfo>, val) => {
   acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
   return acc;
 }, {});
