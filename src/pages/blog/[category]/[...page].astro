@@ -37,7 +37,7 @@ const params = Astro.params;
 ---
 
 <LayoutBlog title={params.category}>
-  <div slot="sidebar">
+  <section slot="sidebar">
     <div class="section-header underlined">
       <h1>Categories</h1>
     </div>
@@ -51,7 +51,7 @@ const params = Astro.params;
         ))
       }
     </ul>
-  </div>
+  </section>
 
   <section>
     <div class="section-header underlined">

@@ -10,9 +10,9 @@ const { title } = Astro.props;
 
 <Layout title={title}>
   <main>
-    <section class="sidebar">
+    <div class="sidebar">
       <slot name="sidebar" />
-    </section>
+    </div>
 
     <section class="content">
       <slot />

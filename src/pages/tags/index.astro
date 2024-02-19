@@ -22,17 +22,19 @@ const tags = sortedTags.reduce((acc: Record<string,TagInfo>, val) => {
 
 <Layout title="Tags">
   <main>
-    <div class="section-header underlined">
-      <h1>Tags</h1>
-    </div>
-    <ul>
-      {
-        Object.values(tags).map((tag) => (
-          <li>
-            <a href={`/tags/${tag.name}`}>{tag.name}</a> ({tag.count})
-          </li>
-        ))
-      }
-    </ul>
+    <section>
+      <div class="section-header underlined">
+        <h1>Tags</h1>
+      </div>
+      <ul>
+        {
+          Object.values(tags).map((tag) => (
+            <li>
+              <a href={`/tags/${tag.name}`}>{tag.name}</a> ({tag.count})
+            </li>
+          ))
+        }
+      </ul>
+    </section>
   </main>
 </Layout>
