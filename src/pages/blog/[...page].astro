@@ -33,7 +33,7 @@ const { page, categories } = Astro.props
 
 ---
 <LayoutBlog title="Blog">
-  <div slot="sidebar">
+  <section slot="sidebar">
     <div class="section-header underlined">
       <h1>Categories</h1>
     </div>
@@ -46,7 +46,7 @@ const { page, categories } = Astro.props
             ))
           }
     </ul>
-  </div>
+  </section>
 
   <section>
     <div class="section-header underlined">
