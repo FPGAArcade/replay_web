@@ -41,7 +41,8 @@ const { page, categories } = Astro.props
       {
         Object.values(categories).map((category) => (
           <li>
-            <a href={`/blog/${category.name}`}>{category.name}</a> ({category.count})
+            <a href={`/blog/${category.name}`}>{category.name}</a>
+            <span>({category.count})</span>
             </li>
             ))
           }
