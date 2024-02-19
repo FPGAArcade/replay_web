@@ -1,0 +1,105 @@
+---
+import type {
+  InferGetStaticPropsType,
+  GetStaticPaths,
+} from "astro";
+import { getCollection } from "astro:content";
+import Pagination from "@philnash/astro-pagination";
+
+import Layout from "@layouts/Layout.astro";
+import Post from "@components/Post.astro";
+
+interface CategoryInfo {
+  name: string,
+  count: number
+}
+
+export const getStaticPaths = (async ({paginate}) => {
+  const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
+  const categories = [
+    ...posts.map((post) => post.data.categories).flat(),
+  ].sort((a, b) => a.localeCompare(b));
+  
+  const categoryInfo = categories.reduce((acc: Record<string,CategoryInfo>, val) => {
+    acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
+    return acc;
+  }, {});
+
+  return paginate(posts, {pageSize: 8, props: {categories: categoryInfo}})
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { page, categories } = Astro.props
+
+---
+<Layout title="Tags">
+  <main>
+    
+    <section class="section-categories">
+      <div class="section-header underlined">
+        <h1>Categories</h1>
+      </div>
+      <ul>
+        {
+          Object.values(categories).map((category) => (
+            <li>
+              <a href={`/blog/${category.name}`}>{category.name}</a> ({category.count})
+              </li>
+              ))
+            }
+      </ul>
+    </section>
+
+    <section class="section-posts">
+      <div class="section-header underlined">
+        <h1>Posts</h1>
+      </div>
+
+      <div class="posts">
+        {
+          page.data.map(async (post) => <Post post={post} summary></Post>)
+        }
+      </div>
+
+      <div class="pagination">
+        <Pagination page={page} urlPattern={`/blog/{}`} previousLabel="« Newer" nextLabel="Older »" /> 
+      </div>
+    </section>
+
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: grid;
+    
+    grid-template-areas: "categories"
+                         "posts";
+    
+    justify-items: start;
+    gap: 1rem;
+  }
+  
+  @media(min-width: 767px) {
+    main {
+      grid-template-areas: "posts categories";
+      justify-items: center;
+    }
+  }
+
+  .section-categories {
+    grid-area: categories;
+  }
+
+  .section-posts {
+    grid-area: posts;
+  }
+
+  /* TODO: mobile layout stacking */
+
+  .posts {
+    display: grid;
+    grid-gap: 1rem;
+    max-width: 80ch;
+  }
+</style>

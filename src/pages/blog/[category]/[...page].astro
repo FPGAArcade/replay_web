@@ -10,10 +10,10 @@ import Layout from "@layouts/Layout.astro";
 import Post from "@components/Post.astro"
 
 export const getStaticPaths = (async ({paginate}) => {
-  // TODO: Fetch from front matter
-  // TODO: Switch to reference to allow name/description/logo similar to authors?
-  const categories = ["news", "core-news"]
   const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
+  const categories = [
+    ...new Set(posts.map((post) => post.data.categories).flat()),
+  ].sort((a, b) => a.localeCompare(b));
   
   return categories.flatMap(category => {
     const categoryPosts = posts.filter(post => post.data.categories.includes(category))
