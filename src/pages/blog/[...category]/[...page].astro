@@ -21,32 +21,56 @@ export const getStaticPaths = (async ({ paginate }) => {
     return acc;
   }, {});
 
-  return paginate(posts, { pageSize: 8, props: { categories: categoryInfo } });
+  // Post routes for top level /blog/[page]
+  const pathsRoot = paginate(posts, {
+    pageSize: 8,
+    params: { category: undefined },
+    props: { categories: categoryInfo, isRoot: true }
+  })
+
+  // Filtered post routes byte category for /blog/[category]/[page]
+  const pathsCategory = [...new Set(categories)].flatMap((category) => {
+    const categoryPosts = posts.filter((post) =>
+      post.data.categories.includes(category)
+    );
+    return paginate(categoryPosts, {
+      pageSize: 8,
+      params: { category: category},
+      props: { categories: categoryInfo, isRoot: false },
+    });
+  });
+
+  return [...pathsRoot, ...pathsCategory]
+
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-const { page, categories } = Astro.props;
+const { page, categories, isRoot } = Astro.props;
+const params = Astro.params;
+
+const title = isRoot ? "Blog: All Posts" : `Blog: ${params.category}`
+const urlPattern = isRoot ? `/blog/{}` : `/blog/${params.category}/{}`
 ---
 
-<LayoutBlog title="Blog" categories={categories}>
+<LayoutBlog title={title} categories={categories}>
   <section>
     <div class="section-header underlined">
-      <h1>All Posts</h1>
+      <h1>{title}</h1>
     </div>
 
     <div class="posts">
       {page.data.map(async (post) => <Post post={post} summary />)}
     </div>
-
-    <div class="pagination">
-      <Pagination
-        page={page}
-        urlPattern={`/blog/{}`}
-        previousLabel="« Newer"
-        nextLabel="Older »"
-      />
-    </div>
   </section>
+
+  <div class="pagination">
+    <Pagination
+      page={page}
+      urlPattern={urlPattern}
+      previousLabel="« Newer"
+      nextLabel="Older »"
+    />
+  </div>
 </LayoutBlog>
 
 <style>
