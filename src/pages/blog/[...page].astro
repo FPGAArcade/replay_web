@@ -9,10 +9,7 @@ import Pagination from "@philnash/astro-pagination";
 import LayoutBlog from "@layouts/LayoutBlog.astro";
 import Post from "@components/Post.astro";
 
-interface CategoryInfo {
-  name: string,
-  count: number
-}
+import type { Categories } from "@layouts/LayoutBlog.astro";
 
 export const getStaticPaths = (async ({paginate}) => {
   const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
@@ -20,7 +17,7 @@ export const getStaticPaths = (async ({paginate}) => {
     ...posts.map((post) => post.data.categories).flat(),
   ].sort((a, b) => a.localeCompare(b));
   
-  const categoryInfo = categories.reduce((acc: Record<string,CategoryInfo>, val) => {
+  const categoryInfo = categories.reduce((acc: Categories, val) => {
     acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
     return acc;
   }, {});
@@ -32,23 +29,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page, categories } = Astro.props
 
 ---
-<LayoutBlog title="Blog">
-  <section slot="sidebar">
-    <div class="section-header underlined">
-      <h1>Categories</h1>
-    </div>
-    <ul>
-      {
-        Object.values(categories).map((category) => (
-          <li>
-            <a href={`/blog/${category.name}`}>{category.name}</a>
-            <span>({category.count})</span>
-            </li>
-            ))
-          }
-    </ul>
-  </section>
-
+<LayoutBlog title="Blog" categories={categories}>
   <section>
     <div class="section-header underlined">
       <h1>All Posts</h1>

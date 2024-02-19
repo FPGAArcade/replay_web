@@ -6,6 +6,8 @@ import Pagination from "@philnash/astro-pagination";
 import LayoutBlog from "@layouts/LayoutBlog.astro";
 import Post from "@components/Post.astro";
 
+import type { Categories } from "@layouts/LayoutBlog.astro";
+
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = (await getCollection("posts")).sort(
     (a, b) => b.data.created.getTime() - a.data.created.getTime()
@@ -15,7 +17,7 @@ export const getStaticPaths = (async ({ paginate }) => {
   );
 
   const categoryInfo = categories.reduce(
-    (acc: Record<string, CategoryInfo>, val) => {
+    (acc: Categories, val) => {
       acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
       return acc;
     },
@@ -39,23 +41,7 @@ const { page, categories } = Astro.props;
 const params = Astro.params;
 ---
 
-<LayoutBlog title={params.category}>
-  <section slot="sidebar">
-    <div class="section-header underlined">
-      <h1>Categories</h1>
-    </div>
-    <ul>
-      {
-        Object.values(categories).map((category) => (
-          <li>
-            <a href={`/blog/${category.name}`}>{category.name}</a>
-            <span>({category.count})</span>
-          </li>
-        ))
-      }
-    </ul>
-  </section>
-
+<LayoutBlog title={params.category} categories={categories}>
   <section>
     <div class="section-header underlined">
       <h1>{params.category}</h1>

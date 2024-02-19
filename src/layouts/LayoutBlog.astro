@@ -1,18 +1,40 @@
 ---
 import Layout from "@layouts/Layout.astro";
 
-export interface Props {
-  title: string;
+export type Categories = Record<string, CategoryInfo>
+
+export interface CategoryInfo {
+  name: string,
+  count: number
 }
 
-const { title } = Astro.props;
+export interface Props {
+  title: string;
+  categories: Categories;
+}
+
+const { title, categories } = Astro.props;
 ---
 
 <Layout title={title}>
   <main>
-    <div class="sidebar">
-      <slot name="sidebar" />
-    </div>
+    <section slot="sidebar">
+      <slot name="sidebar">
+        <div class="section-header underlined">
+          <h1>Categories</h1>
+        </div>
+        <ul>
+          {
+            Object.values(categories).map((category) => (
+              <li>
+                <a href={`/blog/${category.name}`}>{category.name}</a>
+                <span>({category.count})</span>
+              </li>
+            ))
+          }
+        </ul>
+      </slot>
+    </section>
 
     <section class="content">
       <slot />
