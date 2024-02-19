@@ -1,58 +1,79 @@
 ---
-import type {
-  InferGetStaticPropsType,
-  GetStaticPaths,
-} from "astro";
+import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Pagination from "@philnash/astro-pagination";
 
-import Layout from "@layouts/Layout.astro";
-import Post from "@components/Post.astro"
+import LayoutBlog from "@layouts/LayoutBlog.astro";
+import Post from "@components/Post.astro";
 
-export const getStaticPaths = (async ({paginate}) => {
-  const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = (await getCollection("posts")).sort(
+    (a, b) => b.data.created.getTime() - a.data.created.getTime()
+  );
   const categories = [
-    ...new Set(posts.map((post) => post.data.categories).flat()),
+    ...posts.map((post) => post.data.categories).flat(),
   ].sort((a, b) => a.localeCompare(b));
-  
-  return categories.flatMap(category => {
-    const categoryPosts = posts.filter(post => post.data.categories.includes(category))
-    return paginate(categoryPosts, {pageSize: 8, params: {category: category}})
-  })
+
+  const categoryInfo = categories.reduce((acc: Record<string, CategoryInfo>, val) => {
+    acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
+    return acc;
+  }, {});
+
+  return [... new Set(categories)].flatMap((category) => {
+    const categoryPosts = posts.filter((post) =>
+      post.data.categories.includes(category)
+    );
+    return paginate(categoryPosts, {
+      pageSize: 8,
+      params: { category: category },
+      props: { categories: categoryInfo }
+    });
+  });
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-const { page } = Astro.props
-const params = Astro.params
+const { page, categories } = Astro.props;
+const params = Astro.params;
 ---
 
-<Layout title={params.category}>
-  <main>
-    <section>
-      <div class="section-header underlined">
-        <h1>{params.category}</h1>
-        <div><a href="/blog/">View all</a></div>
-      </div>
-
-      <div class="posts">
-        {
-          page.data.map(async (post) => <Post post={post} summary></Post>)
-        }
-      </div>
-    </section>
-
-    <div class="pagination">
-      <Pagination page={page} urlPattern={`/blog/${params.category}/{}`} previousLabel="« Newer" nextLabel="Older »" /> 
+<LayoutBlog title={params.category}>
+  <div slot="sidebar">
+    <div class="section-header underlined">
+      <h1>Categories</h1>
     </div>
-  </main>
-</Layout>
+    <ul>
+      {
+        Object.values(categories).map((category) => (
+          <li>
+            <a href={`/blog/${category.name}`}>{category.name}</a> (
+            {category.count})
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <section>
+    <div class="section-header underlined">
+      <h1>{params.category}</h1>
+    </div>
+
+    <div class="posts">
+      {page.data.map(async (post) => <Post post={post} summary />)}
+    </div>
+  </section>
+
+  <div class="pagination">
+    <Pagination
+      page={page}
+      urlPattern={`/blog/${params.category}/{}`}
+      previousLabel="« Newer"
+      nextLabel="Older »"
+    />
+  </div>
+</LayoutBlog>
 
 <style>
-  main {
-    margin-inline: auto;
-    max-width: 80ch;
-  }
-  
   .posts {
     display: grid;
     grid-gap: 1rem;
