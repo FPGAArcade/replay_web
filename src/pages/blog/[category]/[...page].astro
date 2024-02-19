@@ -16,13 +16,10 @@ export const getStaticPaths = (async ({ paginate }) => {
     (a, b) => a.localeCompare(b)
   );
 
-  const categoryInfo = categories.reduce(
-    (acc: Categories, val) => {
-      acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
-      return acc;
-    },
-    {}
-  );
+  const categoryInfo = categories.reduce((acc: Categories, val) => {
+    acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
+    return acc;
+  }, {});
 
   return [...new Set(categories)].flatMap((category) => {
     const categoryPosts = posts.filter((post) =>

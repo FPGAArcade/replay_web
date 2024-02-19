@@ -1,8 +1,5 @@
 ---
-import type {
-  InferGetStaticPropsType,
-  GetStaticPaths,
-} from "astro";
+import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import Pagination from "@philnash/astro-pagination";
 
@@ -11,24 +8,26 @@ import Post from "@components/Post.astro";
 
 import type { Categories } from "@layouts/LayoutBlog.astro";
 
-export const getStaticPaths = (async ({paginate}) => {
-  const posts = (await getCollection("posts")).sort((a,b) => b.data.created.getTime() - a.data.created.getTime())
-  const categories = [
-    ...posts.map((post) => post.data.categories).flat(),
-  ].sort((a, b) => a.localeCompare(b));
-  
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = (await getCollection("posts")).sort(
+    (a, b) => b.data.created.getTime() - a.data.created.getTime()
+  );
+  const categories = [...posts.map((post) => post.data.categories).flat()].sort(
+    (a, b) => a.localeCompare(b)
+  );
+
   const categoryInfo = categories.reduce((acc: Categories, val) => {
     acc[val] = { name: val, count: (acc[val]?.count ?? 0) + 1 };
     return acc;
   }, {});
 
-  return paginate(posts, {pageSize: 8, props: {categories: categoryInfo}})
+  return paginate(posts, { pageSize: 8, props: { categories: categoryInfo } });
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-const { page, categories } = Astro.props
-
+const { page, categories } = Astro.props;
 ---
+
 <LayoutBlog title="Blog" categories={categories}>
   <section>
     <div class="section-header underlined">
@@ -36,13 +35,16 @@ const { page, categories } = Astro.props
     </div>
 
     <div class="posts">
-      {
-        page.data.map(async (post) => <Post post={post} summary></Post>)
-      }
+      {page.data.map(async (post) => <Post post={post} summary />)}
     </div>
 
     <div class="pagination">
-      <Pagination page={page} urlPattern={`/blog/{}`} previousLabel="« Newer" nextLabel="Older »" /> 
+      <Pagination
+        page={page}
+        urlPattern={`/blog/{}`}
+        previousLabel="« Newer"
+        nextLabel="Older »"
+      />
     </div>
   </section>
 </LayoutBlog>
