@@ -2,7 +2,7 @@
 title: "68060 Ethernet and SD card support"
 created: 2019-11-06
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

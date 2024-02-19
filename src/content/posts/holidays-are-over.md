@@ -2,7 +2,7 @@
 title: "Holidays are over...."
 created: 2006-09-27
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

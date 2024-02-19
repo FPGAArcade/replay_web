@@ -2,7 +2,7 @@
 title: "68000 soft core debug"
 created: 2010-04-28
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

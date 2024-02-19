@@ -2,7 +2,7 @@
 title: "Too much beer ...."
 created: 2009-08-09
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

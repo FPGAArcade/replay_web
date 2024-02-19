@@ -2,7 +2,7 @@
 title: "Scramble & Frogger released"
 created: 2007-06-13
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

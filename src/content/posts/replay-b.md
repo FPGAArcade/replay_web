@@ -2,7 +2,7 @@
 title: "Replay 'B'"
 created: 2009-09-21
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

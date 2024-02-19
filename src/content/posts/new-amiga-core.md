@@ -2,7 +2,7 @@
 title: "New Amiga Core"
 created: 2017-08-01
 categories: 
-  - core-news
+  - core-updates
 authors: 
   - mikej
 image: "@assets/images/post/amiga500.jpg"

@@ -2,7 +2,7 @@
 title: "Large patch daughter board"
 created: 2009-05-06
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

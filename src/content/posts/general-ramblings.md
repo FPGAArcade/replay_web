@@ -2,7 +2,7 @@
 title: "General ramblings"
 created: 2007-02-15
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

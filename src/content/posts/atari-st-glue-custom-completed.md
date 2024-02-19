@@ -2,7 +2,7 @@
 title: "Atari ST 'Glue' custom completed"
 created: 2007-08-28
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

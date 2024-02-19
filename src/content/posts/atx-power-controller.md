@@ -2,7 +2,7 @@
 title: "ATX power controller"
 created: 2011-06-30
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

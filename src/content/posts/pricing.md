@@ -2,7 +2,7 @@
 title: "Pricing"
 created: 2012-05-22
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

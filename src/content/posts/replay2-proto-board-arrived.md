@@ -2,7 +2,7 @@
 title: "Replay2 proto-board arrived"
 created: 2019-02-11
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/20190211_205854.jpg"

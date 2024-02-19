@@ -2,7 +2,7 @@
 title: "New toy - Agilent N5998A HDMI/DVI Analyser"
 created: 2020-10-31
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/n5998.jpg"

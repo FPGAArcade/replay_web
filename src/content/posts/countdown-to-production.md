@@ -2,7 +2,7 @@
 title: "Countdown to production ....."
 created: 2009-08-15
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Boards back in Sweden"
 created: 2010-05-25
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

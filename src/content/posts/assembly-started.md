@@ -2,7 +2,7 @@
 title: "Assembly started"
 created: 2010-10-03
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

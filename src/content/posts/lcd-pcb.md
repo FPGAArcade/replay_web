@@ -2,7 +2,7 @@
 title: "LCD PCB"
 created: 2009-06-04
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

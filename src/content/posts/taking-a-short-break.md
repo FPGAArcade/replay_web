@@ -2,7 +2,7 @@
 title: "Taking a short break"
 created: 2015-06-23
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

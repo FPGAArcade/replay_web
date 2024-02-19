@@ -2,7 +2,7 @@
 title: "Back from holiday"
 created: 2015-07-19
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

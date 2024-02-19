@@ -2,7 +2,7 @@
 title: "Asteroids update"
 created: 2004-07-19
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

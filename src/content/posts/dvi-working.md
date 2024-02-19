@@ -2,7 +2,7 @@
 title: "DVI working"
 created: 2009-07-25
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

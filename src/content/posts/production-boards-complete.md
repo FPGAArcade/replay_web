@@ -2,7 +2,7 @@
 title: "Production boards complete"
 created: 2013-04-03
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

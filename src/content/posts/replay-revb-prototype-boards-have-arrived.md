@@ -2,7 +2,7 @@
 title: "Replay RevB prototype boards have arrived!"
 created: 2010-11-15
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "New server"
 created: 2008-08-31
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "More recovered Atari documents"
 created: 2016-08-26
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/recovered_atari_docs.png"

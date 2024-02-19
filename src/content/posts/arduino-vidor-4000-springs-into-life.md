@@ -2,7 +2,7 @@
 title: "Arduino Vidor 4000 springs into life"
 created: 2019-06-17
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Colecovision Release"
 created: 2006-01-16
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

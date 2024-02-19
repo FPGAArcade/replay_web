@@ -2,7 +2,7 @@
 title: "Scramble video output analysis using Python and Spice"
 created: 2020-06-19
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

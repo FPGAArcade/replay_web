@@ -2,7 +2,7 @@
 title: "Last Replay1 shipped...."
 created: 2019-02-17
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/20190217_190845.jpg"

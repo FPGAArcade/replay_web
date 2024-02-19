@@ -2,7 +2,7 @@
 title: "Replay booted"
 created: 2009-04-16
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

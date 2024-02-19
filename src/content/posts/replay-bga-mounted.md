@@ -2,7 +2,7 @@
 title: "Replay BGA mounted"
 created: 2009-03-28
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

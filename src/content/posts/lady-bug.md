@@ -2,7 +2,7 @@
 title: "Lady Bug"
 created: 2005-11-07
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

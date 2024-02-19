@@ -2,7 +2,7 @@
 title: "Philips Videopac"
 created: 2007-06-10
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

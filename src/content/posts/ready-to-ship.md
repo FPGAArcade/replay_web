@@ -2,7 +2,7 @@
 title: "Ready to ship"
 created: 2013-06-20
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

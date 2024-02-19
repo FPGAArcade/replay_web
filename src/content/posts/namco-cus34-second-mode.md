@@ -2,7 +2,7 @@
 title: "Namco CUS34 - second mode."
 created: 2023-07-06
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

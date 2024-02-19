@@ -2,7 +2,7 @@
 title: "Paula and Denise decapped and scanned"
 created: 2019-10-07
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

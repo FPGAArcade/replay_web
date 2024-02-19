@@ -2,7 +2,7 @@
 title: "Bring up continues"
 created: 2009-07-31
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

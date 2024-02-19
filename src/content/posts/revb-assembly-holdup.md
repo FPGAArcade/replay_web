@@ -2,7 +2,7 @@
 title: "RevB assembly holdup"
 created: 2010-03-29
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

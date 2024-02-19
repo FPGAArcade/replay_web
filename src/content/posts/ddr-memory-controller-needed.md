@@ -2,7 +2,7 @@
 title: "DDR memory controller needed"
 created: 2007-07-01
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

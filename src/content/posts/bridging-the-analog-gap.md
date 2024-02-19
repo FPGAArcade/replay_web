@@ -2,7 +2,7 @@
 title: "Bridging the analog gap"
 created: 2021-11-22
 categories: 
-  - core-news
+  - core-updates
 tags: 
   - vlm5030
 authors: 

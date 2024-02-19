@@ -2,7 +2,7 @@
 title: "Testing testing..."
 created: 2011-10-18
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

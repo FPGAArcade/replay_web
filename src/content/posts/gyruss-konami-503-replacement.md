@@ -2,7 +2,7 @@
 title: "Gyruss Konami 503 Replacement"
 created: 2019-03-10
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

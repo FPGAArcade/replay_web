@@ -2,7 +2,7 @@
 title: "Gyruss reverse engineering"
 created: 2019-02-12
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/gyruss-1.png"

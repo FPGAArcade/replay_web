@@ -2,7 +2,7 @@
 title: "Namco CUS34 reverse engineering"
 created: 2023-05-18
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

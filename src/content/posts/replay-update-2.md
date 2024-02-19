@@ -2,7 +2,7 @@
 title: "Replay update"
 created: 2010-08-31
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

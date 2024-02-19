@@ -2,7 +2,7 @@
 title: "Amiga AGA core stable release"
 created: 2016-02-26
 categories: 
-  - core-news
+  - core-updates
 authors: 
   - mikej
 image: "@assets/images/post/amiga500.jpg"

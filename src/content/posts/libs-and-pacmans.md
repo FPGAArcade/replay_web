@@ -2,7 +2,7 @@
 title: "Libs and Pacmans"
 created: 2015-09-06
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

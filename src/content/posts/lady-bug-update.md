@@ -2,7 +2,7 @@
 title: "Lady Bug update"
 created: 2005-12-19
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

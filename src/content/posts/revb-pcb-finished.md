@@ -2,7 +2,7 @@
 title: "RevB PCB finished!"
 created: 2010-05-05
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Github release repository and Crystal Castles core!"
 created: 2019-11-06
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

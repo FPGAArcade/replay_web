@@ -2,7 +2,7 @@
 title: "Game updates"
 created: 2006-06-20
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

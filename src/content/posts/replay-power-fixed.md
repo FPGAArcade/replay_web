@@ -2,7 +2,7 @@
 title: "Replay power fixed"
 created: 2011-02-02
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

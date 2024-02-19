@@ -2,7 +2,7 @@
 title: "Logic gates extraction"
 created: 2021-08-22
 categories: 
-  - core-news
+  - core-updates
 tags: 
   - vlm5030
 authors: 

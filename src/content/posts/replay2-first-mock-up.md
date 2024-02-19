@@ -2,7 +2,7 @@
 title: "Replay2 first mock up"
 created: 2019-02-08
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

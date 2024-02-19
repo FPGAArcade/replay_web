@@ -2,7 +2,7 @@
 title: "Back to school, and Atari die shots...."
 created: 2016-08-25
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/TOP-50X-1.jpg"

@@ -2,7 +2,7 @@
 title: "Forum down (Now fixed)"
 created: 2016-04-29
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

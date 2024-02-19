@@ -2,7 +2,7 @@
 title: "Pacman update"
 created: 2006-10-25
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

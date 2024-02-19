@@ -2,7 +2,7 @@
 title: "VLM5030 gate-level design validation and lock-step comparison"
 created: 2021-09-11
 categories: 
-  - core-news
+  - core-updates
 tags: 
   - vlm5030
 authors: 

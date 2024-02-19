@@ -2,7 +2,7 @@
 title: "If IKEA made retro arcade boards ..."
 created: 2009-04-27
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Replay Generations"
 created: 2019-04-11
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

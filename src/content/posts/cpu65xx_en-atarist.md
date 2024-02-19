@@ -2,7 +2,7 @@
 title: "CPU65xx_EN & AtariST"
 created: 2006-06-13
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

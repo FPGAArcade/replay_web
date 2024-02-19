@@ -2,7 +2,7 @@
 title: "Board respin"
 created: 2009-09-14
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

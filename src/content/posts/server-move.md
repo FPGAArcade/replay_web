@@ -2,7 +2,7 @@
 title: "Server move"
 created: 2015-02-19
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

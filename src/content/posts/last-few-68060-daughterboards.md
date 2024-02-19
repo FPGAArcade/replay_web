@@ -2,7 +2,7 @@
 title: "Last few 68060 daughterboards...."
 created: 2019-04-11
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

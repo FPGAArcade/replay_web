@@ -2,7 +2,7 @@
 title: "It's-a me, Mario!"
 created: 2021-04-26
 categories: 
-  - core-news
+  - core-updates
 authors: 
   - hicks
 image: "@assets/images/post/NES-Console-Set-scaled.jpg"

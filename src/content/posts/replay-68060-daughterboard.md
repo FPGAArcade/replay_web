@@ -2,7 +2,7 @@
 title: "Replay 68060 daughterboard"
 created: 2017-09-11
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/21740299_10155662107488560_2911845721109517574_n.jpg"

@@ -2,7 +2,7 @@
 title: "Replay RevB layout update"
 created: 2010-04-06
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

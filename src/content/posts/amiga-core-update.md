@@ -2,7 +2,7 @@
 title: "Amiga core update"
 created: 2015-07-06
 categories: 
-  - core-news
+  - core-updates
 authors: 
   - mikej
 image: "@assets/images/post/amiga500.jpg"

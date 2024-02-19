@@ -2,7 +2,7 @@
 title: "Space Invaders Multigame"
 created: 2006-10-17
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

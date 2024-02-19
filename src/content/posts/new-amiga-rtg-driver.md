@@ -2,7 +2,7 @@
 title: "New Amiga RTG Driver"
 created: 2017-08-01
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/p96.jpg"

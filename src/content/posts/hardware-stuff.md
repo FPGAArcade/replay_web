@@ -2,7 +2,7 @@
 title: "Hardware stuff"
 created: 2016-04-14
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Replay RevB finally assembled"
 created: 2010-11-16
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Spatan3e starter kit"
 created: 2006-06-25
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

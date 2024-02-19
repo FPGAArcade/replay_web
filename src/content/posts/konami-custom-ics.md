@@ -2,7 +2,7 @@
 title: "Atari ST chips completed, work started on FPGA board"
 created: 2007-12-23
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

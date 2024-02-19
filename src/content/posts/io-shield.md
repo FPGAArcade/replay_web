@@ -2,7 +2,7 @@
 title: "IO shield"
 created: 2011-12-19
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

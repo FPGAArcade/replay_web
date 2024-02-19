@@ -2,7 +2,7 @@
 title: "68060 Daughterboard rear I/O shield arrives"
 created: 2019-11-06
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "First look at Replay RevB"
 created: 2010-01-27
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

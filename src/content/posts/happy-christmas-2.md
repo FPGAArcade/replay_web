@@ -2,7 +2,7 @@
 title: "Happy Christmas"
 created: 2009-12-27
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Pacman Multigame"
 created: 2007-06-02
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

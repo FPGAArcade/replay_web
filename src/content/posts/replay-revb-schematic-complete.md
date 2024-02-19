@@ -2,7 +2,7 @@
 title: "Replay RevB schematic complete"
 created: 2009-11-20
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

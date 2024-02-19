@@ -2,7 +2,7 @@
 title: "Randomness on a microscopic level"
 created: 2021-08-14
 categories: 
-  - core-news
+  - core-updates
 tags: 
   - vlm5030
 authors: 

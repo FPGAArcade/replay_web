@@ -2,7 +2,7 @@
 title: "VIC-20 released on Spartan 3E board"
 created: 2008-01-12
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

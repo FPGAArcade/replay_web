@@ -2,7 +2,7 @@
 title: "Amiga RTG source and driver released."
 created: 2019-10-29
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

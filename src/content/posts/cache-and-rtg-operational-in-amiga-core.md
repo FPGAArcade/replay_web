@@ -2,7 +2,7 @@
 title: "Cache and RTG operational in Amiga core"
 created: 2016-01-21
 categories: 
-  - core-news
+  - core-updates
 authors: 
   - mikej
 image: "@assets/images/post/amiga500.jpg"

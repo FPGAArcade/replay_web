@@ -2,7 +2,7 @@
 title: "Video I/O board"
 created: 2009-04-22
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

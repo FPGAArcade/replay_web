@@ -2,7 +2,7 @@
 title: "Testing continues"
 created: 2015-06-18
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Server update"
 created: 2016-05-08
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/server.jpg"

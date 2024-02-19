@@ -2,7 +2,7 @@
 title: "Amiga RTG (Graphics card) working and in Beta"
 created: 2015-11-21
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

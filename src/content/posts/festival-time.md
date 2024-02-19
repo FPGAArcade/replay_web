@@ -2,7 +2,7 @@
 title: "Festival time...."
 created: 2010-06-20
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "FPGAArcade development board"
 created: 2008-03-10
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

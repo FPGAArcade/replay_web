@@ -2,7 +2,7 @@
 title: "Amiga roadmap and DDR memory fun"
 created: 2015-10-07
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "All Replay prototype hardware is now built"
 created: 2009-07-21
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

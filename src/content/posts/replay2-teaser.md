@@ -2,7 +2,7 @@
 title: "Replay2 Teaser"
 created: 2023-11-30
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/Replay2_teaser_1.jpg"

@@ -2,7 +2,7 @@
 title: "More boards"
 created: 2011-10-04
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

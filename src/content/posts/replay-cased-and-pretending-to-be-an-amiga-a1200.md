@@ -2,7 +2,7 @@
 title: "Replay cased and pretending to be an Amiga A1200"
 created: 2011-03-09
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "ALICE decap and imaged"
 created: 2017-10-11
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 image: "@assets/images/post/22406235_10154836493611366_111471250334156113_n.jpg"

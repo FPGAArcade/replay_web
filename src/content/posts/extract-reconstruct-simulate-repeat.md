@@ -2,7 +2,7 @@
 title: "Extract, reconstruct, simulate ... repeat"
 created: 2021-09-08
 categories: 
-  - core-news
+  - core-updates
 tags: 
   - vlm5030
 authors: 

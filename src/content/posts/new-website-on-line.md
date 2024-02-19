@@ -2,7 +2,7 @@
 title: "New website on line"
 created: 2013-07-08
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

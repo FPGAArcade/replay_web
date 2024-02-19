@@ -2,7 +2,7 @@
 title: "Forum rework"
 created: 2019-07-08
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

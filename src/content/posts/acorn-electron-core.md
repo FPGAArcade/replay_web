@@ -2,7 +2,7 @@
 title: "Acorn Electron Core"
 created: 2017-11-04
 categories: 
-  - core-news
+  - core-updates
 authors: 
   - mikej
 image: "@assets/images/post/Acorn-Electron-Square-White.svg"

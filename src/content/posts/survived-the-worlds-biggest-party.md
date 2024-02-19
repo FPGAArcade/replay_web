@@ -2,7 +2,7 @@
 title: "Survived the worlds biggest party"
 created: 2015-07-02
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Bally Astrocade in Hi-Res"
 created: 2006-10-01
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

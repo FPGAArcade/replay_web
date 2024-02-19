@@ -2,7 +2,7 @@
 title: "Replay2 Update"
 created: 2024-02-12
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

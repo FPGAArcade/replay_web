@@ -2,7 +2,7 @@
 title: "Vidor USB debug"
 created: 2019-06-17
 categories: 
-  - news
+  - general
 tags: ["vidor", "usb"]
 authors: 
   - mikej

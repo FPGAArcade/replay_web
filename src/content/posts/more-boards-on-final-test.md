@@ -2,7 +2,7 @@
 title: "More boards on final test"
 created: 2015-11-26
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

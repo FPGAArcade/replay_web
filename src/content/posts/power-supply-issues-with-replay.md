@@ -2,7 +2,7 @@
 title: "Power supply issues with Replay"
 created: 2010-12-16
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

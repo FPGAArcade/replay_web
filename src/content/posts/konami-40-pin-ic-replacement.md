@@ -2,7 +2,7 @@
 title: "Konami 40 pin IC replacement"
 created: 2019-02-20
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

@@ -2,7 +2,7 @@
 title: "Replay build continues"
 created: 2009-04-01
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

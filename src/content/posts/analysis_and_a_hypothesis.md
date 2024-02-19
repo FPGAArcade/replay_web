@@ -2,7 +2,7 @@
 title: "Analysis and a hypothesis"
 created: 2021-09-28
 categories: 
-  - core-news
+  - core-updates
 tags: 
   - vlm5030
 authors: 

@@ -2,7 +2,7 @@
 title: "First board shipped"
 created: 2011-02-03
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

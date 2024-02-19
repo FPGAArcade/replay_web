@@ -2,7 +2,7 @@
 title: "Amiga AGA up and running"
 created: 2010-03-09
 categories: 
-  - news
+  - general
 authors: 
   - mikej
 ---

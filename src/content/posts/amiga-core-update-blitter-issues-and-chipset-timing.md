@@ -2,7 +2,7 @@
 title: "Amiga core update - Blitter issues and chipset timing"
 created: 2015-09-07
 categories: 
-  - core-news
+  - core-updates
 authors: 
   - mikej
 image: "@assets/images/post/amiga500.jpg"
