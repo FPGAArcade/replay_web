@@ -5,6 +5,8 @@ categories:
   - general
 authors: 
   - mikej
+image: "@assets/images/post/ai/20240220-ai-fpgaarcade-replay.jpg"
+imageAlt: "FPGA Arcade Replay 2 - Generated with AI"
 ---
 It’s been an exciting two months learning about the new Intel Agilex5 and the RK3588 used in our new Replay2 platform. The design and schematic are nearly completed – after a number of last minute changes/improvements.
 
