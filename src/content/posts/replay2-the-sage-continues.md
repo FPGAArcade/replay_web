@@ -5,6 +5,8 @@ categories:
   - general
 authors: 
   - mikej
+image: "@assets/images/post/ai/20240220-ai-fpgaarcade-replay.jpg"
+imageAlt: "FPGA Arcade Replay 2 - Generated with AI"
 ---
 
 <figure>
