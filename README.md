@@ -46,4 +46,4 @@ to any existing post for an example.
 
 ## Hosting
 
-[![Powered by Vercel]([https://github.com/FPGAArcade/replay_webdocs/blob/75d400a9de124a2d5e4a64a589ec6c8c813f1241/docs/.vuepress/public/images/powered-by-vercel-badge.svg](https://vercel.com/?utm_source=fpgaarcade&utm_campaign=oss)
+[![Powered by Vercel](https://github.com/FPGAArcade/replay_webdocs/blob/75d400a9de124a2d5e4a64a589ec6c8c813f1241/docs/.vuepress/public/images/powered-by-vercel-badge.svg)](https://vercel.com/?utm_source=fpgaarcade&utm_campaign=oss)
