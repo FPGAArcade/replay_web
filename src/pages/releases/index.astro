@@ -1,6 +1,11 @@
 ---
+import * as Consts from "src/constants"
 import Layout from "@layouts/Layout.astro";
-import CoreApplication from "@components/builds/CoreApplication.vue"
+
+import PlatformFilter from "@components/builds/PlatformFilter.astro";
+
+const res = await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`)
+const platforms = await res.json()
 ---
 
 <Layout title="Core Releases">
@@ -9,7 +14,9 @@ import CoreApplication from "@components/builds/CoreApplication.vue"
       <div class="section-header underlined">
         <h1>Core Releases</h1>
       </div>
-      <CoreApplication client:only="vue"></CoreApplication>
+      <!-- TODO: [Gary] Common layout for releases page -->
+      <!-- TODO: [Gary] Show image based platform selection options with link to platform route -->
+      <PlatformFilter platforms={platforms} selectedPlatformID={null}></PlatformFilter>
     </section>
   </main>
 </Layout>

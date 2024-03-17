@@ -1,0 +1,34 @@
+---
+import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
+
+import * as Consts from "src/constants";
+import Layout from "@layouts/Layout.astro";
+
+import PlatformFilter from "@components/builds/PlatformFilter.astro";
+import type { Platform } from "@components/builds/PlatformFilter.astro";
+
+export const getStaticPaths = (async () => {
+  const res = await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`);
+  const platforms: Array<Platform> = await res.json();
+
+   return platforms.map(platform => ({params: {platform: platform.id}, props: {platforms: platforms}}))
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { platform } = Astro.params;
+const { platforms } = Astro.props;
+---
+
+<Layout title="Core Releases">
+  <main>
+    <section>
+      <div class="section-header underlined">
+        <h1>Core Releases</h1>
+      </div>
+      <PlatformFilter platforms={platforms} selectedPlatformID={platform}></PlatformFilter>
+
+      <!-- <PlatformView selected-platform={platform}></PlatformView> -->
+    </section>
+  </main>
+</Layout>
