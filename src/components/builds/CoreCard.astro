@@ -35,7 +35,7 @@ const isStableBuild = core.releaseTrain.includes("stable")
         </div>
       )}
       <div class="core-other-builds">
-        <a href={`${Astro.url.href}/${core.coreId}`}>other builds</a>
+        <a href={new URL(`${Astro.url.pathname}/${core.coreId}`, Astro.url)}>other builds</a>
       </div>
     </div>
   )}
