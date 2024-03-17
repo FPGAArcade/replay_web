@@ -1,38 +1,15 @@
-<template>
-  <div class="core-tag">
-    <div :class="releaseClassName">{{tagName}}</div>
-  </div>
-</template>
-
-<script>
-export default {
-  props: {
-    tagName: {
-      type: String
-    },
-  },
-  data() {
-    return {
-    }
-  },
-
-  beforeMount() {
-  },
-
-  computed: {
-    releaseClassName() {
-      return `core-tag-release ${this.tagName}`
-    },
-    convertDateToLocale() {
-      let date = new Date(this.tagDate).toLocaleString()
-      return date
-    }
-  },
-
-  methods: {
-  }
+---
+interface Props {
+  tagName: string;
 }
-</script>
+
+const { tagName } = Astro.props;
+---
+
+<div class="core-tag">
+  <div class:list={["core-tag-release", tagName]}>{tagName}</div>
+</div>
+
 
 <style scoped>
 .core-tag {

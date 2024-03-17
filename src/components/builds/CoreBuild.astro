@@ -1,0 +1,106 @@
+---
+import type { Build } from "@lib/replay-api.ts";
+
+import CoreTag from "./CoreTag.astro";
+
+interface Props {
+  core: Build;
+}
+
+function isDevel(core: Build) {
+  if (core.releaseTrain.includes("stable")) {
+    return false;
+  }
+  if (core.releaseTrain.includes("testing")) {
+    return false;
+  }
+  if (core.releaseTrain.includes("devel")) {
+    return true;
+  }
+  return false;
+}
+
+function getTagName(core: Build) {
+  if (core.releaseTrain.includes("stable")) {
+    return "stable";
+  }
+  if (core.releaseTrain.includes("testing")) {
+    return "testing";
+  }
+  if (core.releaseTrain.includes("devel")) {
+    return "devel";
+  }
+
+  return "unknown"
+}
+
+const { core } = Astro.props;
+---
+
+<div class="core-build">
+  <div class="core-details">
+    <div class="core-details-top">
+      <div class="core-tag">
+        <CoreTag tagName={getTagName(core)}></CoreTag>
+      </div>
+      <div class="core-note">
+        { isDevel(core) &&
+          <div class="core-warning">
+            Warning: Development builds are bleeding edge, may not work, and could
+           be dangerous to install without good reason.
+          </div>
+        }
+      </div>
+    </div>
+    <div class="core-date">
+      {new Date(core.buildDate).toLocaleString()}
+    </div>
+  </div>
+  <div class="core-download">
+    <a target="_blank" href={core.downloadURL}>
+      <div class="core-download-download">Download</div>
+    </a>
+  </div>
+</div>
+
+<style scoped>
+  .core-build {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .core-warning {
+    padding: 0 2rem;
+    color: #fd8a8a;
+  }
+
+  .core-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .core-details-top {
+    display: flex;
+  }
+
+  .core-date {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin: 1rem 0 0 0;
+  }
+
+  .core-download > a {
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e7501e;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.1s ease;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d44617;
+    margin-bottom: 1rem;
+  }
+</style>

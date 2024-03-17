@@ -1,11 +1,11 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
+import type { Platform } from "@lib/replay-api.ts";
 
 import * as Consts from "src/constants";
 import Layout from "@layouts/Layout.astro";
 
 import PlatformFilter from "@components/builds/PlatformFilter.astro";
-import type { Platform } from "@components/builds/PlatformFilter.astro";
 import PlatformView from "@components/builds/PlatformView.astro";
 
 export const getStaticPaths = (async () => {

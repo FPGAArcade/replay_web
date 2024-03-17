@@ -1,0 +1,63 @@
+---
+import type { InferGetStaticParamsType, InferGetStaticPropsType, GetStaticPaths, GetStaticPathsResult } from "astro";
+import type { Build, Platform } from "@lib/replay-api.ts";
+
+import * as Consts from "src/constants.ts";
+import {getLatestBuildPerCore} from "@lib/replay-api.ts"
+
+import Layout from "@layouts/Layout.astro";
+import CoreBuild from "@components/builds/CoreBuild.astro";
+import CoreCard from "@components/builds/CoreCard.astro";
+import PlatformFilter from "@components/builds/PlatformFilter.astro";
+
+export const getStaticPaths = (async () => {
+  const paths: GetStaticPathsResult = []
+
+  const platforms: Array<Platform> = await (await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`)).json();
+    
+  for (let platform of platforms) {
+    const builds = await getLatestBuildPerCore(platform.id)
+
+    for (let build of builds) {
+      const coreBuilds: Array<Build> = await(await fetch(
+        `${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform.id}&buildType=core&cores=${build.coreId}&desc=true`
+      )).json();
+
+      paths.push({
+        params: {platform: platform.id, core: build.coreId}, props: {builds: coreBuilds, platforms: platforms}
+      })
+    }
+  }
+
+  return paths
+})
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+type Params = InferGetStaticParamsType<typeof getStaticPaths>;
+
+const { platform, core } = Astro.params as Params;
+const { builds, platforms } = Astro.props as Props;
+
+---
+<Layout title="Core Releases">
+  <main>
+    <section>
+      <div class="section-header underlined">
+        <h1>Core Releases</h1>
+      </div>
+      <PlatformFilter platforms={platforms} selectedPlatform={platform}></PlatformFilter>
+
+      <article>
+        <CoreCard core={builds[0]} showDetails={false}></CoreCard>
+      
+        {
+          builds.map(build => (
+            <CoreBuild core={build}></CoreBuild>            
+          ))
+        }
+        
+      </article>      
+    </section>
+  </main>
+</Layout>
+

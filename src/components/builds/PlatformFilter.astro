@@ -1,10 +1,5 @@
 ---
-
-export interface Platform { 
-    id: string;
-    name: string;
-    imageurl: string;
-}
+import type { Platform } from "@lib/replay-api.ts";
 
 interface Props {
   platforms: Array<Platform>;
