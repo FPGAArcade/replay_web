@@ -3,9 +3,8 @@ import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import type { Platform } from "@lib/replay-api.ts";
 
 import * as Consts from "src/constants";
-import Layout from "@layouts/Layout.astro";
+import LayoutReleases from "@layouts/LayoutReleases.astro";
 
-import PlatformFilter from "@components/builds/PlatformFilter.astro";
 import PlatformView from "@components/builds/PlatformView.astro";
 
 export const getStaticPaths = (async () => {
@@ -21,15 +20,6 @@ const { platform } = Astro.params;
 const { platforms } = Astro.props;
 ---
 
-<Layout title="Core Releases">
-  <main>
-    <section>
-      <div class="section-header underlined">
-        <h1>Core Releases</h1>
-      </div>
-      <PlatformFilter platforms={platforms} selectedPlatform={platform}></PlatformFilter>
-
-      <PlatformView platform={platform}></PlatformView>
-    </section>
-  </main>
-</Layout>
+<LayoutReleases title="Core Releases" platforms={platforms} selectedPlatform={platform}>
+  <PlatformView platform={platform}></PlatformView>
+</LayoutReleases>

@@ -1,0 +1,29 @@
+---
+import type {Platform} from "@lib/replay-api.ts"
+
+import Layout from "@layouts/Layout.astro";
+import PlatformFilter from "@components/builds/PlatformFilter.astro"
+
+export interface Props {
+  title: string;
+  platforms: Platform[];
+  selectedPlatform?: string;
+}
+
+const {title, platforms, selectedPlatform} = Astro.props;
+---
+
+<Layout title={title}>
+  <main>
+    <section>
+      <div class="section-header underlined">
+        <h1>Core Releases</h1>
+      </div>
+      <PlatformFilter platforms={platforms} selectedPlatform={selectedPlatform} />
+
+      <section class="content">
+        <slot />
+      </section>
+    </section>
+  </main>
+</Layout>

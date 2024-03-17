@@ -5,10 +5,9 @@ import type { Build, Platform } from "@lib/replay-api.ts";
 import * as Consts from "src/constants.ts";
 import {getLatestBuildPerCore} from "@lib/replay-api.ts"
 
-import Layout from "@layouts/Layout.astro";
+import LayoutReleases from "@layouts/LayoutReleases.astro";
 import CoreBuild from "@components/builds/CoreBuild.astro";
 import CoreCard from "@components/builds/CoreCard.astro";
-import PlatformFilter from "@components/builds/PlatformFilter.astro";
 
 export const getStaticPaths = (async () => {
   const paths = []
@@ -36,26 +35,15 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { platform } = Astro.params;
 const { builds, platforms } = Astro.props;
-
 ---
-<Layout title="Core Releases">
-  <main>
-    <section>
-      <div class="section-header underlined">
-        <h1>Core Releases</h1>
-      </div>
-      <PlatformFilter platforms={platforms} selectedPlatform={platform}></PlatformFilter>
 
-      <article>
-        <CoreCard core={builds[0]} showDetails={false}></CoreCard>
-      
-        {
-          builds.map(build => (
-            <CoreBuild core={build}></CoreBuild>            
-          ))
-        }
-      </article>      
-    </section>
-  </main>
-</Layout>
+<LayoutReleases title="Core Releases" platforms={platforms} selectedPlatform={platform}>
+  <CoreCard core={builds[0]} showDetails={false}></CoreCard>
+
+  {
+    builds.map(build => (
+      <CoreBuild core={build}></CoreBuild>            
+    ))
+  }
+</LayoutReleases>
 

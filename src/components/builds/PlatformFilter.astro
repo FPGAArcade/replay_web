@@ -3,7 +3,7 @@ import type { Platform } from "@lib/replay-api.ts";
 
 interface Props {
   platforms: Array<Platform>;
-  selectedPlatform: string | null;
+  selectedPlatform?: string;
 }
 
 const { platforms, selectedPlatform } = Astro.props;
