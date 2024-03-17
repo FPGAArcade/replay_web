@@ -1,6 +1,5 @@
 ---
 
-// TODO: [Gary] move to api/types module
 export interface Platform { 
     id: string;
     name: string;
@@ -9,18 +8,17 @@ export interface Platform {
 
 interface Props {
   platforms: Array<Platform>;
-  selectedPlatformID: string | null;
+  selectedPlatform: string | null;
 }
 
-
-const { platforms, selectedPlatformID } = Astro.props;
+const { platforms, selectedPlatform } = Astro.props;
 ---
 
 <div>
     <ul class="platform-filters">
     {
         platforms.map(platform => (
-            <li class:list={["platform-filter", {'platform-filter--selected': selectedPlatformID === platform.id}]}>
+            <li class:list={["platform-filter", {'platform-filter--selected': selectedPlatform === platform.id}]}>
                 <a href={`/releases/${platform.id}`}>{platform.name}</a>
             </li>
         )

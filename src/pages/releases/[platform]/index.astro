@@ -6,6 +6,7 @@ import Layout from "@layouts/Layout.astro";
 
 import PlatformFilter from "@components/builds/PlatformFilter.astro";
 import type { Platform } from "@components/builds/PlatformFilter.astro";
+import PlatformView from "@components/builds/PlatformView.astro";
 
 export const getStaticPaths = (async () => {
   const res = await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`);
@@ -26,9 +27,9 @@ const { platforms } = Astro.props;
       <div class="section-header underlined">
         <h1>Core Releases</h1>
       </div>
-      <PlatformFilter platforms={platforms} selectedPlatformID={platform}></PlatformFilter>
+      <PlatformFilter platforms={platforms} selectedPlatform={platform}></PlatformFilter>
 
-      <!-- <PlatformView selected-platform={platform}></PlatformView> -->
+      <PlatformView platform={platform}></PlatformView>
     </section>
   </main>
 </Layout>
