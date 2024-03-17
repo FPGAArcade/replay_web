@@ -1,16 +1,17 @@
 ---
 import * as Consts from "src/constants";
-import CoreCard from "./CoreCard.vue";
-import { BuildkiteIcon } from "node_modules/vue3-simple-icons/dist/types/main";
+import CoreCard from "./CoreCard.astro";
 
 interface Props {
   platform: string;
 }
 
-type ReleaseTrain = "devel" | "stable" | "testing";
-type BuildType = "core";
+export type ReleaseTrain = "devel" | "stable" | "testing";
+export type BuildType = "core";
 
-interface Build {
+// TODO: [Gary] Rename Build to CoreBuild and setup base Build
+// TODO: [Gary] Relocate api types lib/replay_api.js?
+export interface Build {
   buildDate: EpochTimeStamp;
   buildType: BuildType;
   coreId: string;
@@ -72,8 +73,7 @@ const builds = sortByCoreName(uniqBuilds);
 
 <div>
   {builds.length === 0 && <div>No cores available.</div>}
-  {
-    builds.map((build) => <div>core id: {build.coreId}</div>)
-    // <CoreCard v-for="core in platformData" :key="core.id" :core="core" :show-details="true" @select-core="$event => $emit('select-core', $event)" />
+  {    
+    builds.map(build => <CoreCard core={build} showDetails={true} ></CoreCard>)
   }
 </div>

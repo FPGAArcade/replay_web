@@ -1,56 +1,45 @@
-<template>
-  <div class="core-wrapper">
-    <div class="core-details">
-      <div class="core-name">
-      {{ core.coreId }}
-      </div>
-    </div> 
-    <div class="core-download" v-if="this.showDetails === true" >
-      <div v-if="isStable">
-        <a class="download-button" target="_blank" :href="core.downloadURL">
-          <div class="core-download-download">Download</div>
-          <div class="core-download-subtext">latest stable</div>
-        </a>
-      </div>
-      <div v-else>
-        <div class="download-button disabled">
-          <div class="core-download-download">Download</div>
-          <div class="core-download-subtext">&nbsp;</div>
+---
+import type {Build} from "./PlatformView.astro"
+
+interface Props {
+  showDetails: boolean;
+  core: Build;
+}
+
+const { showDetails, core } = Astro.props;
+const isStableBuild = core.releaseTrain.includes("stable")
+---
+
+<div class="core-wrapper">
+  <div class="core-details">
+    <div class="core-name">
+      { core.coreId }
+    </div>
+  </div> 
+  { showDetails && (
+    <div class="core-download">
+      { isStableBuild && (
+        <div>
+          <a class="download-button" target="_blank" href={core.downloadURL}>
+            <div class="core-download-download">Download</div>
+            <div class="core-download-subtext">latest stable</div>
+          </a>
         </div>
-      </div>
+      )}
+      { !isStableBuild && (
+        <div>
+          <div class="download-button disabled">
+            <div class="core-download-download">Download</div>
+            <div class="core-download-subtext">&nbsp;</div>
+          </div>
+        </div>
+      )}
       <div class="core-other-builds">
-        <span @click="$emit('select-core', core.coreId)" href="">other builds</span>
+        <a href={`${Astro.url.href}/${core.coreId}`}>other builds</a>
       </div>
     </div>
-  </div>
-</template>
-
-<script>
-export default {
-  emits: ['select-core'],
-  props: {
-    showDetails: {
-      type: Boolean
-    },
-    core: {
-      type: Object
-    },
-  },
-  computed: {
-    isStable(core) {
-      if(this.core.releaseTrain.includes("stable")) {
-        return true
-      } 
-      return false
-    },
-  },
-  methods: {
-    getTagDate(release) {
-      return this.core.releaseDate[release]
-    }
-  }
-}
-</script>
+  )}
+</div>
 
 <style scoped>
 .core-name {
