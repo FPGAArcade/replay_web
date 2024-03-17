@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import * as Consts from "src/constants"
 import CoreCard from "./CoreCard.vue"
 
 const sortByBuildDate = (arr) => {
@@ -67,8 +68,7 @@ export default {
     async getForPlatform(platform) {
       this.loading = true
 
-      // TODO: [Gary] move to const/config
-      let res = await fetch(`https://api.fpgaarcade.com/builds?platforms=${platform}&buildType=core`)
+      let res = await fetch(`${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform}&buildType=core`)
 
       let platformData = await res.json()
       platformData = sortByBuildDate(platformData)

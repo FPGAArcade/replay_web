@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import * as Consts from "src/constants"
 import Platforms from "./Platforms.vue"
 
 export default {
@@ -22,8 +23,7 @@ export default {
 
   methods: {
     async getPlatforms() {
-      // TODO: [Gary] move to const/config
-      let res = await fetch(`https://api.fpgaarcade.com/platforms/`)
+      let res = await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`)
       this.platforms = await res.json()
     },
   },

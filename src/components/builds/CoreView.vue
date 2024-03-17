@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import * as Consts from "src/constants"
 import CoreBuilds from "./CoreBuilds.vue"
 import CoreCard from "./CoreCard.vue"
 
@@ -35,8 +36,7 @@ export default {
     async getCore() {
       let platform = this.selectedPlatform
       let core = this.selectedCore
-      // TODO: [Gary] move to const/config
-      let res = await fetch(`https://api.fpgaarcade.com/builds?platforms=${platform}&buildType=core&cores=${core}&desc=true`)
+      let res = await fetch(`${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform}&buildType=core&cores=${core}&desc=true`)
       let json = await res.json()
       this.core = json[0]
       this.cores = json
