@@ -38,7 +38,7 @@ const { builds, platforms } = Astro.props;
 ---
 
 <LayoutReleases title="Core Releases" platforms={platforms} selectedPlatform={platform}>
-  <CoreCard core={builds[0]} showDetails={false}></CoreCard>
+  <CoreCard core={builds[0]} showDetails={false} platform={platform}></CoreCard>
 
   {
     builds.map(build => (

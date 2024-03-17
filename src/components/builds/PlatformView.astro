@@ -17,6 +17,6 @@ const builds = await getLatestBuildPerCore(platform)
 <div>
   {builds.length === 0 && <div>No cores available.</div>}
   {    
-    builds.map(build => <CoreCard core={build} showDetails={true} ></CoreCard>)
+    builds.map(build => <CoreCard core={build} showDetails={true} platform={platform} ></CoreCard>)
   }
 </div>

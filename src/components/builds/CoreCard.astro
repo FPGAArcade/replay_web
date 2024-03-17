@@ -4,9 +4,10 @@ import type {Build} from "./PlatformView.astro"
 interface Props {
   showDetails: boolean;
   core: Build;
+  platform: string;
 }
 
-const { showDetails, core } = Astro.props;
+const { showDetails, core, platform } = Astro.props;
 const isStableBuild = core.releaseTrain.includes("stable")
 ---
 
@@ -34,8 +35,8 @@ const isStableBuild = core.releaseTrain.includes("stable")
           </div>
         </div>
       )}
-      <div class="core-other-builds">
-        <a href={new URL(`${Astro.url.pathname}/${core.coreId}`, Astro.url)}>other builds</a>
+      <div class="core-other-builds">        
+        <a href={`/releases/${platform}/${core.coreId}`}>other builds</a>
       </div>
     </div>
   )}
