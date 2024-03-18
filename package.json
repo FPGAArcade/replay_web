@@ -12,6 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vercel": "^7.3.6",
     "@astrojs/vue": "^4.0.1",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@philnash/astro-pagination": "^0.4.0",
