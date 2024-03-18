@@ -63,7 +63,10 @@ const sortByCoreName = (arr: Array<any>) => {
  * @param platform - id of platform e.g 'R1'
  * @returns Latest build per core 
  */
-export async function getLatestBuildPerCore(platform: string): Promise<Build[]> {
+export async function getLatestBuildPerCore(platform?: string): Promise<Build[]> {
+    if (platform === undefined)
+      return []
+    
     // TODO: [Gary] Expand API support to reduce data overfetch and using builds
     const res = await fetch(
       `${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform}&buildType=core`

@@ -5,47 +5,56 @@ import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import type { Build, Platform } from "@lib/replay-api.ts";
 
 import * as Consts from "src/constants.ts";
-import {getLatestBuildPerCore} from "@lib/replay-api.ts"
+import { getLatestBuildPerCore } from "@lib/replay-api.ts";
 
 import LayoutReleases from "@layouts/LayoutReleases.astro";
 import CoreBuild from "@components/builds/CoreBuild.astro";
 import CoreCard from "@components/builds/CoreCard.astro";
 
-export const getStaticPaths = (async () => {
-  const paths = []
+// Static render version - Left for now whilst testing SSR
+// export const getStaticPaths = (async () => {
+//   const paths = []
 
-  const platforms: Array<Platform> = await (await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`)).json();
+//   const platforms: Array<Platform> = await (await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`)).json();
+
+//   for (let platform of platforms) {
+//     const builds = await getLatestBuildPerCore(platform.id)
+
+//     for (let build of builds) {
+//       const coreBuilds: Array<Build> = await(await fetch(
+//         `${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform.id}&buildType=core&cores=${build.coreId}&desc=true`
+//       )).json();
+
+//       paths.push({
+//         params: {platform: platform.id, core: build.coreId}, props: {builds: coreBuilds, platforms: platforms}
+//       })
+//     }
+//   }
+
+//   return paths
+// }) satisfies GetStaticPaths;
+
+// type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { platform, core } = Astro.params;
+  
+const platforms: Array<Platform> = await (
+  await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`)
+  ).json();
     
-  for (let platform of platforms) {
-    const builds = await getLatestBuildPerCore(platform.id)
-
-    for (let build of builds) {
-      const coreBuilds: Array<Build> = await(await fetch(
-        `${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform.id}&buildType=core&cores=${build.coreId}&desc=true`
-      )).json();
-
-      paths.push({
-        params: {platform: platform.id, core: build.coreId}, props: {builds: coreBuilds, platforms: platforms}
-      })
-    }
-  }
-
-  return paths
-}) satisfies GetStaticPaths;
-
-type Props = InferGetStaticPropsType<typeof getStaticPaths>;
-
-const { platform } = Astro.params;
-const { builds, platforms } = Astro.props;
+const builds: Array<Build> = await (
+  await fetch(
+    `${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform}&buildType=core&cores=${core}&desc=true`
+  )
+).json();
 ---
 
-<LayoutReleases title="Core Releases" platforms={platforms} selectedPlatform={platform}>
-  <CoreCard core={builds[0]} showDetails={false} platform={platform}></CoreCard>
+<LayoutReleases
+  title="Core Releases"
+  platforms={platforms}
+  selectedPlatform={platform}
+>
+  <CoreCard core={builds[0]} showDetails={false} platform={platform} />
 
-  {
-    builds.map(build => (
-      <CoreBuild core={build}></CoreBuild>            
-    ))
-  }
+  {builds.map((build) => <CoreBuild core={build} />)}
 </LayoutReleases>
-

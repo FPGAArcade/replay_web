@@ -1,10 +1,10 @@
 ---
-import type {Build} from "./PlatformView.astro"
+import type {Build} from "@lib/replay-api"
 
 interface Props {
   showDetails: boolean;
   core: Build;
-  platform: string;
+  platform?: string;
 }
 
 const { showDetails, core, platform } = Astro.props;

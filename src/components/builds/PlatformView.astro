@@ -6,7 +6,7 @@ import CoreCard from "./CoreCard.astro";
 import {getLatestBuildPerCore} from "@lib/replay-api.ts"
 
 interface Props {
-  platform: string;
+  platform?: string;
 }
 
 const { platform } = Astro.props;
