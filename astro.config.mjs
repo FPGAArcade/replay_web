@@ -9,5 +9,8 @@ export default defineConfig({
     appEntrypoint: "/src/pages/_app"
   })],
   output: "hybrid",
-  adapter: vercel()
+  adapter: vercel({
+    isr: true,
+    expiration: 60 * 60 * 1,
+  })
 });
