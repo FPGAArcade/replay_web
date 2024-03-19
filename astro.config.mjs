@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import vue from "@astrojs/vue";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/edge";
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,8 +10,5 @@ export default defineConfig({
   })],
   output: "hybrid",
   adapter: vercel({
-    // isr: {
-    //   expiration: 60 * 60 * 1,
-    // }
   })
 });
