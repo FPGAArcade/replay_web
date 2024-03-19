@@ -1,5 +1,4 @@
 ---
-import * as Consts from "src/constants";
 import type {Build} from "@lib/replay-api.ts"
 
 import CoreCard from "./CoreCard.astro";
@@ -11,7 +10,7 @@ interface Props {
 
 const { platform } = Astro.props;
 
-const builds = await getLatestBuildPerCore(platform)
+const builds: Build[] = await getLatestBuildPerCore(platform)
 ---
 
 <div>

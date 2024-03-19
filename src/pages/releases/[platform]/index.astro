@@ -1,7 +1,6 @@
 ---
 export const prerender = false;
 
-import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import type { Platform } from "@lib/replay-api.ts";
 
 import * as Consts from "src/constants";
@@ -9,19 +8,8 @@ import LayoutReleases from "@layouts/LayoutReleases.astro";
 
 import PlatformView from "@components/builds/PlatformView.astro";
 
-// Static render version - Left for now whilst testing SSR 
-// export const getStaticPaths = (async () => {
-//   const res = await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`);
-//   const platforms: Array<Platform> = await res.json();
-
-//    return platforms.map(platform => ({params: {platform: platform.id}, props: {platforms: platforms}}))
-// }) satisfies GetStaticPaths;
-
-// pre-render false testing
 const res = await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`);
 const platforms: Array<Platform> = await res.json();
-
-// type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { platform } = Astro.params;
 
