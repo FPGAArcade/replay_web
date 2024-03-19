@@ -10,7 +10,8 @@ export default defineConfig({
   })],
   output: "hybrid",
   adapter: vercel({
-    isr: true,
-    expiration: 60 * 60 * 1,
+    isr: {
+      expiration: 60 * 60 * 1,
+    }
   })
 });
