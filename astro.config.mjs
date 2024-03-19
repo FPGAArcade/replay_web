@@ -10,6 +10,5 @@ export default defineConfig({
   })],
   output: "hybrid",
   adapter: vercel({
-    edgeMiddleware: true,
   })
 });
