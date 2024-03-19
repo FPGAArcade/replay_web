@@ -6,6 +6,8 @@ import LayoutReleases from "@layouts/LayoutReleases.astro";
 
 const res = await fetch(`${Consts.BASE_URL_REPLAY_API}/platforms/`)
 const platforms = await res.json()
+
+Astro.response.headers.set('Cache-Control', 'public, maxage=360, s-maxage=3600, stale-while-revalidate=86400');
 ---
 
 <LayoutReleases title="Core Releases" platforms={platforms}>

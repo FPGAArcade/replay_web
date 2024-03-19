@@ -47,6 +47,8 @@ const builds: Array<Build> = await (
     `${Consts.BASE_URL_REPLAY_API}/builds?platforms=${platform}&buildType=core&cores=${core}&desc=true`
   )
 ).json();
+
+Astro.response.headers.set('Cache-Control', 'public, maxage=360, s-maxage=3600, stale-while-revalidate=86400');
 ---
 
 <LayoutReleases

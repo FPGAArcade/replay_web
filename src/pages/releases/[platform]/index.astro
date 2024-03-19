@@ -24,6 +24,8 @@ const platforms: Array<Platform> = await res.json();
 // type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
 const { platform } = Astro.params;
+
+Astro.response.headers.set('Cache-Control', 'public, maxage=360, s-maxage=3600, stale-while-revalidate=86400');
 ---
 
 <LayoutReleases title="Core Releases" platforms={platforms} selectedPlatform={platform}>
