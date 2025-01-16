@@ -15,7 +15,6 @@
     "@astrojs/vercel": "^8.0.2",
     "@astrojs/vue": "^5.0.5",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@philnash/astro-pagination": "^0.4.0",
     "astro": "^5.1.7",
     "astro-icon": "^0.8.2",
     "vue-material-design-icons": "^5.2.0",

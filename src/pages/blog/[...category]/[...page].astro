@@ -1,7 +1,7 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
-import Pagination from "@philnash/astro-pagination";
+// import Pagination from "@philnash/astro-pagination";
 
 import LayoutBlog from "@layouts/LayoutBlog.astro";
 import Post from "@components/Post.astro";
@@ -63,12 +63,12 @@ const urlPattern = isRoot ? `/blog/{}` : `/blog/${params.category}/{}`;
   </section>
 
   <div class="pagination">
-    <Pagination
+    <!-- <Pagination
       page={page}
       urlPattern={urlPattern}
       previousLabel="« Newer"
       nextLabel="Older »"
-    />
+    /> -->
   </div>
 </LayoutBlog>
 
