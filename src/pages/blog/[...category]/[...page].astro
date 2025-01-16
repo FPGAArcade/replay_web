@@ -1,7 +1,6 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
-import Pagination from "@philnash/astro-pagination";
 
 import LayoutBlog from "@layouts/LayoutBlog.astro";
 import Post from "@components/Post.astro";
@@ -10,10 +9,10 @@ import type { Categories } from "@layouts/LayoutBlog.astro";
 
 export const getStaticPaths = (async ({ paginate }) => {
   const posts = (await getCollection("posts")).sort(
-    (a, b) => b.data.created.getTime() - a.data.created.getTime()
+    (a, b) => b.data.created.getTime() - a.data.created.getTime(),
   );
   const categories = [...posts.map((post) => post.data.categories).flat()].sort(
-    (a, b) => a.localeCompare(b)
+    (a, b) => a.localeCompare(b),
   );
 
   const categoryInfo = categories.reduce((acc: Categories, val) => {
@@ -25,31 +24,30 @@ export const getStaticPaths = (async ({ paginate }) => {
   const pathsRoot = paginate(posts, {
     pageSize: 8,
     params: { category: undefined },
-    props: { categories: categoryInfo, isRoot: true }
-  })
+    props: { categories: categoryInfo, isRoot: true },
+  });
 
   // Filtered post routes byte category for /blog/[category]/[page]
   const pathsCategory = [...new Set(categories)].flatMap((category) => {
     const categoryPosts = posts.filter((post) =>
-      post.data.categories.includes(category)
+      post.data.categories.includes(category),
     );
     return paginate(categoryPosts, {
       pageSize: 8,
-      params: { category: category},
+      params: { category: category },
       props: { categories: categoryInfo, isRoot: false },
     });
   });
 
-  return [...pathsRoot, ...pathsCategory]
-
+  return [...pathsRoot, ...pathsCategory];
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page, categories, isRoot } = Astro.props;
 const params = Astro.params;
 
-const title = isRoot ? "Blog: All Posts" : `Blog: ${params.category}`
-const urlPattern = isRoot ? `/blog/{}` : `/blog/${params.category}/{}`
+const title = isRoot ? "Blog: All Posts" : `Blog: ${params.category}`;
+const urlPattern = isRoot ? `/blog/{}` : `/blog/${params.category}/{}`;
 ---
 
 <LayoutBlog title={title} categories={categories}>
@@ -64,12 +62,11 @@ const urlPattern = isRoot ? `/blog/{}` : `/blog/${params.category}/{}`
   </section>
 
   <div class="pagination">
-    <Pagination
-      page={page}
-      urlPattern={urlPattern}
-      previousLabel="« Newer"
-      nextLabel="Older »"
-    />
+    <ul>
+      <li>{page.url.prev ? <a href={page.url.prev}>« Newer</a> : "« Newer"}</li>
+      <li>{page.currentPage} / {page.lastPage}</li>
+      <li>{page.url.next ? <a href={page.url.next}>Older »</a> : "Older »"}</li>
+    </ul>
   </div>
 </LayoutBlog>
 

@@ -1,27 +1,30 @@
 ---
-import type {
-  InferGetStaticPropsType,
-  GetStaticPaths,
-} from "astro";
+import type { InferGetStaticPropsType, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import { getEntries } from "astro:content";
 
 import Layout from "@layouts/Layout.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export const getStaticPaths = (async () => {
-    const posts = (await getCollection("posts")).sort((a, b) => b.data.created.getTime() - a.data.created.getTime())
+  const posts = (await getCollection("posts")).sort(
+    (a, b) => b.data.created.getTime() - a.data.created.getTime(),
+  );
 
-    const tags = [...new Set(posts.map(post => post.data?.tags ?? []).flat())]
-    
-    const paths = Array.from(tags).map(tag => {
-      const taggedPosts = posts.filter(post => post.data.tags?.includes(tag))
-      return {params: {tag: tag}, props: {posts: taggedPosts}}
-    })
+  const tags = [...new Set(posts.map((post) => post.data?.tags ?? []).flat())];
 
-    const untaggedPosts = posts.filter(post => (post.data.tags ?? []).length === 0)
-    return [...paths, {params: {tag: 'untagged'}, props: {posts: untaggedPosts}}]
+  const paths = Array.from(tags).map((tag) => {
+    const taggedPosts = posts.filter((post) => post.data.tags?.includes(tag));
+    return { params: { tag: tag }, props: { posts: taggedPosts } };
+  });
 
+  const untaggedPosts = posts.filter(
+    (post) => (post.data.tags ?? []).length === 0,
+  );
+  return [
+    ...paths,
+    { params: { tag: "untagged" }, props: { posts: untaggedPosts } },
+  ];
 }) satisfies GetStaticPaths;
 
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
@@ -32,7 +35,7 @@ const { posts } = Astro.props;
 
 <Layout title={tag}>
   <main>
-    <section>      
+    <section>
       <div class="section-header underlined">
         <h1>Posts tagged {tag}</h1>
         <div><a href="/tags/">View all Tags</a></div>
@@ -40,37 +43,35 @@ const { posts } = Astro.props;
 
       <div class="posts">
         {
-          posts.map(async post => {
+          posts.map(async (post) => {
             const authors = await getEntries(post.data.authors);
 
             return (
               <section class="post">
                 <div class="post__title">
-                <a href={`/post/${post.slug}`}>{post.data.title}</a>
+                  <a href={`/post/${post.id}`}>{post.data.title}</a>
                 </div>
                 <div class="meta">
                   <span>
                     <Icon name="mdi:calendar-month" />
                     <span>
-                      {
-                        new Date(post.data.created).toLocaleDateString("en-GB", {
-                          weekday: "short",
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })
-                      }
+                      {new Date(post.data.created).toLocaleDateString("en-GB", {
+                        weekday: "short",
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
                     </span>
                   </span>
                   <span>
-                    <Icon name="mdi:account" /> 
-                    {
-                      authors.map((author) => <span class="meta__author">{author.data.name}</span>)
-                    }
+                    <Icon name="mdi:account" />
+                    {authors.map((author) => (
+                      <span class="meta__author">{author.data.name}</span>
+                    ))}
                   </span>
                 </div>
               </section>
-            )
+            );
           })
         }
       </div>

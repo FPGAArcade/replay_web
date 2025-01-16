@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-import { getEntries } from "astro:content";
-import { Icon } from "astro-icon";
+import { getEntries, render } from "astro:content";
+import { Icon } from "astro-icon/components";
 import PostExcerpt from "@components/PostExcerpt.astro";
 import PostImage from "@components/PostImage.astro";
 
@@ -11,10 +11,10 @@ interface Props {
   summary?: boolean;
 }
 
-const { post, summary=false } = Astro.props;
+const { post, summary = false } = Astro.props;
 
 const authors = await getEntries(post.data.authors);
-const tags = post.data.tags ?? []
+const tags = post.data.tags ?? [];
 const published = new Date(post.data.created).toLocaleDateString("en-GB", {
   weekday: "short",
   year: "numeric",
@@ -22,12 +22,12 @@ const published = new Date(post.data.created).toLocaleDateString("en-GB", {
   day: "numeric",
 });
 
-const {Content} = await post.render()
+const { Content } = await render(post);
 ---
 
 <article class="post">
   <div class="post__title">
-    <a href={`/post/${post.slug}`}>{post.data.title}</a>
+    <a href={`/post/${post.id}`}>{post.data.title}</a>
   </div>
   <div class="meta">
     <div>
@@ -37,23 +37,21 @@ const {Content} = await post.render()
       <Icon name="mdi:account" />
       {
         authors.map((author) => (
-          <span class="meta__author">
-            {author.data.name}
-          </span>
+          <span class="meta__author">{author.data.name}</span>
         ))
       }
     </div>
-    { tags.length !== 0 &&
-      <div>
-        <Icon name="mdi:tags" />
-        {
-          tags.map(tag => (
+    {
+      tags.length !== 0 && (
+        <div>
+          <Icon name="mdi:tags" />
+          {tags.map((tag) => (
             <span class="meta__tag">
               <a href={`/tags/${tag}`}>{tag}</a>
             </span>
-          ))
-        }        
-      </div>
+          ))}
+        </div>
+      )
     }
     {
       false && (
@@ -64,19 +62,34 @@ const {Content} = await post.render()
       )
     }
   </div>
-  <div>{summary ? <a href={`/post/${post.slug}`}><PostImage post={post} /></a> : <PostImage post={post} />}</div>
+  <div>
+    {
+      summary ? (
+        <a href={`/post/${post.id}`}>
+          <PostImage post={post} />
+        </a>
+      ) : (
+        <PostImage post={post} />
+      )
+    }
+  </div>
   <div>{summary ? <PostExcerpt post={post} /> : <Content />}</div>
-  {summary && <div class="post__continue"><a href={`/post/${post.slug}`}>Continue reading...</a></div>}
+  {
+    summary && (
+      <div class="post__continue">
+        <a href={`/post/${post.id}`}>Continue reading...</a>
+      </div>
+    )
+  }
 </article>
 
 <style>
-  
   .post {
     --item-spacing: 1rem;
-    
+
     display: grid;
     grid-template-rows: min-content min-content min-content 1fr min-content;
-    
+
     border: 1px solid darkgrey;
     background: white;
     min-height: 20rem;
@@ -109,7 +122,7 @@ const {Content} = await post.render()
     display: inline-flex;
     justify-content: start;
     align-items: center;
-  
+
     font-size: 0.7rem;
     text-transform: uppercase;
 
@@ -128,7 +141,8 @@ const {Content} = await post.render()
     padding-inline-end: 0.1rem;
   }
 
-  .meta__author:not(:last-child)::after, .meta__tag:not(:last-child)::after {
+  .meta__author:not(:last-child)::after,
+  .meta__tag:not(:last-child)::after {
     content: ", ";
   }
 </style>

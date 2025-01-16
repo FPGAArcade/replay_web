@@ -1,15 +1,21 @@
 import { defineConfig } from "astro/config";
-import vue from "@astrojs/vue";
 
-import vercel from "@astrojs/vercel/serverless";
+import icon from "astro-icon";
+import vue from "@astrojs/vue";
+import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [vue({
-    appEntrypoint: "/src/pages/_app"
-  })],
-  output: "hybrid",
+  integrations: [
+    icon({
+      include: {
+        mdi: ["account", "book-open-variant", "calendar-month", "tags"],
+      },
+    }),
+    vue({
+      appEntrypoint: "/src/pages/_app"
+    })
+  ],
   adapter: vercel({
-    functionPerRoute: false,
   })
 });
