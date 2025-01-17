@@ -3,6 +3,8 @@ title: "Replay2, Vampire V4 and DE10-nano (MiSTer)"
 created: 2019-06-17
 categories: 
   - general
+tags: 
+  - replay2
 authors: 
   - mikej
 ---

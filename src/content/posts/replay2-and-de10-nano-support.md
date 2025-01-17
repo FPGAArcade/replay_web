@@ -3,6 +3,8 @@ title: "Replay2 and DE10-nano support"
 created: 2020-06-19
 categories: 
   - general
+tags: 
+  - replay2
 authors: 
   - mikej
 image: "@assets/images/post/20200615_150601-scaled.jpg"

@@ -3,6 +3,8 @@ title: "Replay2 Update"
 created: 2024-02-12
 categories: 
   - general
+tags: 
+  - replay2
 authors: 
   - mikej
 image: "@assets/images/post/ai/20240220-ai-fpgaarcade-replay.jpg"

@@ -3,6 +3,8 @@ title: "Replay2... the saga continues"
 created: 2023-11-07
 categories: 
   - general
+tags: 
+  - replay2
 authors: 
   - mikej
 image: "@assets/images/post/ai/20240220-ai-fpgaarcade-replay.jpg"
